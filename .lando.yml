@@ -1,0 +1,41 @@
+name: octahedroid-dev
+
+services:
+  storybook:
+    type: node:12
+    port: 6006
+    build:
+      - yarn
+    command: yarn workspace gatsby-starter-theme storybook
+
+  gatsby:
+    type: node:12
+    port: 8000
+    globals:
+      gatsby-cli: "latest"
+    build:
+      - yarn
+    command: yarn workspace octahedroid-starter gatsby develop --host 0.0.0.0
+
+proxy:
+  storybook:
+    - octahedroid-dev-storybook.lndo.site:6006
+  gatsby:
+    - octahedroid-dev-gatsby.lndo.site:8000
+
+tooling:
+  npm:
+    cmd: Nope, try `lando yarn` instead.
+    service:
+      - storybook
+      - gatsby
+  node:
+    service:
+      - storybook
+      - gatsby
+  yarn:
+    service:
+      - storybook
+      - gatsby
+  gatsby:
+    service: gatsby

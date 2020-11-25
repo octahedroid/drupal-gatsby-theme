@@ -1,0 +1,14 @@
+{
+  "name": "octahedroid-starter",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Octahedroid <hq@octahedroid.com> (@OctahedroidHQ)",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "gatsby": "^2.27.3",
+    "gatsby-theme-drupal": "^1.0.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  }
+}

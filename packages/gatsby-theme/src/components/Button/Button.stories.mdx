@@ -1,0 +1,75 @@
+import { Meta, Story, Props, Preview } from "@storybook/addon-docs/blocks"
+import Button from "."
+
+<Meta title='components/Button' component={Button} />
+
+# Button
+
+You can use it as a button or a link
+
+## Props
+
+<Props of={Button} />
+
+### Default button
+
+<Preview>
+  <Story name='Default'>
+    <Button to='/'>Default button</Button>
+  </Story>
+  <Story name='primary'>
+    <Button to='/' variant='primary'>
+      Primary button
+    </Button>
+  </Story>
+</Preview>
+
+### Secondary button
+
+<Preview>
+  <Story name='Secondary'>
+    <Button to='/' variant='secondary'>
+      Secondary button
+    </Button>
+  </Story>
+</Preview>
+
+### Light button
+
+<Preview>
+  <Story name='Light'>
+    <Button to='/' variant='light'>
+      Secondary button
+    </Button>
+  </Story>
+</Preview>
+
+### Dark button
+
+<Preview>
+  <Story name='Dark'>
+    <Button to='/' variant='dark'>
+      Secondary button
+    </Button>
+  </Story>
+</Preview>
+
+### Link
+
+<Preview>
+  <Story name='Link'>
+    <Button as='a' to='/'>
+      I'm a link
+    </Button>
+  </Story>
+</Preview>
+
+### Transparent
+
+<Preview>
+  <Story name='Transparent'>
+    <Button to='/' variant='transparent'>
+      Transparent button
+    </Button>
+  </Story>
+</Preview>

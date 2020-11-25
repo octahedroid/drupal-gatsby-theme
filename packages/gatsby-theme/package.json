@@ -1,0 +1,33 @@
+{
+  "name": "gatsby-starter-theme",
+  "private": true,
+  "description": "UI Theme",
+  "main": "lib/index.js",
+  "version": "1.0.0",
+  "dependencies": {
+    "gatsby": "^2.27.3",
+    "gatsby-image": "^2.6.0",
+    "gatsby-link": "^2.6.0",
+    "prop-types": "^15.7.2",
+    "react": "^17.0.1",
+    "theme-ui": "^0.3.4"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.9",
+    "@storybook/addon-a11y": "^6.1.6",
+    "@storybook/addon-actions": "^6.1.6",
+    "@storybook/addon-essentials": "^6.1.6",
+    "@storybook/addon-links": "^6.1.6",
+    "@storybook/react": "^6.1.6",
+    "babel-loader": "^8.2.1",
+    "eslint-import-resolver-alias": "^1.1.2"
+  }
+}

@@ -1,0 +1,19 @@
+# Logs
+*.log
+
+# Dependency directories
+node_modules/
+
+# dotenv environment variable files
+.env.development
+.env.production
+
+# gatsby files
+.cache/
+public
+
+# Mac files
+.DS_Store
+
+# Local enviroment
+.vscode
