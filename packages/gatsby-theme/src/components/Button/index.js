@@ -12,8 +12,8 @@ const Button = React.forwardRef(({ to, variant, as, children, ...props }, ref) =
       __themeKey='buttons'
       variant={variant}
       __css={{
-        py: "medium",
-        px: "large",
+        py: "small",
+        px: "medium",
         my: 0,
         textAlign: "left",
         width: "auto",
