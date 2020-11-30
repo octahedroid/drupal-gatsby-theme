@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { Box } from "theme-ui"
-import ReactPlayer from "react-player"
+import ReactPlayer from "react-player/lazy"
 
 const VideoEmbed = ({
   url,
