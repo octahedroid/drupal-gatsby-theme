@@ -11,6 +11,7 @@
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-infinite-scroll-component": "^5.0.5",
+    "react-content-loader": "^5.1.4",
     "react-player": "^2.7.0",
     "theme-ui": "^0.3.4"
   },
