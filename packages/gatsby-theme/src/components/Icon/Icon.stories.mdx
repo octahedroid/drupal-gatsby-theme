@@ -1,0 +1,61 @@
+import { Meta, Story, Props, Preview } from "@storybook/addon-docs/blocks"
+import { withA11y } from "@storybook/addon-a11y"
+import Icon from "."
+
+<Meta title='components/Icon' component={Icon} />
+
+# Icon
+
+Insert icons
+
+## Props
+
+<Props of={Icon} />
+
+### Github
+
+<Preview>
+  <Story name='Github' decorators={[withA11y]}>
+    <Icon icon='github' />
+  </Story>
+</Preview>
+
+### Twitter
+
+<Preview>
+  <Story name='Twitter' decorators={[withA11y]}>
+    <Icon icon='twitter' />
+  </Story>
+</Preview>
+
+### Linkedin
+
+<Preview>
+  <Story name='Linkedin' decorators={[withA11y]}>
+    <Icon icon='linkedin' />
+  </Story>
+</Preview>
+
+### Times
+
+<Preview>
+  <Story name='Times' decorators={[withA11y]}>
+    <Icon icon='times' />
+  </Story>
+</Preview>
+
+### Bars
+
+<Preview>
+  <Story name='Bars' decorators={[withA11y]}>
+    <Icon icon='bars' variant='mobileMenu' />
+  </Story>
+</Preview>
+
+### Octahedroid
+
+<Preview>
+  <Story name='Octahedroid' decorators={[withA11y]}>
+    <Icon icon='octahedroid' sx={{ width: "100px" }} />
+  </Story>
+</Preview>
