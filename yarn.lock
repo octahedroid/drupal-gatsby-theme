@@ -11195,6 +11195,11 @@ load-json-file@^2.0.0:
     pify "^2.0.0"
     strip-bom "^3.0.0"
 
+load-script@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/load-script/-/load-script-1.0.0.tgz#0491939e0bee5643ee494a7e3da3d2bac70c6ca4"
+  integrity sha1-BJGTngvuVkPuSUp+PaPSuscMbKQ=
+
 loader-fs-cache@^1.0.0:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/loader-fs-cache/-/loader-fs-cache-1.0.3.tgz#f08657646d607078be2f0a032f8bd69dd6f277d9"
@@ -11652,6 +11657,11 @@ media-typer@0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/media-typer/-/media-typer-0.3.0.tgz#8710d7af0aa626f8fffa1ce00168545263255748"
   integrity sha1-hxDXrwqmJvj/+hzgAWhUUmMlV0g=
+
+memoize-one@^5.1.1:
+  version "5.1.1"
+  resolved "https://registry.yarnpkg.com/memoize-one/-/memoize-one-5.1.1.tgz#047b6e3199b508eaec03504de71229b8eb1d75c0"
+  integrity sha512-HKeeBpWvqiVJD57ZUAsJNm71eHTykffzcLZVYWiVfQeI1rJtuEaS7hQiEpWfVVk18donPwJEcFKIkCmPJNOhHA==
 
 memoizerific@^1.11.3:
   version "1.11.3"
@@ -14041,6 +14051,11 @@ react-color@^2.17.0:
     reactcss "^1.2.0"
     tinycolor2 "^1.4.1"
 
+react-content-loader@^5.1.4:
+  version "5.1.4"
+  resolved "https://registry.yarnpkg.com/react-content-loader/-/react-content-loader-5.1.4.tgz#854bafe4415dd9de07174621375bc308edd0ebb5"
+  integrity sha512-hTq7pZi2GKCK6a9d3u6XStozm0QGCEjw8cSqQReiWnh2up6IwCha5R5TF0o6SY5qUDpByloEZEZtnFxpJyENFw==
+
 react-dev-utils@^10.0.0:
   version "10.2.1"
   resolved "https://registry.yarnpkg.com/react-dev-utils/-/react-dev-utils-10.2.1.tgz#f6de325ae25fa4d546d09df4bb1befdc6dd19c19"
@@ -14235,6 +14250,17 @@ react-lifecycles-compat@^3.0.4:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
+
+react-player@^2.7.0:
+  version "2.7.0"
+  resolved "https://registry.yarnpkg.com/react-player/-/react-player-2.7.0.tgz#7f25c83b6111770adbae51679f7ad27fb0fa0269"
+  integrity sha512-S+d9EfFCb2UlDBKf5U8jTgVQI3QCRfZ8k7kFUgpYLrSjLuowdV/NyZAKprplUNJEho1LmdwtqsDKg21kMIVymw==
+  dependencies:
+    deepmerge "^4.0.0"
+    load-script "^1.0.0"
+    memoize-one "^5.1.1"
+    prop-types "^15.7.2"
+    react-fast-compare "^3.0.1"
 
 react-popper-tooltip@^3.1.0:
   version "3.1.1"
