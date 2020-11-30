@@ -1,0 +1,34 @@
+import { Meta, Story, Props, Preview } from "@storybook/addon-docs/blocks"
+import { withA11y } from "@storybook/addon-a11y"
+import Loading from "."
+import { Box } from "theme-ui"
+
+<Meta title='components/Loading' component={Loading} />
+
+# Loading
+
+Use this component to insert loading placeholder skeletons
+
+## Props
+
+<Props of={Loading} />
+
+### Contact
+
+<Preview>
+  <Story name='Contact' decorators={[withA11y]}>
+    <Box variant='wrapper' __themeKey='container'>
+      <Loading type='contact' />
+    </Box>
+  </Story>
+</Preview>
+
+### Blog Listing
+
+<Preview>
+  <Story name='Blog Listing' decorators={[withA11y]}>
+    <Box variant='wrapper' __themeKey='container'>
+      <Loading type='blog_list' />
+    </Box>
+  </Story>
+</Preview>

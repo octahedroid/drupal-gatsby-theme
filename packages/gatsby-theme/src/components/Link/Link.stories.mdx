@@ -1,0 +1,37 @@
+import { Meta, Story, Props, Preview } from "@storybook/addon-docs/blocks"
+import { withA11y } from "@storybook/addon-a11y"
+import Link from "."
+
+<Meta title='components/Link' component={Link} />
+
+# Link
+
+Default link element, support render as a diferent component.
+
+## Props
+
+<Props of={Link} />
+
+### Default / Gatsby Link
+
+<Preview>
+  <Story name='Default'>
+    <Link to='/'>Gatsby Link</Link>
+  </Story>
+</Preview>
+
+### Anchor link
+
+<Preview>
+  <Story name='Anchor link'>
+    <Link to='#some-id'>Anchor Link</Link>
+  </Story>
+</Preview>
+
+### External link
+
+<Preview>
+  <Story name='External link'>
+    <Link to='https://octahedroid.com/'>External Link</Link>
+  </Story>
+</Preview>
