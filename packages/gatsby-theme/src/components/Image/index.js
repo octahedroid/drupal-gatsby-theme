@@ -1,31 +1,27 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-/** @jsx jsx */
-import { Box, jsx } from 'theme-ui'
-import Img from 'gatsby-image'
-import RichText from '../RichText'
+import React from "react"
+import PropTypes from "prop-types"
+import { Box } from "theme-ui"
+import Img from "gatsby-image"
+import RichText from "../RichText"
 
 const Image = React.forwardRef(({ variant, caption, image, ...props }, ref) => {
   const isGatsbyImage = !image.src
   return (
-    <Box as="figure" __css={{ m: 0 }} {...props}>
+    <Box as='figure' __css={{ m: 0 }} {...props}>
       {isGatsbyImage ? (
-        <Img ref={ref} variant={variant} __themeKey="images" {...image} />
+        <Img ref={ref} {...image} />
       ) : (
         <Box
           ref={ref}
           variant={variant}
-          as="img"
-          __themeKey="images"
+          as='img'
+          __themeKey='images'
           src={image.src}
           alt={image.alt}
         />
       )}
       {caption && (
-        <RichText
-          as="figcaption"
-          sx={{ fontSize: 'tiny', fontStyle: 'italic' }}
-        >
+        <RichText as='figcaption' sx={{ fontSize: "tiny", fontStyle: "italic" }}>
           {caption}
         </RichText>
       )}
@@ -51,7 +47,7 @@ Image.propTypes = {
   caption: PropTypes.string,
 }
 Image.defaultProps = {
-  caption: '',
-  variant: 'default',
+  caption: "",
+  variant: "default",
 }
 export default Image
