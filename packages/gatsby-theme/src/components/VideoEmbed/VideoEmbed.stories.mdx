@@ -1,0 +1,76 @@
+import { Meta, Story, Props, Preview } from "@storybook/addon-docs/blocks"
+import VideoEmbed from "."
+
+<Meta title='components/VideoEmbed' component={VideoEmbed} />
+
+# Video Embed
+
+Use it to embed videos from different sources, such as Youtube, Vimeo, DailyMotion, Facebook, etc.
+
+Wrapper for [React Player](https://github.com/CookPete/react-player)
+
+## Props
+
+<Props of={VideoEmbed} />
+
+### Default
+
+<Preview>
+  <Story name='Default'>
+    <VideoEmbed
+      url='https://www.youtube.com/watch?v=xlr_87FmD3w'
+      sx={{ width: 600, mx: "auto", p: 10 }}
+    />
+  </Story>
+</Preview>
+
+### Custom Aspect Ratio & Volume
+
+<Preview>
+  <Story name='Aspect Ratio & Volume'>
+    <VideoEmbed
+      url='https://www.youtube.com/watch?v=xlr_87FmD3w'
+      aspectRatio={"1:1"}
+      volume={0.2}
+      sx={{ width: 600, mx: "auto", p: 10 }}
+    />
+  </Story>
+</Preview>
+
+### Light
+
+Utilizado para cargar inicialmente una miniatura y no todo el embed.
+
+<Preview>
+  <Story name='Light'>
+    <VideoEmbed
+      url='https://www.youtube.com/watch?v=xlr_87FmD3w'
+      lightLoad
+      sx={{ width: 600, mx: "auto", p: 10 }}
+    />
+  </Story>
+</Preview>
+
+## Muted & Hide Controls
+
+<Preview>
+  <Story name='Muted & Hide Controls'>
+    <VideoEmbed
+      url='https://www.youtube.com/watch?v=xlr_87FmD3w'
+      muted
+      hideControls
+      sx={{ width: 600, mx: "auto", p: 10 }}
+    />
+  </Story>
+</Preview>
+
+## Vimeo
+
+<Preview>
+  <Story name='Vimeo'>
+    <VideoEmbed
+      url='https://vimeo.com/62566576'
+      sx={{ width: 600, mx: "auto", p: 10 }}
+    />
+  </Story>
+</Preview>
