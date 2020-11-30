@@ -1,0 +1,85 @@
+import { Meta, Story, Props, Preview } from "@storybook/addon-docs/blocks"
+import { withA11y } from "@storybook/addon-a11y"
+import RichText from "."
+import { Box } from "theme-ui"
+
+export const data = `<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet consectetur
+      temporibus id! Impedit corporis, exercitationem modi sed tenetur molestias
+      nesciunt sunt aspernatur deleniti velit officiis, consectetur, praesentium
+      omnis commodi. Ducimus?</p>
+      <p>Lorem ipsum dolor sit amet, <span style="text-decoration:underline">consectetur 
+      adipisicing elit. Amet</span> consectetur <span style="color:#993300">temporibus id!
+      Impedit</span> corporis, exercitationem modi sed tenetur
+      <strong>molestias sunt aspernatur</strong> deleniti velit officiis, consectetur, praesentium
+       commodi. Ducimus?</p>`
+
+<Meta title='components/RichText' component={RichText} />
+
+# RichText
+
+Use this component to insert rich text
+
+## Props
+
+<Props of={RichText} />
+
+### Body Text
+
+<Preview>
+  <Story name='Default' decorators={[withA11y]}>
+    <RichText>{data}</RichText>
+  </Story>
+</Preview>
+
+### Tiny Size
+
+<Preview>
+  <Story name='Tiny Size' decorators={[withA11y]}>
+    <RichText text={data} variant='tiny' />
+  </Story>
+</Preview>
+
+### Large size
+
+<Preview>
+  <Story name='Large size' decorators={[withA11y]}>
+    <RichText text={data} variant='lg' />
+  </Story>
+</Preview>
+
+### Extra Large size
+
+<Preview>
+  <Story name='Extra Large size' decorators={[withA11y]}>
+    <RichText text={data} variant='xl' />
+  </Story>
+</Preview>
+
+### Single text child
+
+<Preview>
+  <Story name='Single text child' decorators={[withA11y]}>
+    <RichText>{"<button>An HTML button</button>"}</RichText>
+  </Story>
+</Preview>
+
+### Single node child
+
+<Preview>
+  <Story name='Single node child' decorators={[withA11y]}>
+    <RichText>
+      <Box>A theme-ui Box node</Box>
+    </RichText>
+  </Story>
+</Preview>
+
+### Multiple node children
+
+<Preview>
+  <Story name='Multiple node children' decorators={[withA11y]}>
+    <RichText>
+      <Box>A theme-ui Box node</Box>
+      <Box>Another theme-ui Box node</Box>
+    </RichText>
+  </Story>
+</Preview>
