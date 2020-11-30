@@ -27,31 +27,7 @@ Use this component to insert rich text
 
 <Preview>
   <Story name='Default' decorators={[withA11y]}>
-    <RichText>{data}</RichText>
-  </Story>
-</Preview>
-
-### Tiny Size
-
-<Preview>
-  <Story name='Tiny Size' decorators={[withA11y]}>
-    <RichText text={data} variant='tiny' />
-  </Story>
-</Preview>
-
-### Large size
-
-<Preview>
-  <Story name='Large size' decorators={[withA11y]}>
-    <RichText text={data} variant='lg' />
-  </Story>
-</Preview>
-
-### Extra Large size
-
-<Preview>
-  <Story name='Extra Large size' decorators={[withA11y]}>
-    <RichText text={data} variant='xl' />
+    <RichText sx={{ fontSize: "1rem" }}>{data}</RichText>
   </Story>
 </Preview>
 
