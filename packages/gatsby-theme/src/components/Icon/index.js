@@ -1,4 +1,4 @@
-import React from "react"
+import { forwardRef } from "react"
 import PropTypes from "prop-types"
 import { Box } from "theme-ui"
 import {
@@ -33,7 +33,7 @@ const Icons = {
   link: FaLink,
 }
 
-const Icon = React.forwardRef(({ icon, variant, ...props }, ref) => {
+const Icon = forwardRef(({ icon, variant, ...props }, ref) => {
   return (
     <Box
       ref={ref}
