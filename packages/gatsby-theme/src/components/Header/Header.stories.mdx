@@ -1,0 +1,51 @@
+import { Meta, Story, Props, Preview } from "@storybook/addon-docs/blocks"
+import Header from "."
+/*import Logo from "../Logo"
+
+export const mainMenu = [
+  {
+    name: "Home",
+    to: "/",
+    active: true,
+  },
+  {
+    name: "About",
+    to: "/",
+  },
+  {
+    name: "Blog",
+    to: "/",
+  },
+  {
+    name: "Contact",
+    to: "/",
+  },
+]
+
+<Meta title='components/Header' component={Header} />
+
+# Header
+
+## Props
+
+<Props of={Header} />
+
+### Default
+
+<Preview height='250'>
+  <Story name='Default'>
+    <Header shadow>
+      <Header.Branding to='/' ariaLabel='Back to Home'>
+        <Logo />
+      </Header.Branding>
+      <Header.Navbar handleShowSidebar={() => {}}>
+        {mainMenu &&
+          mainMenu.map((item) => (
+            <Header.MenuItem key={item.name} to={item.to} active={item.active}>
+              {item.name}
+            </Header.MenuItem>
+          ))}
+      </Header.Navbar>
+    </Header>
+  </Story>
+</Preview>
