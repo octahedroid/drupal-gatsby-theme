@@ -2,6 +2,7 @@ const bColors = {
   transparent: "transparent",
   black: "#000",
   white: "#fff",
+  background: "#fff",
   primary: "#0CBFC7",
   secondary: "#CA3E73",
   darkShade: "#37375B",

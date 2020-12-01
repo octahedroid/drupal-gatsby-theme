@@ -1,8 +1,7 @@
-import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks'
-import { withA11y } from '@storybook/addon-a11y'
-import Image from '.'
+import { Meta, Story, Props, Preview } from "@storybook/addon-docs/blocks"
+import Image from "."
 
-<Meta title="components/Image" component={Image} />
+<Meta title='components/Image' component={Image} />
 
 # Image
 
@@ -15,11 +14,11 @@ Use to insert image
 ### Default
 
 <Preview>
-  <Story name="Default" decorators={[withA11y]}>
+  <Story name='Default'>
     <Image
       image={{
-        src: 'https://placeimg.com/640/480/any',
-        alt: 'tech related stuff',
+        src: "https://placeimg.com/640/480/any",
+        alt: "tech related stuff",
       }}
     />
   </Story>
@@ -28,11 +27,11 @@ Use to insert image
 ### Avatar
 
 <Preview>
-  <Story name="Avatar" decorators={[withA11y]}>
+  <Story name='Avatar'>
     <Image
-      variant="avatar"
+      variant='avatar'
       image={{
-        src: 'https://placeimg.com/240/240/people',
+        src: "https://placeimg.com/240/240/people",
         alt: `someone's avatar`,
       }}
     />
@@ -42,11 +41,11 @@ Use to insert image
 ### With Caption
 
 <Preview>
-  <Story name="With Caption" decorators={[withA11y]}>
+  <Story name='With Caption'>
     <Image
       image={{
-        src: 'https://placeimg.com/640/480/any',
-        alt: 'tech related stuff',
+        src: "https://placeimg.com/640/480/any",
+        alt: "tech related stuff",
       }}
       caption="A caption with a <a href='/'>link</a>"
     />

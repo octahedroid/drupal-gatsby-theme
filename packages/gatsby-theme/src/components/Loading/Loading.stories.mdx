@@ -1,5 +1,4 @@
 import { Meta, Story, Props, Preview } from "@storybook/addon-docs/blocks"
-import { withA11y } from "@storybook/addon-a11y"
 import Loading from "."
 import { Box } from "theme-ui"
 
@@ -16,7 +15,7 @@ Use this component to insert loading placeholder skeletons
 ### Contact
 
 <Preview>
-  <Story name='Contact' decorators={[withA11y]}>
+  <Story name='Contact'>
     <Box variant='wrapper' __themeKey='container'>
       <Loading type='contact' />
     </Box>
@@ -26,7 +25,7 @@ Use this component to insert loading placeholder skeletons
 ### Blog Listing
 
 <Preview>
-  <Story name='Blog Listing' decorators={[withA11y]}>
+  <Story name='Blog Listing'>
     <Box variant='wrapper' __themeKey='container'>
       <Loading type='blog_list' />
     </Box>

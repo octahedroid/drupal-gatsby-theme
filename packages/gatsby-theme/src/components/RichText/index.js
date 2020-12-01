@@ -1,8 +1,8 @@
-import React from "react"
+import { forwardRef } from "react"
 import PropTypes from "prop-types"
 import { Box } from "theme-ui"
 
-const RichText = React.forwardRef(({ as, text, children, ...props }, ref) => {
+const RichText = forwardRef(({ as, text, children, ...props }, ref) => {
   if (text || typeof children === "string") {
     return (
       <Box
