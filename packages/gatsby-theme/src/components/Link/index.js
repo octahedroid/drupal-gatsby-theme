@@ -1,42 +1,40 @@
-import React from "react"
+import { forwardRef } from "react"
 import PropTypes from "prop-types"
 import { Box } from "theme-ui"
 import GatsbyLink from "gatsby-link"
 
-const Link = React.forwardRef(
-  ({ to, children, variant, ariaLabel, ...props }, ref) => {
-    const internal = /^\/(?!\/)/.test(to)
-    const samePage = /^#/.test(to)
+const Link = forwardRef(({ to, children, variant, ariaLabel, ...props }, ref) => {
+  const internal = /^\/(?!\/)/.test(to)
+  const samePage = /^#/.test(to)
 
-    return internal ? (
-      <Box
-        __themeKey='styles'
-        ref={ref}
-        aria-label={ariaLabel}
-        variant={variant}
-        as={GatsbyLink}
-        to={to}
-        {...props}
-      >
-        {children}
-      </Box>
-    ) : (
-      <Box
-        __themeKey='styles'
-        ref={ref}
-        aria-label={ariaLabel}
-        variant={variant}
-        as='a'
-        href={to}
-        target={!samePage ? "_blank" : ""}
-        rel={!samePage ? "noopener noreferrer" : ""}
-        {...props}
-      >
-        {children}
-      </Box>
-    )
-  }
-)
+  return internal ? (
+    <Box
+      __themeKey='styles'
+      ref={ref}
+      aria-label={ariaLabel}
+      variant={variant}
+      as={GatsbyLink}
+      to={to}
+      {...props}
+    >
+      {children}
+    </Box>
+  ) : (
+    <Box
+      __themeKey='styles'
+      ref={ref}
+      aria-label={ariaLabel}
+      variant={variant}
+      as='a'
+      href={to}
+      target={!samePage ? "_blank" : ""}
+      rel={!samePage ? "noopener noreferrer" : ""}
+      {...props}
+    >
+      {children}
+    </Box>
+  )
+})
 
 Link.propTypes = {
   children: PropTypes.node.isRequired,

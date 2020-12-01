@@ -1,4 +1,3 @@
-import React from "react"
 import { ThemeProvider } from "theme-ui"
 import { action } from "@storybook/addon-actions"
 
