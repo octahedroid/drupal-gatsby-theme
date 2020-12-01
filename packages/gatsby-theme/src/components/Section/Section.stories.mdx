@@ -1,0 +1,60 @@
+import { Meta, Story, Props, Preview } from "@storybook/addon-docs/blocks"
+import { withA11y } from "@storybook/addon-a11y"
+import Section from "."
+import Grid from "../Grid"
+
+<Meta title='components/Section' component={Section} />
+
+# Section
+
+Use this component to add a background color to a section and a container.
+
+## Props
+
+<Props of={Section} />
+
+### Default background
+
+<Preview>
+  <Story name='Default' decorators={[withA11y]}>
+    <Section sx={{ p: 4 }}>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam magnam saepe
+      ratione dolor voluptatem voluptatum numquam nemo recusandae quisquam aspernatur
+      repellendus maiores, eius ipsam, eligendi minus nesciunt alias, est reiciendis.
+    </Section>
+  </Story>
+</Preview>
+
+### Dark background
+
+<Preview>
+  <Story name='Dark background' decorators={[withA11y]}>
+    <Section variant='dark' isFull>
+      <Grid>
+        <Grid.Column columns='6' sx={{ p: 4 }}>
+          Column 1
+        </Grid.Column>
+        <Grid.Column columns='6' sx={{ p: 4 }}>
+          Column 2
+        </Grid.Column>
+      </Grid>
+    </Section>
+  </Story>
+</Preview>
+
+### Light Background
+
+<Preview>
+  <Story name='Light Background' decorators={[withA11y]}>
+    <Section variant='light' isFull>
+      <Grid>
+        <Grid.Column columns='6' sx={{ p: 4 }}>
+          Column 1
+        </Grid.Column>
+        <Grid.Column columns='6' sx={{ p: 4 }}>
+          Column 2
+        </Grid.Column>
+      </Grid>
+    </Section>
+  </Story>
+</Preview>
