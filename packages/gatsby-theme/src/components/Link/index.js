@@ -28,8 +28,7 @@ const Link = React.forwardRef(
         variant={variant}
         as='a'
         href={to}
-        target={!samePage ? "_blank" : ""}
-        rel={!samePage ? "noopener noreferrer" : ""}
+        {...(!samePage ? { target: "_blank", rel: "noopener noreferrer" } : {})}
         {...props}
       >
         {children}
