@@ -1,10 +1,10 @@
-import React from "react"
+import { forwardRef } from "react"
 import PropTypes from "prop-types"
 import { Box } from "theme-ui"
 import Icon from "../Icon"
 import Link from "../Link"
 
-const Heading = React.forwardRef(
+const Heading = forwardRef(
   ({ as, id, anchor, variant, children, ...props }, ref) => (
     <Box
       __css={{
