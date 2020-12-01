@@ -1,0 +1,71 @@
+import { Meta, Story, Props, Preview } from "@storybook/addon-docs/blocks"
+
+import TextBlock from "."
+import Section from "../../components/Section"
+
+export const data = {
+  title: "Some nice title",
+  text: `Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+          commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus
+          et magnis dis parturient montes, nascetur ridiculus mus. Donec quam
+          felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla
+          consequat massa quis enim. Donec pede justo, fringilla vel, aliquet
+          nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a,
+          venenatis vitae, justo.`,
+}
+
+export const richTextData = {
+  title: "Some nice title",
+  text: `<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+          commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus
+          et magnis dis parturient montes, <em>nascetur ridiculus mus</em>. Donec quam
+          felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla
+          consequat massa quis enim. Donec pede justo, fringilla vel, aliquet
+          nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a,
+          venenatis vitae, justo.</p>
+          <p>Lorem ipsum <strong>dolor sit amet</strong>, consectetuer adipiscing elit. Aenean
+          commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus
+          et magnis dis parturient montes, nascetur ridiculus mus. Donec quam
+          felis, ultricies nec, <a href="https://www.google.com/">pellentesque eu</a>, pretium quis, sem. Nulla
+          consequat massa quis enim. Donec pede justo, fringilla vel, aliquet
+          nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a,
+          venenatis vitae, justo.</p>`,
+}
+
+<Meta title='blocks/TextBlock' component={TextBlock} />
+
+# TextBlock
+
+## Props
+
+<Props of={TextBlock} />
+
+### Default TextBlock
+
+<Preview>
+  <Story name='Default'>
+    <Section>
+      <TextBlock {...data} />
+    </Section>
+  </Story>
+</Preview>
+
+### Different align
+
+<Preview>
+  <Story name='Different align'>
+    <Section>
+      <TextBlock {...data} align='center' />
+    </Section>
+  </Story>
+</Preview>
+
+### Rich Text
+
+<Preview>
+  <Story name='Rich Text'>
+    <Section>
+      <TextBlock {...richTextData} />
+    </Section>
+  </Story>
+</Preview>
