@@ -3,6 +3,29 @@ import { Meta, Story, Props, Preview } from "@storybook/addon-docs/blocks"
 import MobileMenu from "."
 import Button from "../Button"
 
+export const BComponent = (args) => {
+  const [show, handleShow] = useState(false)
+  return (
+    <>
+      <Button onClick={() => handleShow(!show)}>Toggle</Button>
+      <MobileMenu
+        showSidebar={show}
+        handleShowSidebar={() => handleShow(!show)}
+        {...args}
+      >
+        <MobileMenu.Navbar>
+          {mainMenu &&
+            mainMenu.map((item) => (
+              <MobileMenu.Item key={item.name} to={item.to}>
+                {item.name}
+              </MobileMenu.Item>
+            ))}
+        </MobileMenu.Navbar>
+      </MobileMenu>
+    </>
+  )
+}
+
 export const mainMenu = [
   {
     name: "Home",
@@ -41,47 +64,22 @@ Use this MobileMenu
 ### Default
 
 <Preview>
-  <Story name='Default'>
-    {() => {
-      const [show, handleShow] = useState(false)
-      return (
-        <>
-          <Button onClick={() => handleShow(!show)}>Toggle</Button>
-          <MobileMenu showSidebar={show} handleShowSidebar={() => handleShow(!show)}>
-            <MobileMenu.Navbar>
-              {mainMenu &&
-                mainMenu.map((item) => (
-                  <MobileMenu.Item key={item.name} to={item.to}>
-                    {item.name}
-                  </MobileMenu.Item>
-                ))}
-            </MobileMenu.Navbar>
-          </MobileMenu>
-        </>
-      )
-    }}
-  </Story>
+  <Story name='Default'>{BComponent.bind({})}</Story>
 </Preview>
 
 ### MegaMenu
 
 <Preview>
   <Story name='MegaMenu'>
-    {() => {
-      return (
-        <>
-          <MobileMenu showSidebar={true} handleShowSidebar={() => {}}>
-            <MobileMenu.Navbar>
-              {mainMenu &&
-                mainMenu.map((item) => (
-                  <MobileMenu.Item key={item.name} to={item.to}>
-                    {item.name}
-                  </MobileMenu.Item>
-                ))}
-            </MobileMenu.Navbar>
-          </MobileMenu>
-        </>
-      )
-    }}
+    <MobileMenu showSidebar handleShowSidebar={() => {}}>
+      <MobileMenu.Navbar>
+        {mainMenu &&
+          mainMenu.map((item) => (
+            <MobileMenu.Item key={item.name} to={item.to}>
+              {item.name}
+            </MobileMenu.Item>
+          ))}
+      </MobileMenu.Navbar>
+    </MobileMenu>
   </Story>
 </Preview>
