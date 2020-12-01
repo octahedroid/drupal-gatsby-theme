@@ -62,3 +62,26 @@ Use this MobileMenu
     }}
   </Story>
 </Preview>
+
+### MegaMenu
+
+<Preview>
+  <Story name='MegaMenu'>
+    {() => {
+      return (
+        <>
+          <MobileMenu showSidebar={true} handleShowSidebar={() => {}}>
+            <MobileMenu.Navbar>
+              {mainMenu &&
+                mainMenu.map((item) => (
+                  <MobileMenu.Item key={item.name} to={item.to}>
+                    {item.name}
+                  </MobileMenu.Item>
+                ))}
+            </MobileMenu.Navbar>
+          </MobileMenu>
+        </>
+      )
+    }}
+  </Story>
+</Preview>
