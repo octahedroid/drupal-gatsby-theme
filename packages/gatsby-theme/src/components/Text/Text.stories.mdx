@@ -1,0 +1,75 @@
+import { Meta, Story, Props, Preview } from "@storybook/addon-docs/blocks"
+import { Box } from "theme-ui"
+import Text from "."
+
+<Meta title='components/Text' component={Text} />
+
+# Text
+
+Use this component to wrap common text
+
+## Props
+
+<Props of={Text} />
+
+### Body Text
+
+<Preview>
+  <Story name='Default'>
+    <Text>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet consectetur
+      temporibus id! Impedit corporis, exercitationem modi sed tenetur molestias
+      nesciunt sunt aspernatur deleniti velit officiis, consectetur, praesentium
+      omnis commodi. Ducimus?
+    </Text>
+  </Story>
+</Preview>
+
+### Different Align
+
+<Preview>
+  <Story name='Different Align'>
+    <Text align='center'>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet consectetur
+      temporibus id! Impedit corporis, exercitationem modi sed tenetur molestias
+      nesciunt sunt aspernatur deleniti velit officiis, consectetur, praesentium
+      omnis commodi. Ducimus?
+    </Text>
+  </Story>
+</Preview>
+
+### Using React Components
+
+<Preview>
+  <Story name='Using React Components'>
+    <Text>
+      <p>
+        This is
+        <strong>{" bolded "}</strong>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet consectetur
+        temporibus id!
+        <Box as='span' __css={{ color: "red" }}>
+          Impedit corporis
+        </Box>
+        {` , exercitationem modi sed tenetur molestias nesciunt sunt aspernatur
+        deleniti velit officiis, `}
+        <Box
+          as='span'
+          __css={{
+            borderBottom: "2px solid red",
+            transition: "1s",
+            ":hover": {
+              borderBottom: "5px solid red",
+            },
+          }}
+        >
+          consectetur, praesentium omnis commodi.
+        </Box>
+      </p>
+      <ol>
+        <li>Lorem</li>
+        <li>Ipsum</li>
+      </ol>
+    </Text>
+  </Story>
+</Preview>
