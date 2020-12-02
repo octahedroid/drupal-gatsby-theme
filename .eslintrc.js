@@ -17,7 +17,19 @@ module.exports = {
       alias: [["ui", "./packages/gatsby-theme/components"]],
     },
   },
-  extends: ["airbnb", "plugin:prettier/recommended"],
+  extends: ["airbnb", "plugin:prettier/recommended", "plugin:mdx/recommended"],
+  overrides: [
+    {
+      files: ["*.mdx"],
+      extends: ["plugin:mdx/overrides"],
+      rules: {
+        "react/jsx-filename-extension": 0,
+        "import/no-extraneous-dependencies": 0,
+        "react/jsx-indent": 0,
+        "react/prop-types": 0,
+      },
+    },
+  ],
   parserOptions: {
     ecmaVersion: 2018,
     sourceType: "module",
