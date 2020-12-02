@@ -1,0 +1,99 @@
+import { Meta, Story, Props, Preview } from "@storybook/addon-docs/blocks"
+import Card from "."
+import Link from "../Link"
+import Icon from "../Icon"
+
+<Meta title='components/Card' component={Card} />
+
+# Card
+
+A Card component.
+
+## Props
+
+<Props of={Card} />
+
+### Default
+
+<Preview>
+  <Story name='Default'>
+    <Card>
+      <Card.Intro>Something awesome</Card.Intro>
+      <Link to='/' variant='default'>
+        <Card.Image
+          image={{
+            src: "https://placeimg.com/1000/480/tech",
+            alt: "tech related stuff",
+          }}
+        />
+      </Link>
+      <Card.Heading>Let&#39;s code something now</Card.Heading>
+      <Card.Text>
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
+        ligula eget dolor. Aenean massa.
+      </Card.Text>
+      <Card.Button to='/'>Hire us now!</Card.Button>
+    </Card>
+  </Story>
+</Preview>
+
+### Centered
+
+<Preview>
+  <Story name='Centered'>
+    <Card align='center'>
+      <Card.Intro>Something awesome</Card.Intro>
+      <Link to='/' variant='default'>
+        <Card.Image
+          image={{
+            src: "https://placeimg.com/1000/480/tech",
+            alt: "tech related stuff",
+          }}
+        />
+      </Link>
+      <Card.Heading>Let&#39;s code something now</Card.Heading>
+      <Card.Text>
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
+        ligula eget dolor. Aenean massa.
+      </Card.Text>
+      <Card.Button to='/'>Hire us now!</Card.Button>
+    </Card>
+  </Story>
+</Preview>
+
+## Blog Teaser
+
+<Preview>
+  <Story name='Blog Teaser'>
+    <Card
+      sx={{
+        maxWidth: 400,
+        border: "2px solid grey",
+        m: "medium",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "flex-start",
+      }}
+    >
+      <Link to='/' variant='default'>
+        <Card.Image
+          image={{
+            src: "https://placeimg.com/1000/480/tech",
+            alt: "tech related stuff",
+          }}
+        />
+      </Link>
+      <Card.Heading>Let&#39;s code something now</Card.Heading>
+      <Card.Text sx={{ fontSize: "tiny" }}>
+        <Icon icon='calendar' sx={{ pt: 2, mr: "xsmall" }} />
+        Julio 2, 2020
+      </Card.Text>
+      <Card.RichText
+        sx={{ flex: 1 }}
+        text={`<strong>Lorem ipsum dolor sit amet</strong>, consectetuer adipiscing elit. 
+        Aenean commodo ligula eget dolor. Aenean massa.`}
+      />
+      <Card.Button to='/'>Read more</Card.Button>
+    </Card>
+  </Story>
+</Preview>
