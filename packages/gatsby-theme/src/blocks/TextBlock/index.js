@@ -17,8 +17,8 @@ TextBlock.propTypes = {
 }
 
 TextBlock.defaultProps = {
-  title: "",
-  text: "",
+  title: undefined,
+  text: undefined,
   align: "left",
 }
 
