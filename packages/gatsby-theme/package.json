@@ -1,5 +1,5 @@
 {
-  "name": "gatsby-starter-theme",
+  "name": "gatsby-theme",
   "private": true,
   "description": "UI Theme",
   "main": "lib/index.js",
