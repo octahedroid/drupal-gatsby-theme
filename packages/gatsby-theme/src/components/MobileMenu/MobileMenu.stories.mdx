@@ -3,29 +3,6 @@ import { Meta, Story, Props, Preview } from "@storybook/addon-docs/blocks"
 import MobileMenu from "."
 import Button from "../Button"
 
-export const BComponent = (args) => {
-  const [show, handleShow] = useState(false)
-  return (
-    <>
-      <Button onClick={() => handleShow(!show)}>Toggle</Button>
-      <MobileMenu
-        showSidebar={show}
-        handleShowSidebar={() => handleShow(!show)}
-        {...args}
-      >
-        <MobileMenu.Navbar>
-          {mainMenu &&
-            mainMenu.map((item) => (
-              <MobileMenu.Item key={item.name} to={item.to}>
-                {item.name}
-              </MobileMenu.Item>
-            ))}
-        </MobileMenu.Navbar>
-      </MobileMenu>
-    </>
-  )
-}
-
 export const mainMenu = [
   {
     name: "Home",
@@ -52,6 +29,29 @@ export const mainMenu = [
     to: "/",
   },
 ]
+
+export const BComponent = (args) => {
+  const [show, handleShow] = useState(false)
+  return (
+    <>
+      <Button onClick={() => handleShow(!show)}>Toggle</Button>
+      <MobileMenu
+        showSidebar={show}
+        handleShowSidebar={() => handleShow(!show)}
+        {...args}
+      >
+        <MobileMenu.Navbar>
+          {mainMenu &&
+            mainMenu.map((item) => (
+              <MobileMenu.Item key={item.name} to={item.to}>
+                {item.name}
+              </MobileMenu.Item>
+            ))}
+        </MobileMenu.Navbar>
+      </MobileMenu>
+    </>
+  )
+}
 
 <Meta title='components/MobileMenu' component={MobileMenu} />
 

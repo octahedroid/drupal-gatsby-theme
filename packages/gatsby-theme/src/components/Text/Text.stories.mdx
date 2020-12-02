@@ -1,7 +1,6 @@
 import { Meta, Story, Props, Preview } from "@storybook/addon-docs/blocks"
-import Text from "."
 import { Box } from "theme-ui"
-import Link from "../Link"
+import Text from "."
 
 <Meta title='components/Text' component={Text} />
 
@@ -45,12 +44,16 @@ Use this component to wrap common text
   <Story name='Using React Components'>
     <Text>
       <p>
-        This is <strong>bolded</strong> text. This is a <Link to='/'>link</Link>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet consectetur temporibus
-        id! <Box as='span' __css={{ color: "red" }}>
+        This is
+        <strong>{" bolded "}</strong>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet consectetur
+        temporibus id!
+        <Box as='span' __css={{ color: "red" }}>
           Impedit corporis
-        </Box>, exercitationem modi sed tenetur molestias nesciunt sunt aspernatur deleniti
-        velit officiis, <Box
+        </Box>
+        {` , exercitationem modi sed tenetur molestias nesciunt sunt aspernatur
+        deleniti velit officiis, `}
+        <Box
           as='span'
           __css={{
             borderBottom: "2px solid red",
@@ -60,8 +63,8 @@ Use this component to wrap common text
             },
           }}
         >
-          consectetur, praesentium omnis commodi
-        </Box>. Ducimus?{" "}
+          consectetur, praesentium omnis commodi.
+        </Box>
       </p>
       <ol>
         <li>Lorem</li>
