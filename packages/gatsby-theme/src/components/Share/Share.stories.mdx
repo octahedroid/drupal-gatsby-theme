@@ -1,0 +1,43 @@
+import { Meta, Story, Props, Preview } from "@storybook/addon-docs/blocks"
+import Share from "."
+
+<Meta title='components/Share' component={Share} />
+
+# Share
+
+Share links
+
+## Props
+
+<Props of={Share} />
+
+### Default
+
+<Preview>
+  <Story name='Default'>
+    <Share>
+      <Share.Heading />
+      <Share.Container>
+        <Share.Facebook to='https://octahedroid.com/' title='Octahedroid' />
+        <Share.Linkedin
+          to='https://octahedroid.com/'
+          title='Octahedroid'
+          summary='A summary of the site'
+          source='The source'
+        />
+        <Share.Reddit to='https://octahedroid.com/' title='Octahedroid' />
+        <Share.Twitter
+          to='https://octahedroid.com/'
+          title='Octahedroid'
+          handler='Octonauts'
+          hashtags={["octahedroid", "octonautas"]}
+        />
+        <Share.Whatsapp
+          to='https://octahedroid.com/'
+          title='Octahedroid'
+          separator='/'
+        />
+      </Share.Container>
+    </Share>
+  </Story>
+</Preview>

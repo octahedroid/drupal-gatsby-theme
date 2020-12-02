@@ -1,0 +1,90 @@
+import { Meta, Story, Props, Preview } from "@storybook/addon-docs/blocks"
+import { useArgs } from "@storybook/client-api"
+import _ from "lodash"
+import ShareBlock from "."
+import Section from "../../components/Section"
+
+export const config = {
+  title: `Octahedroid's new blogs`,
+  to: "https://octahedroid.com/",
+  twitter: {
+    title: "Octahedroid About Page",
+    to: "https://octahedroid.com/about/",
+    handler: "Octonauts",
+    hashtags: ["Octonautas", "Octahedroid"],
+  },
+  linkedin: {
+    source: "The source",
+    summary: "A summary",
+  },
+  whatsapp: {
+    separator: "/",
+  },
+}
+
+export const disabled = {
+  facebook: true,
+  reddit: true,
+}
+
+export const shareArgTypes = {
+  disabledOptions: {
+    control: {
+      type: "check",
+      show: "xd",
+      options: ["facebook", "linkedin", "reddit", "twitter", "whatsapp"],
+    },
+  },
+}
+
+<Meta title='blocks/ShareBlock' component={ShareBlock} />
+
+# ShareBlock
+
+## Props
+
+<Props of={ShareBlock} />
+
+export const ShareBlockTemplate = ({ disabledOptions }) => {
+  const [args, setArgs] = useArgs()
+  const disabledSettings = {}
+  if (disabledOptions) {
+    disabledOptions.forEach((el) => {
+      disabledSettings[el] = true
+    })
+    if (!_.isEqual(disabledSettings, args.disabled)) {
+      setArgs({ disabled: disabledSettings })
+    }
+  }
+  return <ShareBlock {...args} />
+}
+
+### Default ShareBlock
+
+<Preview>
+  <Story name='Default' args={{ config }} argTypes={shareArgTypes}>
+    {ShareBlockTemplate.bind({})}
+  </Story>
+</Preview>
+
+### Different heading
+
+<Preview>
+  <Story
+    name='Different heading'
+    args={{ config, heading: "Comparte:" }}
+    argTypes={shareArgTypes}
+  >
+    {ShareBlockTemplate.bind({})}
+  </Story>
+</Preview>
+
+### Disabling options
+
+<Preview>
+  <Story name='Disabling options'>
+    <Section>
+      <ShareBlock config={config} disabled={disabled} />
+    </Section>
+  </Story>
+</Preview>
