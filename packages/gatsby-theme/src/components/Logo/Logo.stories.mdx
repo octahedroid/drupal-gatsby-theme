@@ -2,11 +2,19 @@ import { Meta, Story, Props, Preview } from "@storybook/addon-docs/blocks"
 import { Box } from "theme-ui"
 import Logo from "."
 
-<Meta title='components/Logo' component={Logo} />
+export const BLogo = (args) => {
+  return <Logo {...args} />
+}
+
+<Meta
+  title='components/Logo'
+  component={Logo}
+  argTypes={{ fill: { control: "color" } }}
+/>
 
 # Logo
 
-Octahedroid logo
+Gatsby logo
 
 ## Props
 
@@ -15,9 +23,7 @@ Octahedroid logo
 ### Default
 
 <Preview>
-  <Story name='Default'>
-    <Logo />
-  </Story>
+  <Story name='Default'>{BLogo.bind({})}</Story>
 </Preview>
 
 ### Light version
@@ -25,7 +31,7 @@ Octahedroid logo
 <Preview>
   <Story name='Light version'>
     <Box sx={{ bg: "darkShade" }}>
-      <Logo width={50} fill='#fff' />
+      <Logo width={200} fill='#fff' />
     </Box>
   </Story>
 </Preview>
