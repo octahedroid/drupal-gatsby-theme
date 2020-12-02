@@ -5,11 +5,10 @@
     "starters/*"
   ],
   "scripts": {
-    "storybook": "yarn workspace gatsby-starter-theme storybook",
+    "storybook": "yarn workspace gatsby-theme storybook",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "format": "prettier --write \"**/*.{js,jsx,json,md,mdx}\"",
-    "website:develop": "yarn workspace octahedroid-starter gatsby develop"
+    "format": "prettier --write \"**/*.{js,jsx,json,md,mdx}\""
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",

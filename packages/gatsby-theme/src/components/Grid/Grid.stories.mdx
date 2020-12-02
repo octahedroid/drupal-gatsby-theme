@@ -1,5 +1,4 @@
 import { Meta, Story, Props, Preview } from "@storybook/addon-docs/blocks"
-import { withA11y } from "@storybook/addon-a11y"
 import { Box } from "theme-ui"
 import Grid from "."
 
@@ -13,7 +12,8 @@ export const GenerateColumns = ({ count }) => {
             key={index}
             __css={{ backgroundColor: colors[index % 3], p: "small" }}
           >
-            Column {index + 1}
+            Column
+            {` ${index + 1}`}
           </Box>
         )
       })}
@@ -73,7 +73,7 @@ the first column will a ratio of two to one
 
 <Preview>
   <Story name='Different proportions'>
-    <Grid proportion={"2:1"}>
+    <Grid proportion='2:1'>
       <GenerateColumns count={6} />
     </Grid>
   </Story>

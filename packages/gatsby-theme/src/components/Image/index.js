@@ -1,10 +1,10 @@
-import React from "react"
+import { forwardRef } from "react"
 import PropTypes from "prop-types"
 import { Box } from "theme-ui"
 import Img from "gatsby-image"
 import RichText from "../RichText"
 
-const Image = React.forwardRef(({ variant, caption, image, ...props }, ref) => {
+const Image = forwardRef(({ variant, caption, image, ...props }, ref) => {
   const isGatsbyImage = !image.src
   return (
     <Box as='figure' __css={{ m: 0 }} {...props}>

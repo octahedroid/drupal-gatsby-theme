@@ -1,8 +1,8 @@
-import React from "react"
+import { forwardRef } from "react"
 import PropTypes from "prop-types"
 import { Box, useThemeUI } from "theme-ui"
 
-const Button = React.forwardRef(({ to, variant, as, children, ...props }, ref) => {
+const Button = forwardRef(({ to, variant, as, children, ...props }, ref) => {
   const { theme } = useThemeUI()
   return (
     <Box

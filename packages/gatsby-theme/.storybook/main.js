@@ -1,11 +1,9 @@
 const path = require(`path`)
 
 module.exports = {
-  stories: [
-    "../src/components/**/*.stories.mdx",
-    "../src/components/**/*.stories.@(js|jsx|ts|tsx|mdx)",
-  ],
+  stories: ["../src/**/*.stories.mdx", "../src/**/*.stories.@(js|jsx|ts|tsx|mdx)"],
   addons: [
+    "@storybook/addon-controls",
     "@storybook/addon-links",
     "@storybook/addon-a11y",
     "@storybook/addon-essentials",
@@ -17,7 +15,7 @@ module.exports = {
     config.module.rules[0].use[0].loader = require.resolve("babel-loader")
     // use @babel/preset-react for JSX and env (instead of staged presets)
     config.module.rules[0].use[0].options.presets = [
-      require.resolve("@babel/preset-react"),
+      [require.resolve("@babel/preset-react"), { runtime: "automatic" }],
       require.resolve("@babel/preset-env"),
     ]
     config.module.rules[0].use[0].options.plugins = [

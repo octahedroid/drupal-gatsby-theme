@@ -1,0 +1,85 @@
+import { useState } from "react"
+import { Meta, Story, Props, Preview } from "@storybook/addon-docs/blocks"
+import MobileMenu from "."
+import Button from "../Button"
+
+export const mainMenu = [
+  {
+    name: "Home",
+    to: "/",
+  },
+  {
+    name: "About",
+    to: "/",
+  },
+  {
+    name: "JAMSTACK",
+    to: "/",
+  },
+  {
+    name: "CMS",
+    to: "/",
+  },
+  {
+    name: "WEB DEVELOPMENT",
+    to: "/",
+  },
+  {
+    name: "Contact",
+    to: "/",
+  },
+]
+
+export const BComponent = (args) => {
+  const [show, handleShow] = useState(false)
+  return (
+    <>
+      <Button onClick={() => handleShow(!show)}>Toggle</Button>
+      <MobileMenu
+        showSidebar={show}
+        handleShowSidebar={() => handleShow(!show)}
+        {...args}
+      >
+        <MobileMenu.Navbar>
+          {mainMenu &&
+            mainMenu.map((item) => (
+              <MobileMenu.Item key={item.name} to={item.to}>
+                {item.name}
+              </MobileMenu.Item>
+            ))}
+        </MobileMenu.Navbar>
+      </MobileMenu>
+    </>
+  )
+}
+
+<Meta title='components/MobileMenu' component={MobileMenu} />
+
+# MobileMenu
+
+Use this MobileMenu
+
+<Props of={MobileMenu} />
+
+### Default
+
+<Preview>
+  <Story name='Default'>{BComponent.bind({})}</Story>
+</Preview>
+
+### MegaMenu
+
+<Preview>
+  <Story name='MegaMenu'>
+    <MobileMenu showSidebar handleShowSidebar={() => {}}>
+      <MobileMenu.Navbar>
+        {mainMenu &&
+          mainMenu.map((item) => (
+            <MobileMenu.Item key={item.name} to={item.to}>
+              {item.name}
+            </MobileMenu.Item>
+          ))}
+      </MobileMenu.Navbar>
+    </MobileMenu>
+  </Story>
+</Preview>

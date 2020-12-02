@@ -1,4 +1,3 @@
-import React from "react"
 import { Box, Divider } from "theme-ui"
 import PropTypes from "prop-types"
 import ContentLoader from "react-content-loader"

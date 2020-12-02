@@ -1,0 +1,104 @@
+import { Meta, Story, Props, Preview } from "@storybook/addon-docs/blocks"
+import Heading from "."
+
+export const headingArgTypes = {
+  as: {
+    description: "HTML Tag",
+    control: {
+      type: "select",
+      options: ["h1", "h2", "h3", "h4", "h5", "h6"],
+    },
+  },
+  variant: {
+    description: "Style variants",
+    control: {
+      type: "select",
+      options: ["default", "big", "intro"],
+    },
+  },
+}
+
+<Meta title='components/Heading' component={Heading} />
+
+# Heading
+
+Common headings h1 to h6
+
+## Props
+
+<Props of={Heading} />
+
+export const HeadingTemplate = (args) => <Heading {...args} />
+
+### Default
+
+<Preview>
+  <Story
+    args={{ children: "Default is h2, change the tag in the controls tab." }}
+    argTypes={headingArgTypes}
+    name='Default'
+  >
+    {HeadingTemplate.bind({})}
+  </Story>
+</Preview>
+
+### Big heading
+
+<Preview>
+  <Story
+    name='Big heading'
+    args={{ children: "Big variant", variant: "big" }}
+    argTypes={headingArgTypes}
+  >
+    {HeadingTemplate.bind({})}
+  </Story>
+</Preview>
+
+### Intro heading
+
+<Preview>
+  <Story
+    name='Intro heading'
+    args={{ children: "Intro variant", variant: "intro" }}
+    argTypes={headingArgTypes}
+  >
+    {HeadingTemplate.bind({})}
+  </Story>
+</Preview>
+
+### With ID
+
+<Preview>
+  <Story
+    name='With ID'
+    args={{ children: "A nice title", id: "anchor" }}
+    argTypes={headingArgTypes}
+  >
+    {HeadingTemplate.bind({})}
+  </Story>
+</Preview>
+
+### With ID no anchor
+
+<Preview>
+  <Story
+    name='With ID no anchor'
+    args={{ children: "A nice title", id: "anchor", anchor: false }}
+    argTypes={headingArgTypes}
+  >
+    {HeadingTemplate.bind({})}
+  </Story>
+</Preview>
+
+### All sizes
+
+<Preview>
+  <Story name='All sizes'>
+    <Heading as='h1'>H1</Heading>
+    <Heading as='h2'>H2</Heading>
+    <Heading as='h3'>H3</Heading>
+    <Heading as='h4'>H4</Heading>
+    <Heading as='h5'>H5</Heading>
+    <Heading as='h6'>H6</Heading>
+  </Story>
+</Preview>
