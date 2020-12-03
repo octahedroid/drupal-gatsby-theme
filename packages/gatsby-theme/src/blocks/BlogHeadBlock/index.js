@@ -1,5 +1,5 @@
 import PropTypes from "prop-types"
-import BlogHead from "../../components/BlogHead"
+import { BlogHead } from "ui"
 
 const BlogHeadBlock = ({
   title,

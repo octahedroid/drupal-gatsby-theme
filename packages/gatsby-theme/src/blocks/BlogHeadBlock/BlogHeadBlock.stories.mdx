@@ -27,7 +27,12 @@ export const blogHeadArgTypes = {
   },
 }
 
-<Meta title='blocks/BlogHeadBlock' component={BlogHeadBlock} />
+<Meta
+  title='blocks/BlogHeadBlock'
+  component={BlogHeadBlock}
+  args={{ ...data }}
+  argTypes={blogHeadArgTypes}
+/>
 
 # BlogHeadBlock
 
@@ -40,9 +45,7 @@ export const BlogHeadBlockTemplate = (args) => <BlogHeadBlock {...args} />
 ### Default BlogHeadBlock
 
 <Preview>
-  <Story name='Default' args={{ ...data }} argTypes={blogHeadArgTypes}>
-    {BlogHeadBlockTemplate.bind({})}
-  </Story>
+  <Story name='Default'>{BlogHeadBlockTemplate.bind({})}</Story>
 </Preview>
 
 ## No author link
