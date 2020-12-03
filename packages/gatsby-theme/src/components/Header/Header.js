@@ -1,4 +1,4 @@
-import React from "react"
+import { forwardRef } from "react"
 import PropTypes from "prop-types"
 import { Box } from "theme-ui"
 import { SkipNavLink } from "@reach/skip-nav"
@@ -25,7 +25,7 @@ const SkipNavStyles = {
   },
 }
 
-const Header = React.forwardRef(({ children, shadow }, ref) => {
+const Header = forwardRef(({ children, shadow }, ref) => {
   return (
     <Box
       as='nav'
