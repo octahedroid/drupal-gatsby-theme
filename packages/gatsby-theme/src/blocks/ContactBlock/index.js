@@ -1,5 +1,5 @@
 import PropTypes from "prop-types"
-import Contact from "../../components/Contact"
+import { Contact } from "ui"
 
 const ContactBlock = ({ heading, align, contactInfo }) => {
   return (

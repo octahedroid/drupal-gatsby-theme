@@ -1,8 +1,6 @@
 import PropTypes from "prop-types"
 import { Box } from "theme-ui"
-import Icon from "../Icon"
-import RichText from "../RichText"
-import Heading from "../Heading"
+import { Icon, Heading, RichText } from "ui"
 
 const ContactItem = ({ title, text, icon, align, ...props }) => {
   return (
