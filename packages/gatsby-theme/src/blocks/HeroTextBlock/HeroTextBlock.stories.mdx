@@ -1,0 +1,37 @@
+import { Meta, Story, Props, Preview } from "@storybook/addon-docs/blocks"
+import HeroTextBlock from "."
+
+export const data = {
+  title: "We create digital experience that advances the human experience",
+  text: `Our creative thinking, technology expertise, and passion for problem
+          solving are only surpassed by our desire to learn, collaborate, and
+          share knowledge openly with everyone`,
+}
+
+<Meta title='blocks/HeroTextBlock' component={HeroTextBlock} />
+
+# HeroTextBlock
+
+You can use it to a Hero Text block
+
+## Props
+
+<Props of={HeroTextBlock} />
+
+export const HeroTextBlockTemplate = (args) => <HeroTextBlock {...args} />
+
+### Default HeroTextBlock
+
+<Preview>
+  <Story name='Default' args={{ ...data }}>
+    {HeroTextBlockTemplate.bind({})}
+  </Story>
+</Preview>
+
+### With Intro
+
+<Preview>
+  <Story name='With Intro' args={{ ...data, intro: "A nice intro" }}>
+    {HeroTextBlockTemplate.bind({})}
+  </Story>
+</Preview>
