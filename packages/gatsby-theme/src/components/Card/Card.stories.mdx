@@ -3,7 +3,114 @@ import Card from "."
 import Link from "../Link"
 import Icon from "../Icon"
 
-<Meta title='components/Card' component={Card} />
+export const argTypes = {
+  align: {
+    control: {
+      type: "select",
+      options: ["left", "center", "right"],
+    },
+    table: {
+      category: "Card",
+    },
+  },
+  to: {
+    table: {
+      category: "Card",
+    },
+  },
+  children: {
+    table: {
+      disable: true,
+    },
+  },
+  Intro: {
+    control: "text",
+    table: {
+      category: "Card Intro",
+    },
+  },
+  Heading: {
+    control: "text",
+    table: {
+      category: "Card Heading",
+    },
+  },
+  LinkTo: {
+    control: "text",
+    table: {
+      category: "Card Link",
+    },
+  },
+  LinkVariant: {
+    control: "text",
+    table: {
+      category: "Card Link",
+    },
+  },
+  ImageSrc: {
+    control: "text",
+    table: {
+      category: "Card Image",
+    },
+  },
+  ImageAlt: {
+    control: "text",
+    table: {
+      category: "Card Image",
+    },
+  },
+  Text: {
+    control: "text",
+    table: {
+      category: "Card Text",
+    },
+  },
+  ButtonTo: {
+    control: "text",
+    table: {
+      category: "Card Button",
+    },
+  },
+  ButtonText: {
+    control: "text",
+    table: {
+      category: "Card Button",
+    },
+  },
+}
+
+export const BTemplate = ({
+  Intro,
+  Heading,
+  LinkTo,
+  LinkVariant,
+  ImageSrc,
+  ImageAlt,
+  Text,
+  ButtonTo,
+  ButtonText,
+  align,
+  to,
+}) => {
+  return (
+    <Card align={align} to={to}>
+      <Card.Intro>{Intro}</Card.Intro>
+      <Link to={LinkTo} variant={LinkVariant}>
+        <Card.Image
+          image={{
+            src: ImageSrc,
+            alt: ImageAlt,
+          }}
+        />
+      </Link>
+      <Card.Heading>{Heading}</Card.Heading>
+      <Card.Text>{Text}</Card.Text>
+      <Card.Button to={ButtonTo}>{ButtonText}</Card.Button>
+    </Card>
+  )
+}
+
+<Meta title='components/Card' component={Card} argTypes={argTypes} />
 
 # Card
 
@@ -13,27 +120,98 @@ A Card component.
 
 <Props of={Card} />
 
-### Default
+### With inner component
 
 <Preview>
-  <Story name='Default'>
-    <Card>
-      <Card.Intro>Something awesome</Card.Intro>
-      <Link to='/' variant='default'>
-        <Card.Image
-          image={{
-            src: "https://placeimg.com/1000/480/tech",
-            alt: "tech related stuff",
-          }}
-        />
-      </Link>
-      <Card.Heading>Let&#39;s code something now</Card.Heading>
-      <Card.Text>
-        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
-        ligula eget dolor. Aenean massa.
-      </Card.Text>
-      <Card.Button to='/'>Hire us now!</Card.Button>
-    </Card>
+  <Story
+    name='With inner component'
+    args={{
+      Intro: "Something awesome",
+      LinkTo: "/",
+      LinkVariant: "default",
+      ImageSrc: "https://placeimg.com/1000/480/tech",
+      ImageAlt: "tech related stuff",
+      Heading: "Let's code something now",
+      Text: `Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
+        ligula eget dolor. Aenean massa.`,
+      ButtonTo: "/",
+      ButtonText: "Hire us now!",
+    }}
+  >
+    {({
+      Intro,
+      Heading,
+      LinkTo,
+      LinkVariant,
+      ImageSrc,
+      ImageAlt,
+      Text,
+      ButtonTo,
+      ButtonText,
+      align,
+      to,
+    }) => {
+      return (
+        <Card align={align} to={to}>
+          <Card.Intro>{Intro}</Card.Intro>
+          <Link to={LinkTo} variant={LinkVariant}>
+            <Card.Image
+              image={{
+                src: ImageSrc,
+                alt: ImageAlt,
+              }}
+            />
+          </Link>
+          <Card.Heading>{Heading}</Card.Heading>
+          <Card.Text>{Text}</Card.Text>
+          <Card.Button to={ButtonTo}>{ButtonText}</Card.Button>
+        </Card>
+      )
+    }}
+  </Story>
+</Preview>
+
+### With outer component
+
+<Preview>
+  <Story
+    name='With outer component'
+    args={{
+      Intro: "Something awesome",
+      LinkTo: "/",
+      LinkVariant: "default",
+      ImageSrc: "https://placeimg.com/1000/480/tech",
+      ImageAlt: "tech related stuff",
+      Heading: "Let's code something now",
+      Text: `Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
+        ligula eget dolor. Aenean massa.`,
+      ButtonTo: "/",
+      ButtonText: "Hire us now!",
+    }}
+  >
+    {(args) => <BTemplate {...args} />}
+  </Story>
+</Preview>
+
+### With bind
+
+<Preview>
+  <Story
+    name='With bind'
+    args={{
+      Intro: "Something awesome",
+      LinkTo: "/",
+      LinkVariant: "default",
+      ImageSrc: "https://placeimg.com/1000/480/tech",
+      ImageAlt: "tech related stuff",
+      Heading: "Let's code something now",
+      Text: `Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
+        ligula eget dolor. Aenean massa.`,
+      ButtonTo: "/",
+      ButtonText: "Hire us now!",
+    }}
+  >
+    {BTemplate.bind({})}
   </Story>
 </Preview>
 
