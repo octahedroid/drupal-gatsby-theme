@@ -1,30 +1,28 @@
-import React from "react"
+import { forwardRef } from "react"
 import PropTypes from "prop-types"
 import { Box } from "theme-ui"
 import Grid from "../Grid"
 
-const HeroCta = React.forwardRef(
-  ({ proportion, gutter, children, sx, ...props }, ref) => {
-    return (
-      <Box variant='wrapper' __themeKey='container'>
-        <Grid
-          ref={ref}
-          proportion={proportion}
-          columnGap={gutter}
-          sx={{
-            pt: ["medium", null, "xsmall"],
-            pb: ["none", null, "small"],
-            px: "small",
-            ...sx,
-          }}
-          {...props}
-        >
-          {children}
-        </Grid>
-      </Box>
-    )
-  }
-)
+const HeroCta = forwardRef(({ proportion, gutter, children, sx, ...props }, ref) => {
+  return (
+    <Box variant='wrapper' __themeKey='container'>
+      <Grid
+        ref={ref}
+        proportion={proportion}
+        columnGap={gutter}
+        sx={{
+          pt: ["medium", null, "xsmall"],
+          pb: ["none", null, "small"],
+          px: "small",
+          ...sx,
+        }}
+        {...props}
+      >
+        {children}
+      </Grid>
+    </Box>
+  )
+})
 
 HeroCta.propTypes = {
   proportion: PropTypes.string,
