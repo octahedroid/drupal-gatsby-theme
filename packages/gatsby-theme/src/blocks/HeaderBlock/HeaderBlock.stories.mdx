@@ -1,0 +1,38 @@
+import { Meta, Story, Props, Preview } from "@storybook/addon-docs/blocks"
+import HeaderBlock from "."
+
+export const mainMenu = [
+  {
+    name: "Home",
+    to: "/",
+    active: true,
+  },
+  {
+    name: "About",
+    to: "/",
+  },
+  {
+    name: "Blog",
+    to: "/",
+  },
+  {
+    name: "Contact",
+    to: "/",
+  },
+]
+
+<Meta title='blocks/HeaderBlock' component={HeaderBlock} />
+
+# HeaderBlock
+
+## Props
+
+<Props of={HeaderBlock} />
+
+### Default
+
+<Preview height='250'>
+  <Story name='Default'>
+    <HeaderBlock links={mainMenu} />
+  </Story>
+</Preview>
