@@ -10,19 +10,19 @@ const ShareBlock = ({ heading, config, disabled, ...props }) => {
       <Share {...props}>
         {heading && <Share.Heading>{heading}</Share.Heading>}
         <Share.Container>
-          {!disabled.facebook && (
+          {!disabled.facebook && config.facebook && (
             <Share.Facebook {...generalConfig} {...config.facebook} />
           )}
-          {!disabled.linkedin && (
+          {!disabled.linkedin && config.linkedin && (
             <Share.Linkedin {...generalConfig} {...config.linkedin} />
           )}
-          {!disabled.reddit && (
+          {!disabled.reddit && config.reddit && (
             <Share.Reddit {...generalConfig} {...config.reddit} />
           )}
-          {!disabled.twitter && (
+          {!disabled.twitter && config.twitter && (
             <Share.Twitter {...generalConfig} {...config.twitter} />
           )}
-          {!disabled.whatsapp && (
+          {!disabled.whatsapp && config.whatsapp && (
             <Share.Whatsapp {...generalConfig} {...config.whatsapp} />
           )}
         </Share.Container>

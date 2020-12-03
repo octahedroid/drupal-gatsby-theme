@@ -1,5 +1,6 @@
 import { Meta, Story, Props, Preview } from "@storybook/addon-docs/blocks"
 import Share from "."
+import ShareSocial from "./ShareSocial"
 
 <Meta title='components/Share' component={Share} />
 
@@ -36,6 +37,20 @@ Share links
           to='https://octahedroid.com/'
           title='Octahedroid'
           separator='/'
+        />
+      </Share.Container>
+    </Share>
+  </Story>
+</Preview>
+
+<Preview>
+  <Story name='Fb'>
+    <Share>
+      <Share.Container>
+        <ShareSocial
+          social='facebook'
+          to='https://octahedroid.com/'
+          title='Octahedroid'
         />
       </Share.Container>
     </Share>
