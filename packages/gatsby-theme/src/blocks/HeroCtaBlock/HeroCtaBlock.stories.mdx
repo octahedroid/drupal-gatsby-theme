@@ -1,0 +1,73 @@
+import { Meta, Story, Props, Preview } from "@storybook/addon-docs/blocks"
+import HeroCtaBlock from "."
+
+export const data = {
+  intro: "Some nice intro",
+  title: "A title",
+  text: `If you have multiple tasks that you want to convert into subtasks, utilize the Multitask Toolbar to select multiple tasks, statuses, or entire Lists and convert them into subtasks.`,
+  image: {
+    src: "https://placeimg.com/700/480/tech",
+    alt: "tech related stuff",
+  },
+  linkTo: "/",
+  ctaText: "CTA",
+  columnProportion: "1:1",
+}
+
+<Meta title='blocks/HeroCtaBlock' component={HeroCtaBlock} />
+
+# HeroCtaBlock
+
+You can use it to a Hero Block with a CTA
+
+## Props
+
+<Props of={HeroCtaBlock} />
+
+export const HeroCtaBlockTemplate = (args) => <HeroCtaBlock {...args} />
+
+### Default HeroCtaBlock
+
+<Preview>
+  <Story name='Default' args={{ ...data }}>
+    {HeroCtaBlockTemplate.bind({})}
+  </Story>
+</Preview>
+
+### Different Gutter
+
+<Preview>
+  <Story name='Different Gutter' args={{ ...data, gutter: "80px" }}>
+    {HeroCtaBlockTemplate.bind({})}
+  </Story>
+</Preview>
+
+### Reversed
+
+<Preview>
+  <Story name='Reversed' args={{ ...data, reversed: true }}>
+    {HeroCtaBlockTemplate.bind({})}
+  </Story>
+</Preview>
+
+### Different Column Proportions
+
+<Preview>
+  <Story
+    name='Different Column Proportions'
+    args={{ ...data, columnProportion: "2:1" }}
+  >
+    {HeroCtaBlockTemplate.bind({})}
+  </Story>
+</Preview>
+
+### Different Column Proportion Reversed
+
+<Preview>
+  <Story
+    name='Different Column Proportions Reversed'
+    args={{ ...data, columnProportion: "2:1", reversed: true }}
+  >
+    {HeroCtaBlockTemplate.bind({})}
+  </Story>
+</Preview>

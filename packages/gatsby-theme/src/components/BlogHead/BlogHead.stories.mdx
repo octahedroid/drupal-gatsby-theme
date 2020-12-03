@@ -1,0 +1,38 @@
+import { Meta, Story, Props, Preview } from "@storybook/addon-docs/blocks"
+import BlogHead from "."
+
+<Meta title='components/BlogHead' component={BlogHead} />
+
+# BlogHead
+
+Use this component to insert common BlogHead
+
+## Props
+
+<Props of={BlogHead} />
+
+### BlogHead
+
+<Preview>
+  <Story name='Default'>
+    <BlogHead>
+      <BlogHead.Image
+        image={{
+          src:
+            "https://3czfu91fpa5s34atq735lonm-wpengine.netdna-ssl.com/wp-content/uploads/2018/12/types-of-infrastructure.jpeg",
+          alt: "Roads",
+        }}
+      />
+      <BlogHead.Credits>Via Unsplash</BlogHead.Credits>
+      <BlogHead.Container>
+        <BlogHead.Title>
+          Gatsby's long road to incremental builds with Kyle Mathews
+        </BlogHead.Title>
+        <BlogHead.Author to='/' ariaLabel='Marco'>
+          Marco José Sánchez
+        </BlogHead.Author>
+        <BlogHead.Date>Julio 2, 2020</BlogHead.Date>
+      </BlogHead.Container>
+    </BlogHead>
+  </Story>
+</Preview>

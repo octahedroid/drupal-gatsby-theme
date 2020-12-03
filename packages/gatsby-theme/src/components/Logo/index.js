@@ -38,7 +38,7 @@ Logo.propTypes = {
 }
 
 Logo.defaultProps = {
-  width: 200,
+  width: 50,
   fill: null,
 }
 export default Logo

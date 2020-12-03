@@ -1,0 +1,92 @@
+import { Meta, Story, Props, Preview } from "@storybook/addon-docs/blocks"
+import BlogHeadBlock from "."
+
+export const data = {
+  title: `Gatsby's long road to incremental builds with Kyle Mathews`,
+  credits: "Via Unsplash",
+  author: {
+    name: "Marco José Sánchez",
+    link: "/",
+    ariaLabel: "Marco",
+  },
+  date: "Julio 2, 2020",
+  image: {
+    src:
+      "https://3czfu91fpa5s34atq735lonm-wpengine.netdna-ssl.com/wp-content/uploads/2018/12/types-of-infrastructure.jpeg",
+    alt: "Roads",
+  },
+}
+
+export const blogHeadArgTypes = {
+  backgroundColor: {
+    description: "Background overlay color",
+    control: {
+      type: "color",
+      presetColors: ["#001133CC"],
+    },
+  },
+}
+
+<Meta
+  title='blocks/BlogHeadBlock'
+  component={BlogHeadBlock}
+  args={{ ...data }}
+  argTypes={blogHeadArgTypes}
+/>
+
+# BlogHeadBlock
+
+## Props
+
+<Props of={BlogHeadBlock} />
+
+export const BlogHeadBlockTemplate = (args) => <BlogHeadBlock {...args} />
+
+### Default BlogHeadBlock
+
+<Preview>
+  <Story name='Default'>{BlogHeadBlockTemplate.bind({})}</Story>
+</Preview>
+
+## No author link
+
+<Preview>
+  <Story
+    name='No author link'
+    args={{ ...data, author: { name: "Marco José Sánchez" } }}
+    argTypes={blogHeadArgTypes}
+  >
+    {BlogHeadBlockTemplate.bind({})}
+  </Story>
+</Preview>
+
+### No image
+
+<Preview>
+  <Story
+    name='No image'
+    args={{ ...data, image: undefined, credits: undefined }}
+    argTypes={blogHeadArgTypes}
+  >
+    {BlogHeadBlockTemplate.bind({})}
+  </Story>
+</Preview>
+
+### Custom Background Overlay Color
+
+This accepts any valid CSS color value
+
+<Preview>
+  <Story
+    name='Custom Background Overlay Color'
+    args={{
+      ...data,
+      image: undefined,
+      credits: undefined,
+      backgroundColor: "#001133CC",
+    }}
+    argTypes={blogHeadArgTypes}
+  >
+    {BlogHeadBlockTemplate.bind({})}
+  </Story>
+</Preview>
