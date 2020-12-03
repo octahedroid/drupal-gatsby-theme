@@ -1,8 +1,7 @@
 import { forwardRef } from "react"
 import PropTypes from "prop-types"
 import { Box } from "theme-ui"
-import Icon from "../Icon"
-import Link from "../Link"
+import { Icon, Link } from "ui"
 
 const Heading = forwardRef(
   ({ as, id, anchor, variant, children, ...props }, ref) => (

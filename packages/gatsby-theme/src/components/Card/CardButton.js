@@ -1,6 +1,5 @@
 import PropTypes from "prop-types"
-import Button from "../Button"
-import Link from "../Link"
+import { Button, Link } from "ui"
 
 const CardButton = ({ children, variant, to, ...props }) => (
   <Button as={Link} variant={variant} to={to} {...props}>

@@ -1,5 +1,5 @@
 import PropTypes from "prop-types"
-import Icon from "../Icon"
+import { Icon } from "ui"
 
 const FooterIcon = ({ icon, variant }) => {
   return <Icon icon={icon} variant={variant} sx={{ mt: "tiny" }} />

@@ -1,5 +1,5 @@
 import PropTypes from "prop-types"
-import Heading from "../Heading"
+import { Heading } from "ui"
 
 const HeroTextTitle = ({ children, sx }) => (
   <Heading sx={{ fontSize: ["3xl", null, "5xl"], ...sx }}>{children}</Heading>

@@ -1,7 +1,6 @@
 import PropTypes from "prop-types"
 import { Box } from "theme-ui"
-import Button from "../Button"
-import Icon from "../Icon"
+import { Button, Icon } from "ui"
 
 const HeaderNavbar = ({ handleShowSidebar, children }) => {
   return (
