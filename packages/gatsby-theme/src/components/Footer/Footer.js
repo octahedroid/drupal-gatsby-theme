@@ -1,9 +1,9 @@
-import React from "react"
+import { forwardRef } from "react"
 import PropTypes from "prop-types"
 import { Box } from "theme-ui"
 import Section from "../Section"
 
-const Footer = React.forwardRef(
+const Footer = forwardRef(
   ({ children, size, align, isFull, variant, ...props }, ref) => {
     const alignOptions = {
       default: ["center", null, "flex-start"],
