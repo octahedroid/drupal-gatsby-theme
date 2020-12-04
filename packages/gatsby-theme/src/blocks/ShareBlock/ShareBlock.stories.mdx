@@ -46,7 +46,7 @@ export const shareArgTypes = {
   },
 }
 
-<Meta title='blocks/ShareBlock' component={ShareBlock} />
+<Meta title='blocks/ShareBlock' component={ShareBlock} argTypes={shareArgTypes} />
 
 # ShareBlock
 
@@ -75,7 +75,7 @@ export const ShareBlockTemplate = ({ disabledOptions }) => {
 ### Default ShareBlock
 
 <Preview>
-  <Story name='Default' args={{ data }} argTypes={shareArgTypes}>
+  <Story name='Default' args={{ data }}>
     {ShareBlockTemplate.bind({})}
   </Story>
 </Preview>
@@ -83,11 +83,7 @@ export const ShareBlockTemplate = ({ disabledOptions }) => {
 ### Different heading
 
 <Preview>
-  <Story
-    name='Different heading'
-    args={{ data, heading: "Comparte:" }}
-    argTypes={shareArgTypes}
-  >
+  <Story name='Different heading' args={{ data, heading: "Comparte:" }}>
     {ShareBlockTemplate.bind({})}
   </Story>
 </Preview>

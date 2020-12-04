@@ -34,22 +34,38 @@ const ShareSocial = forwardRef(
     },
     ref
   ) => {
+    const Component = Socials[social]
     return (
       <Box
-        summary={social === "linkedin" && summary}
-        source={source === "linkedin" && source}
-        separator={social === "whatsapp" && separator}
-        via={social === "twitter" && handler}
-        hashtags={social === "twitter" && hashtags}
-        as={Socials[social]}
-        url={to}
-        title={title}
-        resetButtonStyle={false}
-        ref={ref}
-        {...props}
+        __css={{
+          button: {
+            fontSize: "2xl",
+            lineHeight: "0",
+            mx: "xsmall",
+            cursor: "pointer",
+            background: "transparent",
+            border: "none",
+            ":hover": {
+              color: "secondary",
+            },
+          },
+        }}
       >
-        <Icon icon={social} />
-        {children}
+        <Component
+          summary={summary}
+          source={source}
+          separator={separator}
+          via={handler}
+          hashtags={hashtags}
+          url={to}
+          title={title}
+          resetButtonStyle={false}
+          ref={ref}
+          {...props}
+        >
+          <Icon icon={social} />
+          {children}
+        </Component>
       </Box>
     )
   }

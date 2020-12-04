@@ -8,17 +8,6 @@ const ShareContainer = ({ children, ...props }) => {
         display: "flex",
         alignItems: "center",
         color: "darkShade",
-        button: {
-          fontSize: "2xl",
-          lineHeight: "0",
-          mx: "xsmall",
-          cursor: "pointer",
-          background: "transparent",
-          border: "none",
-          ":hover": {
-            color: "secondary",
-          },
-        },
       }}
       {...props}
     >

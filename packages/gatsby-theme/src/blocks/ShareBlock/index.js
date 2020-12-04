@@ -1,6 +1,6 @@
 import PropTypes from "prop-types"
 import { Box } from "theme-ui"
-import Share from "../../components/Share"
+import { Share } from "ui"
 
 const ShareBlock = ({ heading, data, ...props }) => {
   return (
@@ -9,7 +9,7 @@ const ShareBlock = ({ heading, data, ...props }) => {
         {heading && <Share.Heading>{heading}</Share.Heading>}
         <Share.Container>
           {data.map((item) => {
-            return !item.disabled && <Share.Social {...item} />
+            return !item.disabled && <Share.Social {...item} key={item.social} />
           })}
         </Share.Container>
       </Share>
