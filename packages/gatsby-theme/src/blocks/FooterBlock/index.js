@@ -1,5 +1,5 @@
 import PropTypes from "prop-types"
-import Footer from "../../components/Footer"
+import { Footer } from "ui"
 
 const FooterBlock = ({ isFull, variant, branding }) => {
   return (
