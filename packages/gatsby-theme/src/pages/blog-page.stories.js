@@ -2,7 +2,6 @@ import { useState } from "react"
 import { Box } from "theme-ui"
 import { SkipNavContent } from "@reach/skip-nav"
 import {
-  Contact,
   Header,
   Section,
   Image,
@@ -14,6 +13,7 @@ import {
   MobileMenu,
   Heading,
 } from "ui"
+import ContactBlock from "../blocks/ContactBlock"
 
 export default { title: "pages/Blog" }
 
@@ -43,6 +43,10 @@ const mainMenu = [
     to: "/",
   },
 ]
+
+const heading =
+  "Tell us about your project. And we will contact you promptly to discuss next steps"
+
 const contactInfo = [
   {
     title: "Email",
@@ -226,13 +230,10 @@ export const BlogPost = () => {
           <Footer.Branding to='/' ariaLabel='Back to Home'>
             <Logo width={200} fill='#fff' />
           </Footer.Branding>
-          <Contact>
-            <Contact.Header>
-              Tell us about your project. And we will contact you promptly to discuss
-              next steps.
-            </Contact.Header>
-            <Contact.Grid contactInfo={contactInfo} />
-          </Contact>
+          <ContactBlock heading={heading} contactInfo={contactInfo}>
+            Tell us about your project. And we will contact you promptly to discuss
+            next steps.
+          </ContactBlock>
         </Footer>
       </Section>
     </Box>
