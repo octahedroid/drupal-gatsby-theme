@@ -3,28 +3,43 @@ import { Box } from "theme-ui"
 import Share from "../../components/Share"
 
 const ShareBlock = ({ heading, config, disabled, ...props }) => {
-  const generalConfig = { title: config.title, to: config.to }
+  // const generalConfig = { title: config.title, to: config.to }
 
   return (
     <Box variant='wrapper' __themeKey='container'>
       <Share {...props}>
         {heading && <Share.Heading>{heading}</Share.Heading>}
         <Share.Container>
-          {!disabled.facebook && config.facebook && (
-            <Share.Facebook {...generalConfig} {...config.facebook} />
+          {config.map((option) => {
+            return !option.disabled && <Share.Social {...option} />
+          })}
+          {/* {!disabled.facebook && config.facebook && (
+            <Share.Social
+              social='facebook'
+              {...generalConfig}
+              {...config.facebook}
+            />
           )}
           {!disabled.linkedin && config.linkedin && (
-            <Share.Linkedin {...generalConfig} {...config.linkedin} />
+            <Share.Social
+              social='linkedin'
+              {...generalConfig}
+              {...config.linkedin}
+            />
           )}
           {!disabled.reddit && config.reddit && (
-            <Share.Reddit {...generalConfig} {...config.reddit} />
+            <Share.Social social='reddit' {...generalConfig} {...config.reddit} />
           )}
           {!disabled.twitter && config.twitter && (
-            <Share.Twitter {...generalConfig} {...config.twitter} />
+            <Share.Social social='twitter' {...generalConfig} {...config.twitter} />
           )}
           {!disabled.whatsapp && config.whatsapp && (
-            <Share.Whatsapp {...generalConfig} {...config.whatsapp} />
-          )}
+            <Share.Social
+              social='whatsapp'
+              {...generalConfig}
+              {...config.whatsapp}
+            />
+          )} */}
         </Share.Container>
       </Share>
     </Box>
@@ -36,6 +51,7 @@ const generalProps = { title: PropTypes.string, to: PropTypes.string }
 ShareBlock.propTypes = {
   heading: PropTypes.string,
   config: PropTypes.shape({
+    map: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     to: PropTypes.string.isRequired,
     facebook: PropTypes.shape({

@@ -2,30 +2,40 @@ import { Meta, Story, Props, Preview } from "@storybook/addon-docs/blocks"
 import { useArgs } from "@storybook/client-api"
 import _ from "lodash"
 import ShareBlock from "."
-import Section from "../../components/Section"
 
-export const config = {
-  title: `Octahedroid's new blogs`,
-  to: "https://octahedroid.com/",
-  twitter: {
+export const config = [
+  {
+    social: "twitter",
     title: "Octahedroid About Page",
     to: "https://octahedroid.com/about/",
     handler: "Octonauts",
     hashtags: ["Octonautas", "Octahedroid"],
+    disabled: false,
   },
-  linkedin: {
+  {
+    social: "linkedin",
     source: "The source",
     summary: "A summary",
+    disabled: false,
   },
-  whatsapp: {
+  {
+    social: "whatsapp",
     separator: "/",
+    disabled: false,
   },
-}
-
-export const disabled = {
-  facebook: true,
-  reddit: true,
-}
+  {
+    social: "facebook",
+    to: "https://octahedroid.com/",
+    title: "Octahedroid",
+    disabled: false,
+  },
+  {
+    social: "reddit",
+    to: "https://octahedroid.com/",
+    title: "Octahedroid",
+    disabled: false,
+  },
+]
 
 export const shareArgTypes = {
   disabledOptions: {
@@ -46,15 +56,31 @@ export const shareArgTypes = {
 
 export const ShareBlockTemplate = ({ disabledOptions }) => {
   const [args, setArgs] = useArgs()
-  const disabledSettings = {}
+  const disabledSettings = []
   if (disabledOptions) {
-    disabledOptions.forEach((el) => {
-      disabledSettings[el] = true
+    config.forEach((item) => {
+      const disabled = disabledOptions.some((option) => option === item.social)
+      console.log(disabledOptions)
+      disabledSettings.push({
+        ...item,
+        disabled,
+      })
     })
-    if (!_.isEqual(disabledSettings, args.disabled)) {
-      setArgs({ disabled: disabledSettings })
-    }
+    // setArgs({ config: disabledSettings })
   }
+  if (!_.isEqual(disabledSettings, args.config) && disabledSettings.length > 0) {
+    console.log("hh", disabledSettings)
+    setArgs({ config: disabledSettings })
+  }
+  // if (disabledOptions) {
+  //   disabledOptions.forEach((option) => {
+  //     config.filter((item) => item.social === option)
+  //     disabledSettings[el] = true
+  //   })
+  // if (!_.isEqual(disabledSettings, args.disabled)) {
+  //   setArgs({ disabled: disabledSettings })
+  // }
+  console.log("args", args)
   return <ShareBlock {...args} />
 }
 
@@ -75,15 +101,5 @@ export const ShareBlockTemplate = ({ disabledOptions }) => {
     argTypes={shareArgTypes}
   >
     {ShareBlockTemplate.bind({})}
-  </Story>
-</Preview>
-
-### Disabling options
-
-<Preview>
-  <Story name='Disabling options'>
-    <Section>
-      <ShareBlock config={config} disabled={disabled} />
-    </Section>
   </Story>
 </Preview>

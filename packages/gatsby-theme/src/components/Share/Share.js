@@ -1,7 +1,7 @@
 import PropTypes from "prop-types"
 import { Box } from "theme-ui"
 
-const Share = ({ children, ...props }) => {
+const Share = ({ social, children, ...props }) => {
   return (
     <Box
       __css={{
@@ -10,6 +10,7 @@ const Share = ({ children, ...props }) => {
         flexWrap: "wrap",
         alignItems: "center",
       }}
+      social={social}
       {...props}
     >
       {children}
@@ -19,6 +20,7 @@ const Share = ({ children, ...props }) => {
 
 Share.propTypes = {
   children: PropTypes.node.isRequired,
+  social: PropTypes.string.isRequired,
 }
 
 export default Share
