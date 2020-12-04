@@ -1,8 +1,6 @@
 import { useState, useEffect } from "react"
 import PropTypes from "prop-types"
-import Header from "../../components/Header"
-import MobileMenu from "../../components/MobileMenu"
-import Logo from "../../components/Logo"
+import { Header, MobileMenu, Logo } from "ui"
 
 const HeaderBlock = ({ links }) => {
   const [scrolledMenu, setScrolledMenu] = useState(false)
@@ -30,11 +28,7 @@ const HeaderBlock = ({ links }) => {
         <Header.Navbar handleShowSidebar={handleShowSidebar}>
           {links &&
             links.map((item) => (
-              <Header.MenuItem
-                key={item.name}
-                to={item.to}
-                variant={item.active ? "menuItemLinkActive" : "menuItemLink"}
-              >
+              <Header.MenuItem key={item.name} to={item.to} active={item.active}>
                 {item.name}
               </Header.MenuItem>
             ))}
