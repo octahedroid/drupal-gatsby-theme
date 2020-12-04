@@ -2,9 +2,9 @@ import { useState } from "react"
 import { Box } from "theme-ui"
 import { SkipNavContent } from "@reach/skip-nav"
 
-import { Header, Section, Grid, Heading, Card, Link, Logo, MobileMenu } from "ui"
+import { Section, Grid, Heading, Card, Link, MobileMenu } from "ui"
 
-import { FooterBlock } from "blocks"
+import { FooterBlock, HeaderBlock } from "blocks"
 import HeroCta from "../components/HeroCta"
 
 export default { title: "pages/Home" }
@@ -20,15 +20,7 @@ const mainMenu = [
     to: "/",
   },
   {
-    name: "JAMSTACK",
-    to: "/",
-  },
-  {
-    name: "CMS",
-    to: "/",
-  },
-  {
-    name: "WEB DEVELOPMENT",
+    name: "Blog",
     to: "/",
   },
   {
@@ -36,7 +28,6 @@ const mainMenu = [
     to: "/",
   },
 ]
-
 export const Home = () => {
   const [show, handleShow] = useState(false)
   return (
@@ -45,19 +36,7 @@ export const Home = () => {
         pt: ["large", null, "xlarge"],
       }}
     >
-      <Header shadow>
-        <Header.Branding to='/' ariaLabel='Back to Home'>
-          <Logo />
-        </Header.Branding>
-        <Header.Navbar handleShowSidebar={() => handleShow(!show)}>
-          {mainMenu &&
-            mainMenu.map((item) => (
-              <Header.MenuItem key={item.name} to={item.to} active={item.active}>
-                {item.name}
-              </Header.MenuItem>
-            ))}
-        </Header.Navbar>
-      </Header>
+      <HeaderBlock links={mainMenu} />
       <MobileMenu showSidebar={show} handleShowSidebar={() => handleShow(!show)}>
         <MobileMenu.Navbar>
           {mainMenu &&
