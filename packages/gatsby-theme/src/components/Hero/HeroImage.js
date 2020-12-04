@@ -1,9 +1,9 @@
 import PropTypes from "prop-types"
 import { Image } from "ui"
 
-const HeroCtaImage = ({ image, ...props }) => <Image image={image} {...props} />
+const HeroImage = ({ image, ...props }) => <Image image={image} {...props} />
 
-HeroCtaImage.propTypes = {
+HeroImage.propTypes = {
   image: PropTypes.oneOfType([
     PropTypes.shape({
       src: PropTypes.string.isRequired,
@@ -20,4 +20,4 @@ HeroCtaImage.propTypes = {
   ]).isRequired,
 }
 
-export default HeroCtaImage
+export default HeroImage
