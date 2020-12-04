@@ -1,6 +1,6 @@
 import { Box } from "theme-ui"
 import PropTypes from "prop-types"
-import Link from "../Link"
+import { Link } from "ui"
 
 const MobileMenuItem = ({ children, to, sx }) => (
   <Box as='li'>

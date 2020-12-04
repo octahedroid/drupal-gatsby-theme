@@ -1,7 +1,7 @@
 import { forwardRef } from "react"
 import PropTypes from "prop-types"
 import { Box } from "theme-ui"
-import Section from "../Section"
+import { Section } from "ui"
 
 const Footer = forwardRef(
   ({ children, size, align, isFull, variant, ...props }, ref) => {

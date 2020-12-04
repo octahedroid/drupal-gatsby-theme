@@ -1,6 +1,6 @@
 import PropTypes from "prop-types"
 import { Box, useThemeUI } from "theme-ui"
-import Link from "../Link"
+import { Link } from "ui"
 
 const HeaderMenuItem = ({ children, to, active, sx }) => {
   const { theme } = useThemeUI()

@@ -1,5 +1,5 @@
 import PropTypes from "prop-types"
-import Grid from "../Grid"
+import { Grid } from "ui"
 
 const HeroCtaColumn = ({ children, columns, rows, sx, ...props }) => {
   return (

@@ -1,5 +1,5 @@
 import PropTypes from "prop-types"
-import Heading from "../Heading"
+import { Heading } from "ui"
 
 const HeroCtaHeading = ({ children, ...props }) => (
   <Heading variant='big' {...props}>
