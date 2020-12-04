@@ -1,9 +1,11 @@
 import { Meta, Story, Props, Preview } from "@storybook/addon-docs/blocks"
+import { Contact } from "ui"
 import FooterBlock from "."
 
 export const footerInfo = {
   branding: {
     to: "/",
+    width: 100,
     ariaLabel: "Back to home",
   },
   menuColumns: [
@@ -39,6 +41,31 @@ export const footerInfo = {
   ],
 }
 
+export const contactInfo = [
+  {
+    title: "Email",
+    icon: "comment",
+    text: "hq@octahedroid.com",
+  },
+  {
+    title: "Schedule",
+    icon: "calendar",
+    text: `<a
+              href="https://calendly.com/jmolivas/free-one-to-one-consultation"
+              target="_blank"
+              rel="noreferrer"
+              }}
+            >
+              Free consultation
+            </a>`,
+  },
+  {
+    title: "Phone",
+    icon: "phone",
+    text: "760-618-1215",
+  },
+]
+
 <Meta title='blocks/FooterBlock' component={FooterBlock} />
 
 # FooterBlock
@@ -64,20 +91,6 @@ export const FooterBlockTemplate = (args) => <FooterBlock {...args} />
   </Story>
 </Preview>
 
-### No Menu Columns
-
-<Preview>
-  <Story
-    name='No Menu Columns'
-    args={{
-      ...footerInfo,
-      menuColumns: null,
-    }}
-  >
-    {FooterBlockTemplate.bind({})}
-  </Story>
-</Preview>
-
 ### Full Width
 
 <Preview>
@@ -85,7 +98,6 @@ export const FooterBlockTemplate = (args) => <FooterBlock {...args} />
     name='Full Width'
     args={{
       ...footerInfo,
-      menuColumns: null,
       isFull: true,
     }}
   >
@@ -100,10 +112,31 @@ export const FooterBlockTemplate = (args) => <FooterBlock {...args} />
     name='Light variant'
     args={{
       ...footerInfo,
-      menuColumns: null,
       variant: "light",
     }}
   >
     {FooterBlockTemplate.bind({})}
+  </Story>
+</Preview>
+
+### With Contack Block
+
+<Preview>
+  <Story
+    name='With Contact Block'
+    args={{
+      ...footerInfo,
+      variant: "light",
+    }}
+  >
+    <FooterBlock isFull variant='light' align='left' branding={footerInfo.branding}>
+      <Contact>
+        <Contact.Header>
+          Tell us about your project. And we will contact you promptly to discuss
+          next steps.
+        </Contact.Header>
+        <Contact.Grid contactInfo={contactInfo} />
+      </Contact>
+    </FooterBlock>
   </Story>
 </Preview>

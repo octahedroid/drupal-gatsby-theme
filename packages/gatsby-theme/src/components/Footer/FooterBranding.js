@@ -7,6 +7,7 @@ const FooterBranding = ({ variant, width, to, ariaLabel }) => {
     dark: "#F7F7F7",
     light: "#37375B",
   }
+
   return (
     <Box
       __css={{
