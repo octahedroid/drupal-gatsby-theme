@@ -3,7 +3,7 @@ import { useArgs } from "@storybook/client-api"
 import _ from "lodash"
 import ShareBlock from "."
 
-export const config = [
+export const data = [
   {
     social: "twitter",
     title: "Octahedroid About Page",
@@ -58,36 +58,24 @@ export const ShareBlockTemplate = ({ disabledOptions }) => {
   const [args, setArgs] = useArgs()
   const disabledSettings = []
   if (disabledOptions) {
-    config.forEach((item) => {
+    data.forEach((item) => {
       const disabled = disabledOptions.some((option) => option === item.social)
-      console.log(disabledOptions)
       disabledSettings.push({
         ...item,
         disabled,
       })
     })
-    // setArgs({ config: disabledSettings })
   }
-  if (!_.isEqual(disabledSettings, args.config) && disabledSettings.length > 0) {
-    console.log("hh", disabledSettings)
-    setArgs({ config: disabledSettings })
+  if (!_.isEqual(disabledSettings, args.data) && disabledSettings.length > 0) {
+    setArgs({ data: disabledSettings })
   }
-  // if (disabledOptions) {
-  //   disabledOptions.forEach((option) => {
-  //     config.filter((item) => item.social === option)
-  //     disabledSettings[el] = true
-  //   })
-  // if (!_.isEqual(disabledSettings, args.disabled)) {
-  //   setArgs({ disabled: disabledSettings })
-  // }
-  console.log("args", args)
   return <ShareBlock {...args} />
 }
 
 ### Default ShareBlock
 
 <Preview>
-  <Story name='Default' args={{ config }} argTypes={shareArgTypes}>
+  <Story name='Default' args={{ data }} argTypes={shareArgTypes}>
     {ShareBlockTemplate.bind({})}
   </Story>
 </Preview>
@@ -97,7 +85,7 @@ export const ShareBlockTemplate = ({ disabledOptions }) => {
 <Preview>
   <Story
     name='Different heading'
-    args={{ config, heading: "Comparte:" }}
+    args={{ data, heading: "Comparte:" }}
     argTypes={shareArgTypes}
   >
     {ShareBlockTemplate.bind({})}

@@ -2,14 +2,14 @@ import PropTypes from "prop-types"
 import { Box } from "theme-ui"
 import Share from "../../components/Share"
 
-const ShareBlock = ({ heading, config, ...props }) => {
+const ShareBlock = ({ heading, data, ...props }) => {
   return (
     <Box variant='wrapper' __themeKey='container'>
       <Share {...props}>
         {heading && <Share.Heading>{heading}</Share.Heading>}
         <Share.Container>
-          {config.map((option) => {
-            return !option.disabled && <Share.Social {...option} />
+          {data.map((item) => {
+            return !item.disabled && <Share.Social {...item} />
           })}
         </Share.Container>
       </Share>
@@ -19,7 +19,7 @@ const ShareBlock = ({ heading, config, ...props }) => {
 
 ShareBlock.propTypes = {
   heading: PropTypes.string,
-  config: PropTypes.arrayOf(
+  data: PropTypes.arrayOf(
     PropTypes.shape({
       title: PropTypes.string,
       to: PropTypes.string,
