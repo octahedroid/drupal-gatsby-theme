@@ -1,9 +1,10 @@
 import PropTypes from "prop-types"
 import { Footer } from "ui"
 
-const FooterBlock = ({ isFull, variant, branding }) => {
+const FooterBlock = ({ isFull, variant, branding, children, align }) => {
   return (
-    <Footer isFull={isFull} variant={variant}>
+    <Footer isFull={isFull} variant={variant} align={align}>
+      {children}
       {branding && (
         <Footer.Branding
           to={branding.to}
@@ -17,6 +18,8 @@ const FooterBlock = ({ isFull, variant, branding }) => {
 }
 
 FooterBlock.propTypes = {
+  align: PropTypes.string,
+  children: PropTypes.node,
   variant: PropTypes.string,
   isFull: PropTypes.bool,
   branding: PropTypes.shape({
@@ -27,6 +30,8 @@ FooterBlock.propTypes = {
 }
 
 FooterBlock.defaultProps = {
+  align: "default",
+  children: undefined,
   variant: "dark",
   isFull: false,
   branding: undefined,
