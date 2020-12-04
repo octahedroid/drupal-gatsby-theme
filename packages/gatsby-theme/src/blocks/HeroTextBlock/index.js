@@ -1,3 +1,4 @@
+import React from "react"
 import PropTypes from "prop-types"
 import HeroText from "../../components/HeroText"
 import Section from "../../components/Section"
