@@ -1,9 +1,26 @@
 import PropTypes from "prop-types"
 import { Image } from "ui"
 
-const HeroCtaImage = ({ image, ...props }) => <Image image={image} {...props} />
+const BlogHeadImage = ({ image, sx }) => {
+  return (
+    <Image
+      image={image}
+      sx={{
+        img: {
+          position: "absolute",
+          width: "100%",
+          height: "100%",
+          zIndex: 0,
+          top: 0,
+          objectFit: "cover",
+          ...sx,
+        },
+      }}
+    />
+  )
+}
 
-HeroCtaImage.propTypes = {
+BlogHeadImage.propTypes = {
   image: PropTypes.oneOfType([
     PropTypes.shape({
       src: PropTypes.string.isRequired,
@@ -18,6 +35,11 @@ HeroCtaImage.propTypes = {
       alt: PropTypes.string.isRequired,
     }),
   ]).isRequired,
+  sx: PropTypes.shape({}),
 }
 
-export default HeroCtaImage
+BlogHeadImage.defaultProps = {
+  sx: null,
+}
+
+export default BlogHeadImage

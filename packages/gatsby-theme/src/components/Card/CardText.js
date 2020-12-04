@@ -1,5 +1,5 @@
 import PropTypes from "prop-types"
-import RichText from "../RichText"
+import { RichText } from "ui"
 
 const CardText = ({ children, sx }) => (
   <RichText sx={{ mb: "xsmall", ...sx }}>{children}</RichText>

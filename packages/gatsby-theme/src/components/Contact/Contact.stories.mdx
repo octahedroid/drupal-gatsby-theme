@@ -1,0 +1,64 @@
+import { Meta, Story, Props, Preview } from "@storybook/addon-docs/blocks"
+
+import Contact from "./index"
+
+export const contactInfo = [
+  {
+    title: "Email",
+    icon: "comment",
+    text: "hq@octahedroid.com",
+  },
+  {
+    title: "Schedule",
+    icon: "calendar",
+    text: `<a
+              href="https://calendly.com/jmolivas/free-one-to-one-consultation"
+              target="_blank"
+              rel="noreferrer"
+              }}
+            >
+              Free consultation
+            </a>`,
+  },
+  {
+    title: "Phone",
+    icon: "phone",
+    text: "760-618-1215",
+  },
+]
+
+<Meta title='components/Contact' component={Contact} />
+
+# Contact
+
+## Props
+
+<Props of={Contact} />
+
+### Default Contact
+
+<Preview>
+  <Story name='Default'>
+    <Contact>
+      <Contact.Header>
+        Tell us about your project. And we will contact you promptly to discuss next
+        steps.
+      </Contact.Header>
+      <Contact.Grid contactInfo={contactInfo} />
+    </Contact>
+  </Story>
+</Preview>
+
+### Different align
+
+<Preview>
+  <Story name='Different Align'>
+    <Contact>
+      <Contact.Header align='left'>
+        Tell us about your project. And we will contact you promptly to discuss next
+        steps.
+      </Contact.Header>
+      <Contact.Grid align='left' contactInfo={contactInfo} />
+    </Contact>
+  </Story>
+</Preview>

@@ -1,7 +1,6 @@
 import { forwardRef } from "react"
 import PropTypes from "prop-types"
-import Button from "../Button"
-import Link from "../Link"
+import { Button, Link } from "ui"
 
 const HeroCtaButton = forwardRef(({ children, to, ...props }, ref) => (
   <Button as={Link} ref={ref} to={to} {...props}>

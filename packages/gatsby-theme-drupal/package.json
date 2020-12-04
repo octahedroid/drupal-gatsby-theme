@@ -3,6 +3,7 @@
   "description": "Drupal Developer theme",
   "version": "1.0.0",
   "author": "Octahedroid <hq@octahedroid.com>",
+  "license": "MIT",
   "main": "index.js",
   "dependencies": {
     "dotenv": "^8.2.0",
