@@ -28,6 +28,7 @@ module.exports = {
     config.resolve.mainFields = ["browser", "module", "main"]
 
     config.resolve.alias["ui"] = path.resolve(__dirname, "../src/components")
+    config.resolve.alias["blocks"] = path.resolve(__dirname, "../src/blocks")
 
     return config
   },
