@@ -2,7 +2,7 @@ import PropTypes from "prop-types"
 import { Box } from "theme-ui"
 import Share from "../../components/Share"
 
-const ShareBlock = ({ heading, config, disabled, ...props }) => {
+const ShareBlock = ({ heading, config, ...props }) => {
   return (
     <Box variant='wrapper' __themeKey='container'>
       <Share {...props}>
@@ -17,23 +17,18 @@ const ShareBlock = ({ heading, config, disabled, ...props }) => {
   )
 }
 
-// const generalProps = { title: PropTypes.string, to: PropTypes.string }
-
 ShareBlock.propTypes = {
   heading: PropTypes.string,
-  config: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
-  disabled: PropTypes.shape({
-    facebook: PropTypes.bool,
-    linkedin: PropTypes.bool,
-    reddit: PropTypes.bool,
-    twitter: PropTypes.bool,
-    whatsapp: PropTypes.bool,
-  }),
+  config: PropTypes.arrayOf(
+    PropTypes.shape({
+      title: PropTypes.string,
+      to: PropTypes.string,
+    })
+  ).isRequired,
 }
 
 ShareBlock.defaultProps = {
   heading: "Share: ",
-  disabled: {},
 }
 
 export default ShareBlock
