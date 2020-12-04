@@ -4,9 +4,10 @@ import { Box } from "theme-ui"
 import { Icon, Link } from "ui"
 
 const Heading = forwardRef(
-  ({ as, id, anchor, variant, children, ...props }, ref) => (
+  ({ as, id, anchor, variant, children, align, ...props }, ref) => (
     <Box
       __css={{
+        textAlign: align,
         svg: {
           ml: "xsmall",
           fontSize: "2xl",
@@ -45,6 +46,7 @@ Heading.propTypes = {
   variant: PropTypes.string,
   id: PropTypes.string,
   anchor: PropTypes.bool,
+  align: PropTypes.string,
 }
 
 Heading.defaultProps = {
@@ -52,6 +54,7 @@ Heading.defaultProps = {
   variant: "default",
   id: "",
   anchor: true,
+  align: "",
 }
 
 export default Heading
