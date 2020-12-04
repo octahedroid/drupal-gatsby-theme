@@ -1,6 +1,5 @@
 import { Meta, Story, Props, Preview } from "@storybook/addon-docs/blocks"
 import Footer from "."
-import Section from "../Section"
 
 export const mainMenu = [
   {
@@ -36,133 +35,12 @@ Some **markdown** description, or whatever you want.
 
 <Props of={Footer} />
 
-### Big Footer
+### Default
 
 <Preview>
-  <Story name='Big Footer'>
-    <Section variant='dark' isFull>
-      <Footer>
-        <Footer.Branding to='/' ariaLabel='Back to Home' />
-        <Footer.MenuColumn>
-          <Footer.MenuTitle>Menu 1</Footer.MenuTitle>
-          <Footer.List>
-            {mainMenu &&
-              mainMenu.map((item) => (
-                <Footer.MenuItem
-                  to={item.to}
-                  key={item.name}
-                  ariaLabel={item.ariaLabel}
-                >
-                  {item.name}
-                </Footer.MenuItem>
-              ))}
-          </Footer.List>
-        </Footer.MenuColumn>
-        <Footer.MenuColumn>
-          <Footer.MenuTitle>Menu 2</Footer.MenuTitle>
-          <Footer.List>
-            {mainMenu &&
-              mainMenu.map((item) => (
-                <Footer.MenuItem
-                  to={item.to}
-                  key={item.name}
-                  ariaLabel={item.ariaLabel}
-                >
-                  {item.name}
-                </Footer.MenuItem>
-              ))}
-          </Footer.List>
-        </Footer.MenuColumn>
-        <Footer.MenuColumn>
-          <Footer.MenuTitle>Menu 3</Footer.MenuTitle>
-          <Footer.List>
-            {mainMenu &&
-              mainMenu.map((item) => (
-                <Footer.MenuItem
-                  to={item.to}
-                  key={item.name}
-                  ariaLabel={item.ariaLabel}
-                >
-                  {item.name}
-                </Footer.MenuItem>
-              ))}
-          </Footer.List>
-        </Footer.MenuColumn>
-        <Footer.LinkGroup>
-          <Footer.Link to='/' ariaLabel='Github profile link'>
-            <Footer.Icon icon='github' variant='social' />
-          </Footer.Link>
-          <Footer.Link to='/' ariaLabel='Twitter profile'>
-            <Footer.Icon icon='twitter' variant='social' />
-          </Footer.Link>
-          <Footer.Link to='/' ariaLabel='LinkedIn Profile'>
-            <Footer.Icon icon='linkedin' variant='social' />
-          </Footer.Link>
-        </Footer.LinkGroup>
-      </Footer>
-    </Section>
-  </Story>
-</Preview>
-
-### Footer without menu
-
-<Preview>
-  <Story name='Footer without menu'>
+  <Story name='Default'>
     <Footer>
-      <Footer.Branding to='/' ariaLabel='Back to Home' />
-      <Footer.LinkGroup>
-        <Footer.Link to='/' ariaLabel='Github profile link'>
-          <Footer.Icon icon='github' variant='social' />
-        </Footer.Link>
-        <Footer.Link to='/' ariaLabel='Twitter profile'>
-          <Footer.Icon icon='twitter' variant='social' />
-        </Footer.Link>
-        <Footer.Link to='/' ariaLabel='LinkedIn Profile'>
-          <Footer.Icon icon='linkedin' variant='social' />
-        </Footer.Link>
-      </Footer.LinkGroup>
-    </Footer>
-  </Story>
-</Preview>
-
-### Footer Full
-
-<Preview>
-  <Story name='Footer Full'>
-    <Footer isFull>
-      <Footer.Branding to='/' ariaLabel='Back to Home' />
-      <Footer.LinkGroup>
-        <Footer.Link to='/' ariaLabel='Github profile link'>
-          <Footer.Icon icon='github' variant='social' />
-        </Footer.Link>
-        <Footer.Link to='/' ariaLabel='Twitter profile'>
-          <Footer.Icon icon='twitter' variant='social' />
-        </Footer.Link>
-        <Footer.Link to='/' ariaLabel='LinkedIn Profile'>
-          <Footer.Icon icon='linkedin' variant='social' />
-        </Footer.Link>
-      </Footer.LinkGroup>
-    </Footer>
-  </Story>
-</Preview>
-
-### Footer Light
-
-<Preview>
-  <Story name='Footer Light'>
-    <Footer variant='light'>
-      <Footer.Branding variant='light' to='/' ariaLabel='Back to Home' />
-      <Footer.LinkGroup>
-        <Footer.Link variant='light' to='/' ariaLabel='Github profile link'>
-          <Footer.Icon icon='github' variant='social' />
-        </Footer.Link>
-        <Footer.Link variant='light' to='/' ariaLabel='Twitter profile'>
-          <Footer.Icon icon='twitter' variant='social' />
-        </Footer.Link>
-        <Footer.Link variant='light' to='/' ariaLabel='LinkedIn Profile'>
-          <Footer.Icon icon='linkedin' variant='social' />
-        </Footer.Link>
-      </Footer.LinkGroup>
+      <Footer.Branding to='/' ariaLabel='Back to Home' width={100} />
     </Footer>
   </Story>
 </Preview>
