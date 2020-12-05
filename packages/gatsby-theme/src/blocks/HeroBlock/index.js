@@ -11,6 +11,7 @@ const HeroBlock = ({
   linkTo,
   reversed,
   ctaText,
+  align,
 }) => {
   const columns = image ? 2 : 1
   const elements = []
@@ -33,7 +34,12 @@ const HeroBlock = ({
   }
 
   return (
-    <Hero gutter={gutter} proportion={columnProportion} columns={columns}>
+    <Hero
+      gutter={gutter}
+      proportion={columnProportion}
+      columns={columns}
+      sx={{ textAlign: align }}
+    >
       {reversed ? elements.reverse() : elements}
     </Hero>
   )
@@ -65,6 +71,7 @@ HeroBlock.propTypes = {
   linkTo: PropTypes.string,
   reversed: PropTypes.bool,
   ctaText: PropTypes.string,
+  align: PropTypes.string,
 }
 
 HeroBlock.defaultProps = {
@@ -76,6 +83,7 @@ HeroBlock.defaultProps = {
   reversed: false,
   ctaText: "",
   gutter: "20px",
+  align: "",
 }
 
 export default HeroBlock

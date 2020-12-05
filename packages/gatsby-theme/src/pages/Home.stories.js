@@ -1,11 +1,8 @@
 import { useState } from "react"
 import { Box } from "theme-ui"
 import { SkipNavContent } from "@reach/skip-nav"
-
 import { Section, Grid, Heading, Card, Link, MobileMenu } from "ui"
-
-import { FooterBlock, HeaderBlock } from "blocks"
-import HeroCta from "../components/HeroCta"
+import { FooterBlock, HeaderBlock, HeroBlock } from "blocks"
 
 export default { title: "pages/Home" }
 
@@ -32,7 +29,7 @@ export const Home = () => {
   const [show, handleShow] = useState(false)
   return (
     <Box
-      sx={{
+      __css={{
         pt: ["large", null, "xlarge"],
       }}
     >
@@ -49,28 +46,19 @@ export const Home = () => {
       </MobileMenu>
       <Section>
         <SkipNavContent />
-        <HeroCta>
-          <HeroCta.Column>
-            <HeroCta.Intro>INTERESTED IN KNOWING MORE ABOUT JAMSTACK?</HeroCta.Intro>
-            <HeroCta.Heading>
-              Looking for fast and secure sites and applications?
-            </HeroCta.Heading>
-            <HeroCta.Text>
-              Let us help you maximize your project with the latest and modern
-              technologies.
-            </HeroCta.Text>
-            <HeroCta.Button to='/'>Work with us!</HeroCta.Button>
-          </HeroCta.Column>
-          <HeroCta.Column>
-            <HeroCta.Image
-              image={{
-                src:
-                  "https://octahedroid.com/static/a06512d94e518dbce8a37f33db1317b3/1ebf8/location.png",
-                alt: "Location",
-              }}
-            />
-          </HeroCta.Column>
-        </HeroCta>
+        <HeroBlock
+          intro='INTERESTED IN KNOWING MORE ABOUT JAMSTACK?'
+          text='Let us help you maximize your project with the latest and modern
+          technologies.'
+          title='Looking for fast and secure sites and applications?'
+          image={{
+            src:
+              "https://octahedroid.com/static/a06512d94e518dbce8a37f33db1317b3/1ebf8/location.png",
+            alt: "Location",
+          }}
+          linkTo='/'
+          ctaText='Work with us!'
+        />
       </Section>
       <Section>
         <Grid variant='centered'>
@@ -106,6 +94,15 @@ export const Home = () => {
             </Card>
           </Grid.Column>
         </Grid>
+      </Section>
+      <Section variant='light'>
+        <HeroBlock
+          align='center'
+          text='Build fast and secure sites and apps delivered by pre-rendering files and serving them directly from a CDN, removing the requirement to manage or run web servers, databases and worry about traffic spikes.'
+          title='Ready to embrace the JAMstack revolution?'
+          linkTo='/'
+          ctaText='Work with us!'
+        />
       </Section>
       <Section variant='dark'>
         <FooterBlock
