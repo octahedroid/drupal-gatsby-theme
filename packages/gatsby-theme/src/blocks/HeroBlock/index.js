@@ -1,7 +1,7 @@
 import PropTypes from "prop-types"
-import HeroCta from "../../components/HeroCta"
+import { Hero } from "ui"
 
-const HeroCtaBlock = ({
+const HeroBlock = ({
   columnProportion,
   gutter,
   intro,
@@ -12,26 +12,34 @@ const HeroCtaBlock = ({
   reversed,
   ctaText,
 }) => {
-  const elements = [
-    <HeroCta.Column key={title}>
-      {intro && <HeroCta.Intro>{intro}</HeroCta.Intro>}
-      {title && <HeroCta.Heading>{title}</HeroCta.Heading>}
-      <HeroCta.Text>{text}</HeroCta.Text>
-      {linkTo && ctaText && <HeroCta.Button to={linkTo}>{ctaText}</HeroCta.Button>}
-    </HeroCta.Column>,
-    <HeroCta.Column key='image'>
-      {image && <HeroCta.Image image={image} />}
-    </HeroCta.Column>,
-  ]
+  const columns = image ? 2 : 1
+  const elements = []
+
+  elements.push(
+    <Hero.Column key={title}>
+      {intro && <Hero.Intro>{intro}</Hero.Intro>}
+      {title && <Hero.Title>{title}</Hero.Title>}
+      <Hero.Text>{text}</Hero.Text>
+      {linkTo && ctaText && <Hero.Cta to={linkTo}>{ctaText}</Hero.Cta>}
+    </Hero.Column>
+  )
+
+  if (image) {
+    elements.push(
+      <Hero.Column key='image'>
+        <Hero.Image image={image} />
+      </Hero.Column>
+    )
+  }
 
   return (
-    <HeroCta gutter={gutter} proportion={columnProportion}>
+    <Hero gutter={gutter} proportion={columnProportion} columns={columns}>
       {reversed ? elements.reverse() : elements}
-    </HeroCta>
+    </Hero>
   )
 }
 
-HeroCtaBlock.propTypes = {
+HeroBlock.propTypes = {
   columnProportion: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.string])),
     PropTypes.oneOfType([PropTypes.string]),
@@ -59,15 +67,15 @@ HeroCtaBlock.propTypes = {
   ctaText: PropTypes.string,
 }
 
-HeroCtaBlock.defaultProps = {
-  columnProportion: "1:1",
+HeroBlock.defaultProps = {
+  columnProportion: undefined,
   intro: "",
   title: "",
-  image: null,
+  image: undefined,
   linkTo: "",
   reversed: false,
   ctaText: "",
   gutter: "20px",
 }
 
-export default HeroCtaBlock
+export default HeroBlock

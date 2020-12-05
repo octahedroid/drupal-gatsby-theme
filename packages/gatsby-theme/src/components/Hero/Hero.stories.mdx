@@ -1,0 +1,195 @@
+import { Meta, Story, Props, Preview } from "@storybook/addon-docs/blocks"
+import { Section } from "ui"
+import Hero from "."
+
+<Meta title='components/Hero' component={Hero} />
+
+# Hero
+
+## Props
+
+<Props of={Hero} />
+
+### Default
+
+<Preview>
+  <Story name='Default'>
+    <Section>
+      <Hero>
+        <Hero.Title>
+          We create digital experience that advances the human experience.
+        </Hero.Title>
+        <Hero.Text>
+          Our creative thinking, technology expertise, and passion for problem
+          solving are only surpassed by our desire to learn, collaborate, and share
+          knowledge openly with everyone
+        </Hero.Text>
+      </Hero>
+    </Section>
+  </Story>
+</Preview>
+
+### With Intro
+
+<Preview>
+  <Story name='With Intro'>
+    <Section>
+      <Hero>
+        <Hero.Intro>A nice intro</Hero.Intro>
+        <Hero.Title>
+          We create digital experience that advances the human experience.
+        </Hero.Title>
+        <Hero.Text>
+          Our creative thinking, technology expertise, and passion for problem
+          solving are only surpassed by our desire to learn, collaborate, and share
+          knowledge openly with everyone
+        </Hero.Text>
+      </Hero>
+    </Section>
+  </Story>
+</Preview>
+
+### Default Hero CTA
+
+<Preview>
+  <Story name='Default Hero CTA'>
+    <Section>
+      <Hero columns={2}>
+        <Hero.Column>
+          <Hero.Intro>Intro</Hero.Intro>
+          <Hero.Title>Title</Hero.Title>
+          <Hero.Text>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
+            ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis
+            dis parturient montes, nascetur ridiculus mus.
+          </Hero.Text>
+          <Hero.Cta to='/'>Link here</Hero.Cta>
+        </Hero.Column>
+        <Hero.Column>
+          <Hero.Image
+            image={{
+              src: "https://placeimg.com/480/280/tech",
+              alt: "tech related stuff",
+            }}
+          />
+        </Hero.Column>
+      </Hero>
+    </Section>
+  </Story>
+</Preview>
+
+## Different Gutter
+
+<Preview>
+  <Story name='Different Gutter'>
+    <Section>
+      <Hero columns={2} gutter='80px'>
+        <Hero.Column>
+          <Hero.Intro>Intro</Hero.Intro>
+          <Hero.Title>Title</Hero.Title>
+          <Hero.Text>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
+            ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis
+            dis parturient montes, nascetur ridiculus mus.
+          </Hero.Text>
+          <Hero.Cta to='/'>Link here</Hero.Cta>
+        </Hero.Column>
+        <Hero.Column>
+          <Hero.Image
+            image={{
+              src: "https://placeimg.com/480/280/tech",
+              alt: "tech related stuff",
+            }}
+          />
+        </Hero.Column>
+      </Hero>
+    </Section>
+  </Story>
+</Preview>
+
+### Hero Cta Switch Image
+
+<Preview>
+  <Story name='Hero Cta Switch Image'>
+    <Section>
+      <Hero columns={2}>
+        <Hero.Column>
+          <Hero.Image
+            image={{
+              src: "https://placeimg.com/480/280/tech",
+              alt: "tech related stuff",
+            }}
+          />
+        </Hero.Column>
+        <Hero.Column>
+          <Hero.Intro>Intro</Hero.Intro>
+          <Hero.Title>Title</Hero.Title>
+          <Hero.Text>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
+            ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis
+            dis parturient montes, nascetur ridiculus mus.
+          </Hero.Text>
+          <Hero.Cta to='/'>Link here</Hero.Cta>
+        </Hero.Column>
+      </Hero>
+    </Section>
+  </Story>
+</Preview>
+
+### Hero Cta without container
+
+<Preview>
+  <Story name='Hero Cta Full'>
+    <Section isFull>
+      <Hero columns={2}>
+        <Hero.Column>
+          <Hero.Image
+            image={{
+              src: "https://placeimg.com/480/280/tech",
+              alt: "tech related stuff",
+            }}
+          />
+        </Hero.Column>
+        <Hero.Column>
+          <Hero.Intro>Intro</Hero.Intro>
+          <Hero.Title>Title</Hero.Title>
+          <Hero.Text>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
+            ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis
+            dis parturient montes, nascetur ridiculus mus.
+          </Hero.Text>
+          <Hero.Cta to='/'>Link here</Hero.Cta>
+        </Hero.Column>
+      </Hero>
+    </Section>
+  </Story>
+</Preview>
+
+### Diferent Column Proportion
+
+<Preview>
+  <Story name='Diferent Column Proportion'>
+    <Section>
+      <Hero columns={2} proportion='2:1'>
+        <Hero.Column>
+          <Hero.Image
+            image={{
+              src: "https://placeimg.com/480/280/tech",
+              alt: "tech related stuff",
+            }}
+          />
+        </Hero.Column>
+        <Hero.Column>
+          <Hero.Intro>Intro</Hero.Intro>
+          <Hero.Title>Title</Hero.Title>
+          <Hero.Text>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
+            ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis
+            dis parturient montes, nascetur ridiculus mus.
+          </Hero.Text>
+          <Hero.Cta to='/'>Link here</Hero.Cta>
+        </Hero.Column>
+      </Hero>
+    </Section>
+  </Story>
+</Preview>

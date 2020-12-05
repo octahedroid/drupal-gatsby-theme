@@ -1,0 +1,95 @@
+import { Meta, Story, Props, Preview } from "@storybook/addon-docs/blocks"
+import HeroBlock from "."
+
+export const simpleData = {
+  intro: "Some nice intro",
+  title: "A title",
+  text: `If you have multiple tasks that you want to convert into subtasks, utilize the Multitask Toolbar to select multiple tasks, statuses, or entire Lists and convert them into subtasks.`,
+}
+
+export const complexData = {
+  intro: "Some nice intro",
+  title: "A title",
+  text: `If you have multiple tasks that you want to convert into subtasks, utilize the Multitask Toolbar to select multiple tasks, statuses, or entire Lists and convert them into subtasks.`,
+  image: {
+    src: "https://placeimg.com/700/480/tech",
+    alt: "tech related stuff",
+  },
+  linkTo: "/",
+  ctaText: "Link Text",
+  columnProportion: "1:1",
+}
+
+<Meta title='blocks/HeroBlock' component={HeroBlock} />
+
+# HeroBlock
+
+You can use it to a Hero Block with a CTA
+
+## Props
+
+<Props of={HeroBlock} />
+
+export const HeroBlockTemplate = (args) => <HeroBlock {...args} />
+
+### Default HeroTextBlock
+
+<Preview>
+  <Story name='Default' args={{ ...simpleData }}>
+    {HeroBlockTemplate.bind({})}
+  </Story>
+</Preview>
+
+### With Intro
+
+<Preview>
+  <Story name='With Intro' args={{ ...simpleData, intro: "A nice intro" }}>
+    {HeroBlockTemplate.bind({})}
+  </Story>
+</Preview>
+
+### Default HeroBlock
+
+<Preview>
+  <Story name='Default CTA' args={{ ...complexData }}>
+    {HeroBlockTemplate.bind({})}
+  </Story>
+</Preview>
+
+### Different Gutter
+
+<Preview>
+  <Story name='Different Gutter' args={{ ...complexData, gutter: "80px" }}>
+    {HeroBlockTemplate.bind({})}
+  </Story>
+</Preview>
+
+### Reversed
+
+<Preview>
+  <Story name='Reversed' args={{ ...complexData, reversed: true }}>
+    {HeroBlockTemplate.bind({})}
+  </Story>
+</Preview>
+
+### Different Column Proportions
+
+<Preview>
+  <Story
+    name='Different Column Proportions'
+    args={{ ...complexData, columnProportion: "2:1" }}
+  >
+    {HeroBlockTemplate.bind({})}
+  </Story>
+</Preview>
+
+### Different Column Proportion Reversed
+
+<Preview>
+  <Story
+    name='Different Column Proportions Reversed'
+    args={{ ...complexData, columnProportion: "2:1", reversed: true }}
+  >
+    {HeroBlockTemplate.bind({})}
+  </Story>
+</Preview>
