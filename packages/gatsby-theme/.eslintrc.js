@@ -14,7 +14,10 @@ const config = {
   },
   settings: {
     "import/resolver": {
-      alias: [["ui", `${projectRoot}/components`]],
+      alias: [
+        ["ui", `${projectRoot}/components`],
+        ["blocks", `${projectRoot}/blocks`],
+      ],
       node: {
         paths: ["src"],
       },

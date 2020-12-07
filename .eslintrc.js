@@ -14,7 +14,10 @@ module.exports = {
       version: "detect",
     },
     "import/resolver": {
-      alias: [["ui", "./packages/gatsby-theme/components"]],
+      alias: [
+        ["ui", "./packages/gatsby-theme/components"],
+        ["blocks", "./packages/gatsby-theme/blocks"],
+      ],
     },
   },
   extends: ["airbnb", "plugin:prettier/recommended", "plugin:mdx/recommended"],

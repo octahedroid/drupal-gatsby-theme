@@ -4,7 +4,7 @@ import { RichText } from "ui"
 
 const HeroText = ({ children, sx, ...props }) => {
   return (
-    <RichText variant='xl' sx={{ mb: "xsmall", ...sx }} {...props}>
+    <RichText sx={{ mb: "xsmall", ...sx }} {...props}>
       {children}
     </RichText>
   )
