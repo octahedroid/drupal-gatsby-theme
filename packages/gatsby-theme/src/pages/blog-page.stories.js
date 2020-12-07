@@ -1,9 +1,10 @@
 import { useState } from "react"
 import { Box } from "theme-ui"
-import { Header, Section, Image, Text, Link, Logo, MobileMenu, Heading } from "ui"
+import { Section, Image, Text, Link, MobileMenu, Heading } from "ui"
 import ContactBlock from "../blocks/ContactBlock"
 import BlogHeadBlock from "../blocks/BlogHeadBlock"
 import FooterBlock from "../blocks/FooterBlock"
+import HeaderBlock from "../blocks/HeaderBlock"
 
 export default { title: "pages/Blog" }
 
@@ -93,23 +94,7 @@ export const BlogPost = () => {
         pt: "large",
       }}
     >
-      <Header shadow>
-        <Header.Branding to='/' ariaLabel='Back to Home'>
-          <Logo />
-        </Header.Branding>
-        <Header.Navbar handleShowSidebar={() => handleShow(!show)}>
-          {headerMainMenu &&
-            headerMainMenu.map((item) => (
-              <Header.MenuItem
-                key={item.name}
-                to={item.to}
-                variant={item.active ? "menuItemLinkActive" : "menuItemLink"}
-              >
-                {item.name}
-              </Header.MenuItem>
-            ))}
-        </Header.Navbar>
-      </Header>
+      <HeaderBlock links={headerMainMenu} />
       <MobileMenu showSidebar={show} handleShowSidebar={() => handleShow(!show)}>
         <MobileMenu.Navbar>
           {headerMainMenu &&
