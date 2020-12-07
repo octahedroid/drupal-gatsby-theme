@@ -38,7 +38,7 @@ const HeroBlock = ({
       gutter={gutter}
       proportion={columnProportion}
       columns={columns}
-      sx={{ textAlign: align }}
+      align={align}
     >
       {reversed ? elements.reverse() : elements}
     </Hero>
