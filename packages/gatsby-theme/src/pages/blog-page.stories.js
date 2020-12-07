@@ -1,18 +1,9 @@
 import { useState } from "react"
 import { Box } from "theme-ui"
-import {
-  Header,
-  Section,
-  Image,
-  Text,
-  Link,
-  Logo,
-  Footer,
-  MobileMenu,
-  Heading,
-} from "ui"
+import { Header, Section, Image, Text, Link, Logo, MobileMenu, Heading } from "ui"
 import ContactBlock from "../blocks/ContactBlock"
 import BlogHeadBlock from "../blocks/BlogHeadBlock"
+import FooterBlock from "../blocks/FooterBlock"
 
 export default { title: "pages/Blog" }
 
@@ -84,6 +75,13 @@ const blogHeadBlockData = {
     src:
       "https://3czfu91fpa5s34atq735lonm-wpengine.netdna-ssl.com/wp-content/uploads/2018/12/types-of-infrastructure.jpeg",
     alt: "Roads",
+  },
+}
+const footerInfo = {
+  branding: {
+    to: "/",
+    width: 100,
+    ariaLabel: "Back to home",
   },
 }
 
@@ -230,10 +228,7 @@ export const BlogPost = () => {
         </Text>
       </Section>
       <Section variant='dark'>
-        <Footer>
-          <Footer.Branding to='/' ariaLabel='Back to Home'>
-            <Logo width={200} fill='#fff' />
-          </Footer.Branding>
+        <FooterBlock isFull align='left' branding={footerInfo.branding}>
           <ContactBlock
             heading={contactBlockHeading}
             contactInfo={contactBlockContactInfo}
@@ -241,7 +236,7 @@ export const BlogPost = () => {
             Tell us about your project. And we will contact you promptly to discuss
             next steps.
           </ContactBlock>
-        </Footer>
+        </FooterBlock>
       </Section>
     </Box>
   )
