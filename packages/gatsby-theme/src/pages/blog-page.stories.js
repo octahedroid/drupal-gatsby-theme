@@ -1,10 +1,7 @@
-import { useState } from "react"
+import React, { useState } from "react"
 import { Box } from "theme-ui"
 import { Section, Image, Text, Link, MobileMenu, Heading } from "ui"
-import ContactBlock from "../blocks/ContactBlock"
-import BlogHeadBlock from "../blocks/BlogHeadBlock"
-import FooterBlock from "../blocks/FooterBlock"
-import HeaderBlock from "../blocks/HeaderBlock"
+import { ContactBlock, BlogHeadBlock, FooterBlock, HeaderBlock } from "blocks"
 
 export default { title: "pages/Blog" }
 
@@ -90,7 +87,7 @@ export const BlogPost = () => {
   const [show, handleShow] = useState(false)
   return (
     <Box
-      sx={{
+      __css={{
         pt: "large",
       }}
     >
@@ -114,7 +111,7 @@ export const BlogPost = () => {
         date={blogHeadBlockData.date}
       />
       <Section
-        sx={{
+        __css={{
           p: ["medium", "large"],
           maxWidth: [null, null, 1024],
           fontSize: "1.1em",
