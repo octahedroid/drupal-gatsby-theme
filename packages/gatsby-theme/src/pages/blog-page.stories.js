@@ -1,11 +1,9 @@
 import { useState } from "react"
 import { Box } from "theme-ui"
-import { SkipNavContent } from "@reach/skip-nav"
 import {
   Header,
   Section,
   Image,
-  BlogHead,
   Text,
   Link,
   Logo,
@@ -14,10 +12,11 @@ import {
   Heading,
 } from "ui"
 import ContactBlock from "../blocks/ContactBlock"
+import BlogHeadBlock from "../blocks/BlogHeadBlock"
 
 export default { title: "pages/Blog" }
 
-const mainMenu = [
+const headerMainMenu = [
   {
     name: "Home",
     to: "/",
@@ -44,10 +43,10 @@ const mainMenu = [
   },
 ]
 
-const heading =
+const contactBlockHeading =
   "Tell us about your project. And we will contact you promptly to discuss next steps"
 
-const contactInfo = [
+const contactBlockContactInfo = [
   {
     title: "Email",
     icon: "comment",
@@ -72,6 +71,22 @@ const contactInfo = [
   },
 ]
 
+const blogHeadBlockData = {
+  title: `Gatsby's long road to incremental builds with Kyle Mathews`,
+  credits: "Via Unsplash",
+  author: {
+    name: "Marco José Sánchez",
+    link: "/",
+    ariaLabel: "Marco",
+  },
+  date: "Julio 2, 2020",
+  image: {
+    src:
+      "https://3czfu91fpa5s34atq735lonm-wpengine.netdna-ssl.com/wp-content/uploads/2018/12/types-of-infrastructure.jpeg",
+    alt: "Roads",
+  },
+}
+
 export const BlogPost = () => {
   const [show, handleShow] = useState(false)
   return (
@@ -85,8 +100,8 @@ export const BlogPost = () => {
           <Logo />
         </Header.Branding>
         <Header.Navbar handleShowSidebar={() => handleShow(!show)}>
-          {mainMenu &&
-            mainMenu.map((item) => (
+          {headerMainMenu &&
+            headerMainMenu.map((item) => (
               <Header.MenuItem
                 key={item.name}
                 to={item.to}
@@ -99,33 +114,22 @@ export const BlogPost = () => {
       </Header>
       <MobileMenu showSidebar={show} handleShowSidebar={() => handleShow(!show)}>
         <MobileMenu.Navbar>
-          {mainMenu &&
-            mainMenu.map((item) => (
+          {headerMainMenu &&
+            headerMainMenu.map((item) => (
               <MobileMenu.Item key={item.name} to={item.to}>
                 {item.name}
               </MobileMenu.Item>
             ))}
         </MobileMenu.Navbar>
       </MobileMenu>
-      <BlogHead>
-        <BlogHead.Image
-          image={{
-            src: "https://i.ytimg.com/vi/Buz0mzWozpU/maxresdefault.jpg",
-            alt: "Light Bulbs",
-          }}
-        />
-        <BlogHead.Credits>Via Unsplash</BlogHead.Credits>
-        <BlogHead.Container>
-          <SkipNavContent />
-          <BlogHead.Title>
-            Gatsby&apos;s long road to incremental builds with Kyle Mathews
-          </BlogHead.Title>
-          <BlogHead.Author to='/' ariaLabel='Marco'>
-            Marco José Sánchez
-          </BlogHead.Author>
-          <BlogHead.Date>Julio 2, 2020</BlogHead.Date>
-        </BlogHead.Container>
-      </BlogHead>
+
+      <BlogHeadBlock
+        title={blogHeadBlockData.title}
+        author={blogHeadBlockData.author}
+        credits={blogHeadBlockData.credits}
+        image={blogHeadBlockData.image}
+        date={blogHeadBlockData.date}
+      />
       <Section
         sx={{
           p: ["medium", "large"],
@@ -230,7 +234,10 @@ export const BlogPost = () => {
           <Footer.Branding to='/' ariaLabel='Back to Home'>
             <Logo width={200} fill='#fff' />
           </Footer.Branding>
-          <ContactBlock heading={heading} contactInfo={contactInfo}>
+          <ContactBlock
+            heading={contactBlockHeading}
+            contactInfo={contactBlockContactInfo}
+          >
             Tell us about your project. And we will contact you promptly to discuss
             next steps.
           </ContactBlock>
