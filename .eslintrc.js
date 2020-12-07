@@ -14,7 +14,10 @@ module.exports = {
       version: "detect",
     },
     "import/resolver": {
-      alias: [["ui", "./packages/gatsby-theme/components"]],
+      alias: [
+        ["ui", "./packages/gatsby-theme/components"],
+        ["blocks", "./packages/gatsby-theme/blocks"],
+      ],
     },
   },
   extends: ["airbnb", "plugin:prettier/recommended", "plugin:mdx/recommended"],
@@ -45,7 +48,7 @@ module.exports = {
     "no-underscore-dangle": 0,
     "jsx-a11y/anchor-is-valid": 0,
     "react/jsx-props-no-spreading": "off",
-    "react/jsx-uses-react": "off",
-    "react/react-in-jsx-scope": "off",
+    "react/jsx-uses-react": 2, // rollback
+    "react/react-in-jsx-scope": 2,
   },
 }

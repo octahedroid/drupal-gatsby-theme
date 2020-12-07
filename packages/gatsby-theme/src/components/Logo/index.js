@@ -1,3 +1,4 @@
+import React from "react"
 import PropTypes from "prop-types"
 
 const Logo = ({ width, fill }) => {
@@ -7,9 +8,9 @@ const Logo = ({ width, fill }) => {
       version='1.1'
       viewBox='0 0 191.94 249.2'
       xmlns='http://www.w3.org/2000/svg'
-      xmlnsCc='http://creativecommons.org/ns#'
-      xmlnsDc='http://purl.org/dc/elements/1.1/'
-      xmlnsRdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#'
+      xmlnscc='http://creativecommons.org/ns#'
+      xmlnsdc='http://purl.org/dc/elements/1.1/'
+      xmlnsrdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#'
     >
       <g transform='translate(-10.13 -26.031)'>
         <path
