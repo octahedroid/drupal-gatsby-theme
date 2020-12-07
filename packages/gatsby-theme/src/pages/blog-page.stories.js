@@ -137,7 +137,7 @@ export const BlogPost = () => {
           </p>
         </Text>
         <Image
-          sx={{ p: "medium", pb: "small" }}
+          __css={{ p: "medium", pb: "small" }}
           image={{
             src:
               "https://www.guillermotobar.com/static/gatsbyjs-992e4beb0be3860058645652fb635ac5-48538.png",
