@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import Image from "../Image"
+import { Image } from "ui"
 
 const CardImage = ({ image, ...props }) => <Image image={image} {...props} />
 

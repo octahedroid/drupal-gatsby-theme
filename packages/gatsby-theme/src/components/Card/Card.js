@@ -1,7 +1,7 @@
 import React, { forwardRef } from "react"
 import PropTypes from "prop-types"
 import { Box } from "theme-ui"
-import Link from "../Link"
+import { Link } from "ui"
 
 const Card = forwardRef(({ children, align, to, ...props }, ref) => {
   return (

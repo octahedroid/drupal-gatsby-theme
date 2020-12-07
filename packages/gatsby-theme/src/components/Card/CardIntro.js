@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import Heading from "../Heading"
+import { Heading } from "ui"
 
 const CardIntro = ({ children, variant, ...props }) => (
   <Heading variant={variant} {...props}>

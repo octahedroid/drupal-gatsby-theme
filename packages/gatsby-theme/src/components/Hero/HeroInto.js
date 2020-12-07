@@ -1,15 +1,15 @@
 import React from "react"
 import PropTypes from "prop-types"
-import Heading from "../Heading"
+import { Heading } from "ui"
 
-const HeroCtaIntro = ({ children, ...props }) => (
+const HeroIntro = ({ children, ...props }) => (
   <Heading variant='intro' {...props}>
     {children}
   </Heading>
 )
 
-HeroCtaIntro.propTypes = {
+HeroIntro.propTypes = {
   children: PropTypes.string.isRequired,
 }
 
-export default HeroCtaIntro
+export default HeroIntro

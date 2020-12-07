@@ -1,14 +1,14 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { Box } from "theme-ui"
-import Link from "../Link"
-import Logo from "../Logo"
+import { Link, Logo } from "ui"
 
 const FooterBranding = ({ variant, width, to, ariaLabel }) => {
   const fillOptions = {
     dark: "#F7F7F7",
     light: "#37375B",
   }
+
   return (
     <Box
       __css={{

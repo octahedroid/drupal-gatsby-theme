@@ -1,8 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { Box } from "theme-ui"
-import Link from "../Link"
-import Icon from "../Icon"
+import { Link, Icon } from "ui"
 
 const BlogHeadAuthor = ({ to, ariaLabel, children, ...props }) => {
   return (

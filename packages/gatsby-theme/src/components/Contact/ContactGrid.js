@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import Grid from "../Grid"
+import { Grid } from "ui"
 import ContactItem from "./ContactItem"
 
 const ContactGrid = ({ align, contactInfo, ...props }) => {

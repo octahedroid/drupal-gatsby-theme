@@ -1,0 +1,89 @@
+import { Meta, Story, Props, Preview } from "@storybook/addon-docs/blocks"
+import { useArgs } from "@storybook/client-api"
+import _ from "lodash"
+import ShareBlock from "."
+
+export const data = [
+  {
+    social: "twitter",
+    title: "Octahedroid About Page",
+    to: "https://octahedroid.com/about/",
+    handler: "Octonauts",
+    hashtags: ["Octonautas", "Octahedroid"],
+    disabled: false,
+  },
+  {
+    social: "linkedin",
+    source: "The source",
+    summary: "A summary",
+    disabled: false,
+  },
+  {
+    social: "whatsapp",
+    separator: "/",
+    disabled: false,
+  },
+  {
+    social: "facebook",
+    to: "https://octahedroid.com/",
+    title: "Octahedroid",
+    disabled: false,
+  },
+  {
+    social: "reddit",
+    to: "https://octahedroid.com/",
+    title: "Octahedroid",
+    disabled: false,
+  },
+]
+
+export const shareArgTypes = {
+  disabledOptions: {
+    control: {
+      type: "check",
+      options: ["facebook", "linkedin", "reddit", "twitter", "whatsapp"],
+    },
+  },
+}
+
+<Meta title='blocks/ShareBlock' component={ShareBlock} argTypes={shareArgTypes} />
+
+# ShareBlock
+
+## Props
+
+<Props of={ShareBlock} />
+
+export const ShareBlockTemplate = ({ disabledOptions }) => {
+  const [args, setArgs] = useArgs()
+  const disabledSettings = []
+  if (disabledOptions) {
+    data.forEach((item) => {
+      const disabled = disabledOptions.some((option) => option === item.social)
+      disabledSettings.push({
+        ...item,
+        disabled,
+      })
+    })
+  }
+  if (!_.isEqual(disabledSettings, args.data) && disabledSettings.length > 0) {
+    setArgs({ data: disabledSettings })
+  }
+  return <ShareBlock {...args} />
+}
+
+### Default ShareBlock
+
+<Preview>
+  <Story name='Default' args={{ data }}>
+    {ShareBlockTemplate.bind({})}
+  </Story>
+</Preview>
+
+### Different heading
+
+<Preview>
+  <Story name='Different heading' args={{ data, heading: "Comparte:" }}>
+    {ShareBlockTemplate.bind({})}
+  </Story>
+</Preview>

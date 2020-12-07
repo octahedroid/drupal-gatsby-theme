@@ -1,15 +1,14 @@
 import React, { forwardRef } from "react"
 import PropTypes from "prop-types"
 import { Box } from "theme-ui"
-import Section from "../Section"
+import { Section } from "ui"
 
 const Footer = forwardRef(
   ({ children, size, align, isFull, variant, ...props }, ref) => {
     const alignOptions = {
-      default: ["center", null, "flex-start"],
-      left: "flex-start",
-      center: "center",
-      right: "flex-end",
+      default: ["row", null, "row-reverse"],
+      left: "row-reverse",
+      right: "row",
     }
 
     return (
@@ -17,12 +16,11 @@ const Footer = forwardRef(
         <Box
           __css={{
             display: "flex",
-            flexDirection: ["column", null, "row"],
+            flexDirection: ["column", null, alignOptions[align]],
             flexWrap: ["wrap", null, "nowrap"],
             justifyContent: "space-between",
             px: "xsmall",
             py: 22,
-            alignItems: alignOptions[align],
           }}
         >
           {children}

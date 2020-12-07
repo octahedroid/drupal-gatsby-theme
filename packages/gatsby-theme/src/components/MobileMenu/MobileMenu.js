@@ -1,7 +1,7 @@
 import React from "react"
 import { Box } from "theme-ui"
 import PropTypes from "prop-types"
-import Icon from "../Icon"
+import { Icon } from "ui"
 
 const MobileMenu = ({ children, showSidebar, handleShowSidebar }) => {
   return (

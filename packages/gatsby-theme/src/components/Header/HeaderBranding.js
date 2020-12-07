@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { Box } from "theme-ui"
-import Link from "../Link"
+import { Link } from "ui"
 
 const HeaderBranding = ({ children, to, ariaLabel }) => {
   return (
