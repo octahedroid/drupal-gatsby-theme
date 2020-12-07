@@ -45,7 +45,7 @@ module.exports = {
     "no-underscore-dangle": 0,
     "jsx-a11y/anchor-is-valid": 0,
     "react/jsx-props-no-spreading": "off",
-    "react/jsx-uses-react": "off",
-    "react/react-in-jsx-scope": "off",
+    "react/jsx-uses-react": 2, // rollback
+    "react/react-in-jsx-scope": 2,
   },
 }
