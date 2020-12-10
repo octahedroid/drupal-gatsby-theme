@@ -6,9 +6,9 @@ import { Section } from "ui"
 const Footer = forwardRef(
   ({ children, size, align, isFull, variant, ...props }, ref) => {
     const alignOptions = {
-      default: ["row", null, "row-reverse"],
-      left: "row-reverse",
-      right: "row",
+      default: ["row", null, "row"],
+      right: "row-reverse",
+      left: "row",
     }
 
     return (

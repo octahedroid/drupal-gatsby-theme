@@ -2,9 +2,9 @@ import React from "react"
 import PropTypes from "prop-types"
 import { Footer } from "ui"
 
-const FooterBlock = ({ isFull, variant, branding, children, align }) => {
+const FooterBlock = ({ isFull, variant, branding, children, alignContent }) => {
   return (
-    <Footer isFull={isFull} variant={variant} align={align}>
+    <Footer isFull={isFull} variant={variant} align={alignContent}>
       {children}
       {branding && (
         <Footer.Branding
@@ -19,7 +19,7 @@ const FooterBlock = ({ isFull, variant, branding, children, align }) => {
 }
 
 FooterBlock.propTypes = {
-  align: PropTypes.string,
+  alignContent: PropTypes.string,
   children: PropTypes.node,
   variant: PropTypes.string,
   isFull: PropTypes.bool,
@@ -31,7 +31,7 @@ FooterBlock.propTypes = {
 }
 
 FooterBlock.defaultProps = {
-  align: "default",
+  alignContent: "default",
   children: undefined,
   variant: "dark",
   isFull: false,
