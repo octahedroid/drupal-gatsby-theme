@@ -38,6 +38,7 @@ Use to insert an InfiniteScroll
           <Grid columns={2}>
             {items.map((val) => (
               <Box
+                key={JSON.stringify(val)}
                 __css={{
                   textAlign: "center",
                   py: "xlarge",
