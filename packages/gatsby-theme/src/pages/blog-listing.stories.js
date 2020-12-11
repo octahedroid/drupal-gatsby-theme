@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import { Box } from "theme-ui"
+import "@reach/skip-nav/styles.css"
 import { SkipNavContent } from "@reach/skip-nav"
 import { Section, Grid, Card, Link, Icon, MobileMenu } from "ui"
 import { FooterBlock, HeaderBlock, HeroBlock } from "blocks"
