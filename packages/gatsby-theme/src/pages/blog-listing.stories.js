@@ -4,7 +4,7 @@ import { SkipNavContent } from "@reach/skip-nav"
 import { Section, Grid, Card, Link, Icon, MobileMenu } from "ui"
 import { FooterBlock, HeaderBlock, HeroBlock } from "blocks"
 
-export default { title: "pages/Blog" }
+export default { title: "pages/Blog/Listing" }
 
 const branding = {
   to: "/",

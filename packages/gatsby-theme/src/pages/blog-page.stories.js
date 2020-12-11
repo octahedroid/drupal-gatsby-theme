@@ -3,7 +3,7 @@ import { Box } from "theme-ui"
 import { Section, Image, Text, Link, MobileMenu, Heading } from "ui"
 import { ContactBlock, BlogHeadBlock, FooterBlock, HeaderBlock } from "blocks"
 
-export default { title: "pages/Blog" }
+export default { title: "pages/Blog/Post" }
 
 const headerMainMenu = [
   {
