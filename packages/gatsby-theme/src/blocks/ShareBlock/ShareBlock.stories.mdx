@@ -75,15 +75,7 @@ export const ShareBlockTemplate = ({ disabledOptions }) => {
 ### Default ShareBlock
 
 <Preview>
-  <Story name='Default' args={{ data }}>
-    {ShareBlockTemplate.bind({})}
-  </Story>
-</Preview>
-
-### Different heading
-
-<Preview>
-  <Story name='Different heading' args={{ data, heading: "Comparte:" }}>
+  <Story name='Default' args={{ data, title: "Share:" }}>
     {ShareBlockTemplate.bind({})}
   </Story>
 </Preview>
