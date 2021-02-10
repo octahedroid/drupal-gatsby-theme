@@ -103,10 +103,10 @@ export const BlogListing = () => {
                 <Image image={item.img} />
               </Link>
               <Card.Heading>{item.title}</Card.Heading>
-              <Card.Text sx={{ fontSize: "tiny" }}>
+              <Card.RichText sx={{ fontSize: "tiny" }}>
                 <Icon icon='calendar' sx={{ pt: 2, mr: "xsmall" }} />
                 {item.date}
-              </Card.Text>
+              </Card.RichText>
               <Card.RichText sx={{ flex: "1" }}>{item.content}</Card.RichText>
               <Card.Button to='/' sx={{ alignSelf: "start" }}>
                 Read more
