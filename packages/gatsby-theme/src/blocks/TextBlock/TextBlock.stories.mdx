@@ -1,7 +1,6 @@
-import { Meta, Story, Props, Preview } from "@storybook/addon-docs/blocks"
-
+import { Meta, Story, ArgsTable, Canvas } from "@storybook/addon-docs/blocks"
+import { Section } from "ui"
 import TextBlock from "."
-import Section from "../../components/Section"
 
 export const data = {
   title: "Some nice title",
@@ -38,34 +37,34 @@ export const richTextData = {
 
 ## Props
 
-<Props of={TextBlock} />
+<ArgsTable of={TextBlock} />
 
 ### Default TextBlock
 
-<Preview>
+<Canvas>
   <Story name='Default'>
     <Section>
       <TextBlock {...data} />
     </Section>
   </Story>
-</Preview>
+</Canvas>
 
 ### Different align
 
-<Preview>
+<Canvas>
   <Story name='Different align'>
     <Section>
       <TextBlock {...data} align='center' />
     </Section>
   </Story>
-</Preview>
+</Canvas>
 
 ### Rich Text
 
-<Preview>
+<Canvas>
   <Story name='Rich Text'>
     <Section>
       <TextBlock {...richTextData} />
     </Section>
   </Story>
-</Preview>
+</Canvas>
