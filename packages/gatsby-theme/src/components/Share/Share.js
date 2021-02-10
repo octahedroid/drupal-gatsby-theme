@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import { Box } from "theme-ui"
 import { Heading } from "ui"
 
-const Share = ({ children, title, sx, ...props }) => {
+const Share = ({ children, heading, sx, ...props }) => {
   return (
     <Box
       __css={{
@@ -22,21 +22,30 @@ const Share = ({ children, title, sx, ...props }) => {
           ...sx,
         }}
       >
-        {title}
+        {heading}
       </Heading>
-      {children}
+      <Box
+        __css={{
+          display: "flex",
+          alignItems: "center",
+          color: "darkShade",
+        }}
+        {...props}
+      >
+        {children}
+      </Box>
     </Box>
   )
 }
 
 Share.propTypes = {
   children: PropTypes.node.isRequired,
-  title: PropTypes.string,
+  heading: PropTypes.string,
   sx: PropTypes.shape({}),
 }
 
 Share.defaultProps = {
-  title: undefined,
+  heading: undefined,
   sx: undefined,
 }
 

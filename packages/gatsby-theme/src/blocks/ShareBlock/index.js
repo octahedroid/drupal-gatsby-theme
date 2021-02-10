@@ -7,11 +7,9 @@ const ShareBlock = ({ data, ...props }) => {
   return (
     <Box variant='wrapper' __themeKey='container'>
       <Share {...props}>
-        <Share.Container>
-          {data.map((item) => {
-            return !item.disabled && <Share.Social {...item} key={item.social} />
-          })}
-        </Share.Container>
+        {data.map((item) => {
+          return !item.disabled && <Share.Social {...item} key={item.social} />
+        })}
       </Share>
     </Box>
   )

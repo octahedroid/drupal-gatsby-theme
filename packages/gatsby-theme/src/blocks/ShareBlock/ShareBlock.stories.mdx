@@ -1,4 +1,4 @@
-import { Meta, Story, Props, Preview } from "@storybook/addon-docs/blocks"
+import { Meta, Story, ArgsTable, Canvas } from "@storybook/addon-docs/blocks"
 import { useArgs } from "@storybook/client-api"
 import _ from "lodash"
 import ShareBlock from "."
@@ -6,33 +6,36 @@ import ShareBlock from "."
 export const data = [
   {
     social: "twitter",
-    title: "Octahedroid About Page",
-    to: "https://octahedroid.com/about/",
-    handler: "Octonauts",
-    hashtags: ["Octonautas", "Octahedroid"],
+    title: "Twitter",
+    to: "https://twitter.com/",
+    handler: "a handler",
+    hashtags: ["#firsthashtag", "#secondhashtag"],
     disabled: false,
   },
   {
     social: "linkedin",
+    title: "Linkedin",
+    to: "https://www.linkedin.com/",
     source: "The source",
     summary: "A summary",
     disabled: false,
   },
   {
     social: "whatsapp",
+    title: "Whatsapp",
     separator: "/",
     disabled: false,
   },
   {
     social: "facebook",
-    to: "https://octahedroid.com/",
-    title: "Octahedroid",
+    title: "Facebook",
+    to: "https://www.facebook.com/",
     disabled: false,
   },
   {
     social: "reddit",
-    to: "https://octahedroid.com/",
-    title: "Octahedroid",
+    title: "Reddit",
+    to: "https://www.reddit.com/",
     disabled: false,
   },
 ]
@@ -52,7 +55,7 @@ export const shareArgTypes = {
 
 ## Props
 
-<Props of={ShareBlock} />
+<ArgsTable of={ShareBlock} />
 
 export const ShareBlockTemplate = ({ disabledOptions }) => {
   const [args, setArgs] = useArgs()
@@ -74,8 +77,8 @@ export const ShareBlockTemplate = ({ disabledOptions }) => {
 
 ### Default ShareBlock
 
-<Preview>
-  <Story name='Default' args={{ data, title: "Share:" }}>
+<Canvas>
+  <Story name='Default' args={{ data, heading: "Share:" }}>
     {ShareBlockTemplate.bind({})}
   </Story>
-</Preview>
+</Canvas>
