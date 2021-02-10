@@ -4,8 +4,8 @@ import { Contact } from "ui"
 
 const ContactBlock = ({ heading, align, contactInfo }) => {
   return (
-    <Contact>
-      <Contact.Header align={align}>{heading}</Contact.Header>
+    <Contact align={align}>
+      {heading}
       <Contact.Grid align={align} contactInfo={contactInfo} />
     </Contact>
   )
