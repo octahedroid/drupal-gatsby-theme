@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { Box } from "theme-ui"
 import { SkipNavContent } from "@reach/skip-nav"
-import { Section, Grid, Card, Link, Icon, MobileMenu } from "ui"
+import { Section, Grid, Card, Image, Link, Icon, MobileMenu } from "ui"
 import { FooterBlock, HeaderBlock, HeroBlock } from "blocks"
 
 export default { title: "pages/Blog" }
@@ -100,7 +100,7 @@ export const BlogListing = () => {
               }}
             >
               <Link to='/' variant='default'>
-                <Card.Image image={item.img} />
+                <Image image={item.img} />
               </Link>
               <Card.Heading>{item.title}</Card.Heading>
               <Card.Text sx={{ fontSize: "tiny" }}>
