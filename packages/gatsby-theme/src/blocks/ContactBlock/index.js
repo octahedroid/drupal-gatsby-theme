@@ -2,17 +2,16 @@ import React from "react"
 import PropTypes from "prop-types"
 import { Contact } from "ui"
 
-const ContactBlock = ({ heading, align, contactInfo }) => {
+const ContactBlock = ({ title, align, contactInfo }) => {
   return (
-    <Contact align={align}>
-      {heading}
+    <Contact align={align} title={title}>
       <Contact.Grid align={align} contactInfo={contactInfo} />
     </Contact>
   )
 }
 
 ContactBlock.propTypes = {
-  heading: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
   contactInfo: PropTypes.arrayOf(
     PropTypes.shape({
       title: PropTypes.string.isRequired,

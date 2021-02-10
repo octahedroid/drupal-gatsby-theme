@@ -8,10 +8,10 @@ const Contact = ({ children, title, align, sx, ...props }) => {
     <Box
       variant='wrapper'
       __themeKey='container'
-      sx={{ textAlign: align, ...sx }}
+      __css={{ textAlign: align, ...sx }}
       {...props}
     >
-      <RichText sx={{ textAlign: align, pb: "small", ...sx }} {...props}>
+      <RichText sx={{ textAlign: align, pb: "small" }} {...props}>
         {title}
       </RichText>
       {children}

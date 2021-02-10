@@ -27,7 +27,13 @@ export const contactInfo = [
   },
 ]
 
-<Meta title='components/Contact' component={Contact} />
+<Meta
+  title='components/Contact'
+  component={Contact}
+  subcomponents={{
+    ContactGrid: Contact.Grid,
+  }}
+/>
 
 # Contact
 
