@@ -22,7 +22,8 @@ export const data = [
   },
   {
     social: "whatsapp",
-    title: "Whatsapp",
+    title: "https://octahedroid.com",
+    to: "/",
     separator: "/",
     disabled: false,
   },
@@ -79,6 +80,14 @@ export const ShareBlockTemplate = ({ disabledOptions }) => {
 
 <Canvas>
   <Story name='Default' args={{ data, heading: "Share:" }}>
+    {ShareBlockTemplate.bind({})}
+  </Story>
+</Canvas>
+
+### Whithout a heading
+
+<Canvas>
+  <Story name='Whithout a heading' args={{ data }}>
     {ShareBlockTemplate.bind({})}
   </Story>
 </Canvas>

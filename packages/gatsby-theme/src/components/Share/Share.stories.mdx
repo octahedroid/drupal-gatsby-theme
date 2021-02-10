@@ -36,7 +36,47 @@ Share links
         handler='a handler'
         hashtags={["#firsthashtag", "#secondhashtag"]}
       />
-      <Share.Social social='whatsapp' title='Whatsapp' to='/' separator='/' />
+      <Share.Social
+        social='whatsapp'
+        title='https://octahedroid.com'
+        to='/'
+        separator='/'
+      />
+    </Share>
+  </Story>
+</Canvas>
+
+### Whithout a heading
+
+<Canvas>
+  <Story name='Whithout a heading'>
+    <Share>
+      <Share.Social
+        social='facebook'
+        title='Facebook'
+        to='https://www.facebook.com/'
+      />
+      <Share.Social
+        social='linkedin'
+        title='Linkedin'
+        to='https://www.linkedin.com/'
+        summary='A summary of the site'
+        source='The source'
+      />
+      <Share.Social social='reddit' title='Reddit' to='https://www.reddit.com/' />
+      <Share.Social
+        social='twitter'
+        title='Twitter'
+        to='https://twitter.com/'
+        handler='a handler'
+        hashtags={["#firsthashtag", "#secondhashtag"]}
+      />
+      <Share.Social
+        social='whatsapp'
+        title='https://octahedroid.com'
+        to='/'
+        separator='/'
+      />
     </Share>
   </Story>
 </Canvas>

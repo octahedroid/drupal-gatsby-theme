@@ -11,6 +11,7 @@ const Share = ({ children, heading, sx, ...props }) => {
         display: "flex",
         flexWrap: "wrap",
         alignItems: "center",
+        ...sx,
       }}
       {...props}
     >
@@ -19,7 +20,6 @@ const Share = ({ children, heading, sx, ...props }) => {
           color: "secondary",
           m: 0,
           mr: "small",
-          ...sx,
         }}
       >
         {heading}
