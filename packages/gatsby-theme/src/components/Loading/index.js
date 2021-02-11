@@ -24,7 +24,8 @@ const Loading = ({ type }) => {
           height='100%'
           __css={{ display: "block" }}
         >
-          <rect
+          <Box
+            as='rect'
             x='5%'
             rx='3'
             ry='3'
@@ -34,19 +35,22 @@ const Loading = ({ type }) => {
               height: [200, 230, 340],
             }}
           />
-          <rect
+          <Box
+            as='rect'
             x='5%'
             rx='3'
             ry='3'
             sx={{ y: ["260", "310", "420"], width: ["40%", "15%"], height: 20 }}
           />
-          <rect
+          <Box
+            as='rect'
             x='5%'
             rx='3'
             ry='3'
             sx={{ y: ["290", "340", "450"], width: ["90%", "40%"], height: 20 }}
           />
-          <rect
+          <Box
+            as='rect'
             x='5%'
             rx='3'
             ry='3'
@@ -56,7 +60,8 @@ const Loading = ({ type }) => {
               height: 20,
             }}
           />
-          <rect
+          <Box
+            as='rect'
             x='5%'
             rx='3'
             ry='3'
@@ -66,7 +71,8 @@ const Loading = ({ type }) => {
               height: 20,
             }}
           />
-          <rect
+          <Box
+            as='rect'
             x='5%'
             rx='3'
             ry='3'
@@ -77,25 +83,29 @@ const Loading = ({ type }) => {
             }}
           />
 
-          <rect
+          <Box
+            as='rect'
             x='55%'
             rx='3'
             ry='3'
             sx={{ y: "60", width: ["0%", "40%"], height: [230, null, 340] }}
           />
-          <rect
+          <Box
+            as='rect'
             x='55%'
             rx='3'
             ry='3'
             sx={{ y: ["310", null, "420"], width: ["0%", "15%"], height: 20 }}
           />
-          <rect
+          <Box
+            as='rect'
             x='55%'
             rx='3'
             ry='3'
             sx={{ y: ["340", null, "450"], width: ["0%", "40%"], height: 20 }}
           />
-          <rect
+          <Box
+            as='rect'
             x='55%'
             rx='3'
             ry='3'
@@ -105,7 +115,8 @@ const Loading = ({ type }) => {
               height: 20,
             }}
           />
-          <rect
+          <Box
+            as='rect'
             x='55%'
             rx='3'
             ry='3'
@@ -115,7 +126,8 @@ const Loading = ({ type }) => {
               height: 20,
             }}
           />
-          <rect
+          <Box
+            as='rect'
             x='55%'
             rx='3'
             ry='3'
