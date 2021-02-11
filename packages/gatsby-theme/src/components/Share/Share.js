@@ -15,15 +15,17 @@ const Share = ({ children, heading, sx, ...props }) => {
       }}
       {...props}
     >
-      <Heading
-        sx={{
-          color: "secondary",
-          m: 0,
-          mr: "small",
-        }}
-      >
-        {heading}
-      </Heading>
+      {heading && (
+        <Heading
+          sx={{
+            color: "secondary",
+            m: 0,
+            mr: "small",
+          }}
+        >
+          {heading}
+        </Heading>
+      )}
       <Box
         __css={{
           display: "flex",
