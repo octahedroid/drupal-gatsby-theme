@@ -29,7 +29,7 @@ const Loading = ({ type }) => {
             x='5%'
             rx='3'
             ry='3'
-            sx={{
+            __css={{
               y: ["40", "60"],
               width: ["90%", "40%"],
               height: [200, 230, 340],
@@ -40,21 +40,21 @@ const Loading = ({ type }) => {
             x='5%'
             rx='3'
             ry='3'
-            sx={{ y: ["260", "310", "420"], width: ["40%", "15%"], height: 20 }}
+            __css={{ y: ["260", "310", "420"], width: ["40%", "15%"], height: 20 }}
           />
           <Box
             as='rect'
             x='5%'
             rx='3'
             ry='3'
-            sx={{ y: ["290", "340", "450"], width: ["90%", "40%"], height: 20 }}
+            __css={{ y: ["290", "340", "450"], width: ["90%", "40%"], height: 20 }}
           />
           <Box
             as='rect'
             x='5%'
             rx='3'
             ry='3'
-            sx={{
+            __css={{
               y: ["315", "365", "475"],
               width: ["90%", "40%", "20%"],
               height: 20,
@@ -65,7 +65,7 @@ const Loading = ({ type }) => {
             x='5%'
             rx='3'
             ry='3'
-            sx={{
+            __css={{
               y: ["340", "390"],
               width: ["50%", "20%", "0%"],
               height: 20,
@@ -76,7 +76,7 @@ const Loading = ({ type }) => {
             x='5%'
             rx='3'
             ry='3'
-            sx={{
+            __css={{
               y: ["380", "430", "515"],
               width: ["30%", "15%", "12%"],
               height: 25,
@@ -88,28 +88,28 @@ const Loading = ({ type }) => {
             x='55%'
             rx='3'
             ry='3'
-            sx={{ y: "60", width: ["0%", "40%"], height: [230, null, 340] }}
+            __css={{ y: "60", width: ["0%", "40%"], height: [230, null, 340] }}
           />
           <Box
             as='rect'
             x='55%'
             rx='3'
             ry='3'
-            sx={{ y: ["310", null, "420"], width: ["0%", "15%"], height: 20 }}
+            __css={{ y: ["310", null, "420"], width: ["0%", "15%"], height: 20 }}
           />
           <Box
             as='rect'
             x='55%'
             rx='3'
             ry='3'
-            sx={{ y: ["340", null, "450"], width: ["0%", "40%"], height: 20 }}
+            __css={{ y: ["340", null, "450"], width: ["0%", "40%"], height: 20 }}
           />
           <Box
             as='rect'
             x='55%'
             rx='3'
             ry='3'
-            sx={{
+            __css={{
               y: ["365", null, "475"],
               width: ["0%", "40%", "20%"],
               height: 20,
@@ -120,7 +120,7 @@ const Loading = ({ type }) => {
             x='55%'
             rx='3'
             ry='3'
-            sx={{
+            __css={{
               y: ["390"],
               width: ["0%", "20%", "0%"],
               height: 20,
@@ -131,7 +131,7 @@ const Loading = ({ type }) => {
             x='55%'
             rx='3'
             ry='3'
-            sx={{
+            __css={{
               y: ["430", null, "515"],
               width: ["0%", "15%", "12%"],
               height: 25,
