@@ -7,7 +7,7 @@ const bColors = {
   secondary: "#CA3E73",
   darkShade: "#37375B",
   lightShade: "#F7F7F7",
-  darkBlueOpaque: "rgba(21, 30, 46, 0.92)",
+  darkBlueOpaque: "rgba(21, 30, 46, 0.85)",
 }
 
 const bFonts = {
