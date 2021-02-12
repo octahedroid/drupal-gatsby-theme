@@ -9,7 +9,7 @@ const CardRichText = ({ text, children, sx }) => (
 )
 
 CardRichText.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
+  children: PropTypes.node,
   text: PropTypes.string,
   sx: PropTypes.shape({}),
 }
