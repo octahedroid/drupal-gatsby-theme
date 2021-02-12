@@ -3,7 +3,16 @@ import PropTypes from "prop-types"
 import { Box } from "theme-ui"
 import { Heading, Link, Icon } from "ui"
 
-const BlogHeadContainer = ({ author, ariaLabel, date, title, to, sx, ...props }) => {
+const BlogHeadContainer = ({
+  credits,
+  author,
+  ariaLabel,
+  date,
+  title,
+  to,
+  sx,
+  ...props
+}) => {
   return (
     <Box
       as='section'
@@ -49,6 +58,20 @@ const BlogHeadContainer = ({ author, ariaLabel, date, title, to, sx, ...props })
         <Icon icon='calendar' sx={{ mr: "xsmall", pt: 2 }} />
         {date}
       </Box>
+      <Box
+        __css={{
+          position: "absolute",
+          zIndex: 4,
+          bottom: "small",
+          left: "medium",
+          fontWeight: "thin",
+          fontSize: "tiny",
+          fontStyle: "italic",
+        }}
+        {...props}
+      >
+        {credits}
+      </Box>
     </Box>
   )
 }
@@ -56,6 +79,7 @@ const BlogHeadContainer = ({ author, ariaLabel, date, title, to, sx, ...props })
 BlogHeadContainer.propTypes = {
   author: PropTypes.string.isRequired,
   ariaLabel: PropTypes.string.isRequired,
+  credits: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   to: PropTypes.string,

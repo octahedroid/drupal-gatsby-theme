@@ -1,8 +1,9 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { Box } from "theme-ui"
+import { Image } from "ui"
 
-const BlogHead = ({ imageOverlay, children, ...props }) => {
+const BlogHead = ({ image, imageOverlay, children, sx, ...props }) => {
   return (
     <Box
       __css={{
@@ -28,6 +29,20 @@ const BlogHead = ({ imageOverlay, children, ...props }) => {
       }}
       {...props}
     >
+      <Image
+        image={image}
+        sx={{
+          img: {
+            position: "absolute",
+            width: "100%",
+            height: "100%",
+            zIndex: 0,
+            top: 0,
+            objectFit: "cover",
+            ...sx,
+          },
+        }}
+      />
       {children}
     </Box>
   )
@@ -36,10 +51,26 @@ const BlogHead = ({ imageOverlay, children, ...props }) => {
 BlogHead.propTypes = {
   children: PropTypes.node.isRequired,
   imageOverlay: PropTypes.string,
+  image: PropTypes.oneOfType([
+    PropTypes.shape({
+      src: PropTypes.string.isRequired,
+      alt: PropTypes.string.isRequired,
+    }),
+    PropTypes.shape({
+      fluid: PropTypes.shape({}).isRequired,
+      alt: PropTypes.string.isRequired,
+    }),
+    PropTypes.shape({
+      fixed: PropTypes.shape({}).isRequired,
+      alt: PropTypes.string.isRequired,
+    }),
+  ]).isRequired,
+  sx: PropTypes.shape({}),
 }
 
 BlogHead.defaultProps = {
-  imageOverlay: "",
+  imageOverlay: undefined,
+  sx: undefined,
 }
 
 export default BlogHead
