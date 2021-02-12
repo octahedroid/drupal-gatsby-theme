@@ -1,4 +1,4 @@
-import { Meta, Story, Props, Preview } from "@storybook/addon-docs/blocks"
+import { Meta, Story, ArgsTable, Canvas } from "@storybook/addon-docs/blocks"
 import BlogHead from "."
 
 <Meta title='components/BlogHead' component={BlogHead} />
@@ -9,19 +9,20 @@ Use this component to insert common BlogHead
 
 ## Props
 
-<Props of={BlogHead} />
+<ArgsTable of={BlogHead} />
 
 ### BlogHead
 
-<Preview>
+<Canvas>
   <Story name='Default'>
-    <BlogHead
-      image={{
-        src:
-          "https://3czfu91fpa5s34atq735lonm-wpengine.netdna-ssl.com/wp-content/uploads/2018/12/types-of-infrastructure.jpeg",
-        alt: "Roads",
-      }}
-    >
+    <BlogHead>
+      <BlogHead.Image
+        image={{
+          src:
+            "https://3czfu91fpa5s34atq735lonm-wpengine.netdna-ssl.com/wp-content/uploads/2018/12/types-of-infrastructure.jpeg",
+          alt: "Roads",
+        }}
+      />
       <BlogHead.Container
         credits='Via Unsplash'
         author='Marco José Sánchez'
@@ -32,4 +33,4 @@ Use this component to insert common BlogHead
       />
     </BlogHead>
   </Story>
-</Preview>
+</Canvas>

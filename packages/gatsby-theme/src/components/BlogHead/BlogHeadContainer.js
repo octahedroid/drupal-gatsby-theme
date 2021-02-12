@@ -58,20 +58,22 @@ const BlogHeadContainer = ({
         <Icon icon='calendar' sx={{ mr: "xsmall", pt: 2 }} />
         {date}
       </Box>
-      <Box
-        __css={{
-          position: "absolute",
-          zIndex: 4,
-          bottom: "small",
-          left: "medium",
-          fontWeight: "thin",
-          fontSize: "tiny",
-          fontStyle: "italic",
-        }}
-        {...props}
-      >
-        {credits}
-      </Box>
+      {credits && (
+        <Box
+          __css={{
+            position: "absolute",
+            zIndex: 4,
+            bottom: "small",
+            left: "medium",
+            fontWeight: "thin",
+            fontSize: "tiny",
+            fontStyle: "italic",
+          }}
+          {...props}
+        >
+          {credits}
+        </Box>
+      )}
     </Box>
   )
 }
@@ -79,7 +81,7 @@ const BlogHeadContainer = ({
 BlogHeadContainer.propTypes = {
   author: PropTypes.string.isRequired,
   ariaLabel: PropTypes.string.isRequired,
-  credits: PropTypes.string.isRequired,
+  credits: PropTypes.string,
   date: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   to: PropTypes.string,
@@ -87,6 +89,7 @@ BlogHeadContainer.propTypes = {
 }
 
 BlogHeadContainer.defaultProps = {
+  credits: undefined,
   to: undefined,
   sx: undefined,
 }
