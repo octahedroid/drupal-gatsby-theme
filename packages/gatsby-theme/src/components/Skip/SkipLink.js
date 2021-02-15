@@ -14,7 +14,7 @@ const SkipLink = ({ children, id, ...props }) => {
         bg: "#F9F9F9",
         height: 8,
         top: "0",
-        left: "50%",
+        left: "10%",
         zIndex: 100,
         padding: "8px",
         position: "absolute",
@@ -32,11 +32,12 @@ const SkipLink = ({ children, id, ...props }) => {
 }
 
 SkipLink.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
   id: PropTypes.string,
 }
 
 SkipLink.defaultProps = {
+  children: "Skip to main content",
   id: "main-content",
 }
 

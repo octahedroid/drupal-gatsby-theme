@@ -1,7 +1,7 @@
 import React, { forwardRef } from "react"
 import PropTypes from "prop-types"
 import { Box } from "theme-ui"
-import { SkipNavLink } from "@reach/skip-nav"
+import { SkipLink } from "ui"
 
 const SkipNavStyles = {
   border: 0,
@@ -16,7 +16,6 @@ const SkipNavStyles = {
     padding: "1rem",
     position: "fixed",
     top: 10,
-    left: 10,
     background: "white",
     zIndex: 100,
     width: "auto",
@@ -43,7 +42,7 @@ const Header = forwardRef(({ children, shadow }, ref) => {
         boxShadow: shadow ? "default" : "",
       }}
     >
-      <Box as={SkipNavLink} __css={SkipNavStyles} />
+      <Box as={SkipLink} __css={SkipNavStyles} />
       <Box
         __css={{
           display: "flex",
