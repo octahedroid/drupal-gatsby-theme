@@ -1,19 +1,19 @@
-import { Meta, Story, Props, Preview } from "@storybook/addon-docs/blocks"
+import { Meta, Story, ArgsTable, Canvas } from "@storybook/addon-docs/blocks"
 import Button from "."
 
 <Meta title='components/Button' component={Button} />
 
 # Button
 
-You can use it as a button or a link
+You can use it as a button or a link, this component accepts a variant
 
 ## Props
 
-<Props of={Button} />
+<ArgsTable of={Button} />
 
 ### Default button
 
-<Preview>
+<Canvas>
   <Story name='Default'>
     <Button to='/'>Default button</Button>
   </Story>
@@ -22,54 +22,54 @@ You can use it as a button or a link
       Primary button
     </Button>
   </Story>
-</Preview>
+</Canvas>
 
 ### Secondary button
 
-<Preview>
+<Canvas>
   <Story name='Secondary'>
     <Button to='/' variant='secondary'>
       Secondary button
     </Button>
   </Story>
-</Preview>
+</Canvas>
 
 ### Light button
 
-<Preview>
+<Canvas>
   <Story name='Light'>
     <Button to='/' variant='light'>
       Secondary button
     </Button>
   </Story>
-</Preview>
+</Canvas>
 
 ### Dark button
 
-<Preview>
+<Canvas>
   <Story name='Dark'>
     <Button to='/' variant='dark'>
       Secondary button
     </Button>
   </Story>
-</Preview>
+</Canvas>
 
 ### Link
 
-<Preview>
+<Canvas>
   <Story name='Link'>
     <Button as='a' to='/'>
       I&apos;m a link
     </Button>
   </Story>
-</Preview>
+</Canvas>
 
 ### Transparent
 
-<Preview>
+<Canvas>
   <Story name='Transparent'>
     <Button to='/' variant='transparent'>
       Transparent button
     </Button>
   </Story>
-</Preview>
+</Canvas>

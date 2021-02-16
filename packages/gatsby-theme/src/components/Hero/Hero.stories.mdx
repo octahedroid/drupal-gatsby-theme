@@ -1,4 +1,4 @@
-import { Meta, Story, Props, Preview } from "@storybook/addon-docs/blocks"
+import { Meta, Story, ArgsTable, Canvas } from "@storybook/addon-docs/blocks"
 import { Section } from "ui"
 import Hero from "."
 
@@ -6,13 +6,15 @@ import Hero from "."
 
 # Hero
 
+a Hero component. There are many layout options below.
+
 ## Props
 
-<Props of={Hero} />
+<ArgsTable of={Hero} />
 
 ### Default
 
-<Preview>
+<Canvas>
   <Story name='Default'>
     <Section>
       <Hero>
@@ -27,11 +29,11 @@ import Hero from "."
       </Hero>
     </Section>
   </Story>
-</Preview>
+</Canvas>
 
 ### With Intro
 
-<Preview>
+<Canvas>
   <Story name='With Intro'>
     <Section>
       <Hero>
@@ -47,11 +49,11 @@ import Hero from "."
       </Hero>
     </Section>
   </Story>
-</Preview>
+</Canvas>
 
 ### Default Hero CTA
 
-<Preview>
+<Canvas>
   <Story name='Default Hero CTA'>
     <Section>
       <Hero columns={2}>
@@ -76,11 +78,11 @@ import Hero from "."
       </Hero>
     </Section>
   </Story>
-</Preview>
+</Canvas>
 
 ## Different Gutter
 
-<Preview>
+<Canvas>
   <Story name='Different Gutter'>
     <Section>
       <Hero columns={2} gutter='80px'>
@@ -105,11 +107,11 @@ import Hero from "."
       </Hero>
     </Section>
   </Story>
-</Preview>
+</Canvas>
 
 ### Hero Cta Switch Image
 
-<Preview>
+<Canvas>
   <Story name='Hero Cta Switch Image'>
     <Section>
       <Hero columns={2}>
@@ -134,11 +136,11 @@ import Hero from "."
       </Hero>
     </Section>
   </Story>
-</Preview>
+</Canvas>
 
 ### Hero Cta without container
 
-<Preview>
+<Canvas>
   <Story name='Hero Cta Full'>
     <Section isFull>
       <Hero columns={2}>
@@ -163,11 +165,11 @@ import Hero from "."
       </Hero>
     </Section>
   </Story>
-</Preview>
+</Canvas>
 
 ### Diferent Column Proportion
 
-<Preview>
+<Canvas>
   <Story name='Diferent Column Proportion'>
     <Section>
       <Hero columns={2} proportion='2:1'>
@@ -192,4 +194,4 @@ import Hero from "."
       </Hero>
     </Section>
   </Story>
-</Preview>
+</Canvas>

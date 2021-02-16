@@ -1,6 +1,6 @@
-import { Meta, Story, Props, Preview } from "@storybook/addon-docs/blocks"
+import { Meta, Story, ArgsTable, Canvas } from "@storybook/addon-docs/blocks"
+import { Logo } from "ui"
 import Header from "."
-import Logo from "../Logo"
 
 export const mainMenu = [
   {
@@ -26,13 +26,15 @@ export const mainMenu = [
 
 # Header
 
+a Header component.
+
 ## Props
 
-<Props of={Header} />
+<ArgsTable of={Header} />
 
 ### Default
 
-<Preview height='250'>
+<Canvas height='250'>
   <Story name='Default'>
     <Header shadow>
       <Header.Branding to='/' ariaLabel='Back to Home'>
@@ -48,4 +50,4 @@ export const mainMenu = [
       </Header.Navbar>
     </Header>
   </Story>
-</Preview>
+</Canvas>
