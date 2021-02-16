@@ -21,7 +21,7 @@ const Header = forwardRef(({ children, shadow }, ref) => {
         boxShadow: shadow ? "default" : "",
       }}
     >
-      <Box as={SkipLink} />
+      <Box as={SkipLink} id='main-content' />
       <Box
         __css={{
           display: "flex",

@@ -39,12 +39,11 @@ const SkipLink = ({ children, id, ...props }) => {
 
 SkipLink.propTypes = {
   children: PropTypes.node,
-  id: PropTypes.string,
+  id: PropTypes.string.isRequired,
 }
 
 SkipLink.defaultProps = {
   children: "Skip to main content",
-  id: "main-content",
 }
 
 export default SkipLink
