@@ -9,14 +9,14 @@ const CardRichText = ({ text, children, sx }) => (
 )
 
 CardRichText.propTypes = {
-  children: PropTypes.string,
+  children: PropTypes.node,
   text: PropTypes.string,
   sx: PropTypes.shape({}),
 }
 
 CardRichText.defaultProps = {
-  children: "",
-  text: "",
+  children: undefined,
+  text: undefined,
   sx: null,
 }
 
