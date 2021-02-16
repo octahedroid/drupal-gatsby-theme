@@ -1,4 +1,4 @@
-import { Meta, Story, Props, Preview } from "@storybook/addon-docs/blocks"
+import { Meta, Story, ArgsTable, Canvas } from "@storybook/addon-docs/blocks"
 import HeroBlock from "."
 
 export const simpleData = {
@@ -28,68 +28,68 @@ You can use it to a Hero Block with a CTA
 
 ## Props
 
-<Props of={HeroBlock} />
+<ArgsTable of={HeroBlock} />
 
 export const HeroBlockTemplate = (args) => <HeroBlock {...args} />
 
 ### Default HeroTextBlock
 
-<Preview>
+<Canvas>
   <Story name='Default' args={{ ...simpleData }}>
     {HeroBlockTemplate.bind({})}
   </Story>
-</Preview>
+</Canvas>
 
 ### With Intro
 
-<Preview>
+<Canvas>
   <Story name='With Intro' args={{ ...simpleData, intro: "A nice intro" }}>
     {HeroBlockTemplate.bind({})}
   </Story>
-</Preview>
+</Canvas>
 
 ### Default HeroBlock
 
-<Preview>
+<Canvas>
   <Story name='Default CTA' args={{ ...complexData }}>
     {HeroBlockTemplate.bind({})}
   </Story>
-</Preview>
+</Canvas>
 
 ### Different Gutter
 
-<Preview>
+<Canvas>
   <Story name='Different Gutter' args={{ ...complexData, gutter: "80px" }}>
     {HeroBlockTemplate.bind({})}
   </Story>
-</Preview>
+</Canvas>
 
 ### Reversed
 
-<Preview>
+<Canvas>
   <Story name='Reversed' args={{ ...complexData, reversed: true }}>
     {HeroBlockTemplate.bind({})}
   </Story>
-</Preview>
+</Canvas>
 
 ### Different Column Proportions
 
-<Preview>
+<Canvas>
   <Story
     name='Different Column Proportions'
     args={{ ...complexData, columnProportion: "2:1" }}
   >
     {HeroBlockTemplate.bind({})}
   </Story>
-</Preview>
+</Canvas>
 
 ### Different Column Proportion Reversed
 
-<Preview>
+<Canvas>
   <Story
     name='Different Column Proportions Reversed'
     args={{ ...complexData, columnProportion: "2:1", reversed: true }}
   >
     {HeroBlockTemplate.bind({})}
   </Story>
-</Preview>
+</Canvas>

@@ -22,7 +22,15 @@ export const mainMenu = [
   },
 ]
 
-<Meta title='components/Header' component={Header} />
+<Meta
+  title='components/Header'
+  component={Header}
+  subcomponents={{
+    HeaderBranding: Header.Branding,
+    HeaderMenuItem: Header.MenuItem,
+    HeaderNavbar: Header.Navbar,
+  }}
+/>
 
 # Header
 

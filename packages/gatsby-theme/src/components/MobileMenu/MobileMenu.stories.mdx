@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { Meta, Story, Props, Preview } from "@storybook/addon-docs/blocks"
+import { Meta, Story, ArgsTable, Canvas } from "@storybook/addon-docs/blocks"
 import { Button } from "ui"
 import MobileMenu from "."
 
@@ -53,23 +53,30 @@ export const BComponent = (args) => {
   )
 }
 
-<Meta title='components/MobileMenu' component={MobileMenu} />
+<Meta
+  title='components/MobileMenu'
+  component={MobileMenu}
+  subcomponents={{
+    MobileMenuItem: MobileMenu.Item,
+    MobileMenuNavbar: MobileMenu.Navbar,
+  }}
+/>
 
 # MobileMenu
 
-Use this MobileMenu
+Use this component to insert a MobileMenu.
 
-<Props of={MobileMenu} />
+<ArgsTable of={MobileMenu} />
 
 ### Default
 
-<Preview>
+<Canvas>
   <Story name='Default'>{BComponent.bind({})}</Story>
-</Preview>
+</Canvas>
 
 ### MegaMenu
 
-<Preview>
+<Canvas>
   <Story name='MegaMenu'>
     <MobileMenu showSidebar handleShowSidebar={() => {}}>
       <MobileMenu.Navbar>
@@ -82,4 +89,4 @@ Use this MobileMenu
       </MobileMenu.Navbar>
     </MobileMenu>
   </Story>
-</Preview>
+</Canvas>

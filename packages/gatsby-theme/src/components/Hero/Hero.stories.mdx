@@ -2,7 +2,18 @@ import { Meta, Story, ArgsTable, Canvas } from "@storybook/addon-docs/blocks"
 import { Section } from "ui"
 import Hero from "."
 
-<Meta title='components/Hero' component={Hero} />
+<Meta
+  title='components/Hero'
+  component={Hero}
+  subcomponents={{
+    Intro: Hero.Intro,
+    Text: Hero.Text,
+    Column: Hero.Column,
+    Cta: Hero.Cta,
+    Title: Hero.Title,
+    Image: Hero.Image,
+  }}
+/>
 
 # Hero
 

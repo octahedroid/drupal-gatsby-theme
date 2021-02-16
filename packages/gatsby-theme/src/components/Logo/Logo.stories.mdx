@@ -1,4 +1,4 @@
-import { Meta, Story, Props, Preview } from "@storybook/addon-docs/blocks"
+import { Meta, Story, ArgsTable, Canvas } from "@storybook/addon-docs/blocks"
 import { Box } from "theme-ui"
 import Logo from "."
 
@@ -18,20 +18,20 @@ Gatsby logo
 
 ## Props
 
-<Props of={Logo} />
+<ArgsTable of={Logo} />
 
 ### Default
 
-<Preview>
+<Canvas>
   <Story name='Default'>{BLogo.bind({})}</Story>
-</Preview>
+</Canvas>
 
 ### Light version
 
-<Preview>
+<Canvas>
   <Story name='Light version'>
     <Box sx={{ bg: "darkShade" }}>
       <Logo width={200} fill='#fff' />
     </Box>
   </Story>
-</Preview>
+</Canvas>
