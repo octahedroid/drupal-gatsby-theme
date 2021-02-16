@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { Box } from "theme-ui"
-import { Section, Grid, Card, Link, Icon, MobileMenu, SkipContent } from "ui"
+import { Section, Grid, Card, Image, Link, Icon, MobileMenu, SkipContent } from "ui"
 import { FooterBlock, HeaderBlock, HeroBlock } from "blocks"
 
 export default { title: "pages/Blog" }
@@ -99,13 +99,13 @@ export const BlogListing = () => {
               }}
             >
               <Link to='/' variant='default'>
-                <Card.Image image={item.img} />
+                <Image image={item.img} />
               </Link>
               <Card.Heading>{item.title}</Card.Heading>
-              <Card.Text sx={{ fontSize: "tiny" }}>
+              <Card.RichText sx={{ fontSize: "tiny" }}>
                 <Icon icon='calendar' sx={{ pt: 2, mr: "xsmall" }} />
                 {item.date}
-              </Card.Text>
+              </Card.RichText>
               <Card.RichText sx={{ flex: "1" }}>{item.content}</Card.RichText>
               <Card.Button to='/' sx={{ alignSelf: "start" }}>
                 Read more

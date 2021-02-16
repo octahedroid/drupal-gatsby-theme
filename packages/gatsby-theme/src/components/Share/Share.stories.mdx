@@ -1,4 +1,4 @@
-import { Meta, Story, Props, Preview } from "@storybook/addon-docs/blocks"
+import { Meta, Story, ArgsTable, Canvas } from "@storybook/addon-docs/blocks"
 import Share from "."
 
 <Meta title='components/Share' component={Share} />
@@ -9,46 +9,74 @@ Share links
 
 ## Props
 
-<Props of={Share} />
+<ArgsTable of={Share} />
 
 ### Default
 
-<Preview>
+<Canvas>
   <Story name='Default'>
-    <Share>
-      <Share.Heading />
-      <Share.Container>
-        <Share.Social
-          social='facebook'
-          to='https://octahedroid.com/'
-          title='Octahedroid'
-        />
-        <Share.Social
-          social='linkedin'
-          to='https://octahedroid.com/'
-          title='Octahedroid'
-          summary='A summary of the site'
-          source='The source'
-        />
-        <Share.Social
-          social='reddit'
-          to='https://octahedroid.com/'
-          title='Octahedroid'
-        />
-        <Share.Social
-          social='twitter'
-          to='https://octahedroid.com/'
-          title='Octahedroid'
-          handler='Octonauts'
-          hashtags={["octahedroid", "octonautas"]}
-        />
-        <Share.Social
-          social='whatsapp'
-          to='https://octahedroid.com/'
-          title='Octahedroid'
-          separator='/'
-        />
-      </Share.Container>
+    <Share heading='Share:'>
+      <Share.Social
+        social='facebook'
+        title='Facebook'
+        to='https://www.facebook.com/'
+      />
+      <Share.Social
+        social='linkedin'
+        title='Linkedin'
+        to='https://www.linkedin.com/'
+        summary='A summary of the site'
+        source='The source'
+      />
+      <Share.Social social='reddit' title='Reddit' to='https://www.reddit.com/' />
+      <Share.Social
+        social='twitter'
+        title='Twitter'
+        to='https://twitter.com/'
+        handler='a handler'
+        hashtags={["#firsthashtag", "#secondhashtag"]}
+      />
+      <Share.Social
+        social='whatsapp'
+        title='https://octahedroid.com'
+        to='/'
+        separator='/'
+      />
     </Share>
   </Story>
-</Preview>
+</Canvas>
+
+### Whithout a heading
+
+<Canvas>
+  <Story name='Whithout a heading'>
+    <Share>
+      <Share.Social
+        social='facebook'
+        title='Facebook'
+        to='https://www.facebook.com/'
+      />
+      <Share.Social
+        social='linkedin'
+        title='Linkedin'
+        to='https://www.linkedin.com/'
+        summary='A summary of the site'
+        source='The source'
+      />
+      <Share.Social social='reddit' title='Reddit' to='https://www.reddit.com/' />
+      <Share.Social
+        social='twitter'
+        title='Twitter'
+        to='https://twitter.com/'
+        handler='a handler'
+        hashtags={["#firsthashtag", "#secondhashtag"]}
+      />
+      <Share.Social
+        social='whatsapp'
+        title='https://octahedroid.com'
+        to='/'
+        separator='/'
+      />
+    </Share>
+  </Story>
+</Canvas>
