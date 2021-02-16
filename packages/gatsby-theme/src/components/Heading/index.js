@@ -26,7 +26,7 @@ const Heading = forwardRef(
       ref={ref}
       __themeKey='headings'
       variant={variant}
-      id={id || undefined}
+      id={id}
       as={as}
       {...props}
     >
@@ -52,9 +52,9 @@ Heading.propTypes = {
 Heading.defaultProps = {
   as: "h2",
   variant: "default",
-  id: "",
+  id: undefined,
   anchor: true,
-  align: "",
+  align: "left",
 }
 
 export default Heading

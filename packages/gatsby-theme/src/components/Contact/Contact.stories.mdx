@@ -1,4 +1,4 @@
-import { Meta, Story, Props, Preview } from "@storybook/addon-docs/blocks"
+import { Meta, Story, ArgsTable, Canvas } from "@storybook/addon-docs/blocks"
 
 import Contact from "./index"
 
@@ -27,7 +27,13 @@ export const contactInfo = [
   },
 ]
 
-<Meta title='components/Contact' component={Contact} />
+<Meta
+  title='components/Contact'
+  component={Contact}
+  subcomponents={{
+    ContactGrid: Contact.Grid,
+  }}
+/>
 
 # Contact
 
@@ -35,32 +41,31 @@ A Contact component.
 
 ## Props
 
-<Props of={Contact} />
+<ArgsTable of={Contact} />
 
 ### Default Contact
 
-<Preview>
+<Canvas>
   <Story name='Default'>
-    <Contact>
-      <Contact.Header>
-        Tell us about your project. And we will contact you promptly to discuss next
-        steps.
-      </Contact.Header>
+    <Contact
+      title='Tell us about your project. And we will contact you promptly to discuss next
+        steps.'
+    >
       <Contact.Grid contactInfo={contactInfo} />
     </Contact>
   </Story>
-</Preview>
+</Canvas>
 
 ### Different align
 
-<Preview>
+<Canvas>
   <Story name='Different Align'>
-    <Contact>
-      <Contact.Header align='left'>
-        Tell us about your project. And we will contact you promptly to discuss next
-        steps.
-      </Contact.Header>
+    <Contact
+      title='Tell us about your project. And we will contact you promptly to discuss next
+        steps.'
+      align='left'
+    >
       <Contact.Grid align='left' contactInfo={contactInfo} />
     </Contact>
   </Story>
-</Preview>
+</Canvas>
