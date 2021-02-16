@@ -46,7 +46,7 @@ ContactItem.propTypes = {
 
 ContactItem.defaultProps = {
   align: "center",
-  icon: "",
+  icon: undefined,
 }
 
 export default ContactItem
