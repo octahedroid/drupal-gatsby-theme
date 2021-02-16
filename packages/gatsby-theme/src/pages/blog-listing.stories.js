@@ -80,7 +80,7 @@ export const BlogListing = () => {
         </MobileMenu.Navbar>
       </MobileMenu>
       <Section>
-        <SkipContent />
+        <SkipContent id='main-content' />
         <HeroBlock
           title='Our Ideas'
           text='Creative thinking, technology expertise, and passion for problem solving '

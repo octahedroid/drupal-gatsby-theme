@@ -44,7 +44,7 @@ export const Home = () => {
         </MobileMenu.Navbar>
       </MobileMenu>
       <Section>
-        <SkipContent />
+        <SkipContent id='main-content' />
         <HeroBlock
           intro='INTERESTED IN KNOWING MORE ABOUT JAMSTACK?'
           text='Let us help you maximize your project with the latest and modern
