@@ -38,7 +38,7 @@ const Grid = ({
         gridTemplateColumns: template,
         rowGap,
         columnGap,
-        textAlign: align || "inherit",
+        textAlign: align,
       }}
       {...props}
     >
@@ -67,7 +67,7 @@ Grid.defaultProps = {
   proportion: undefined,
   columnGap: undefined,
   rowGap: undefined,
-  align: undefined,
+  align: "inherit",
 }
 
 export default Grid

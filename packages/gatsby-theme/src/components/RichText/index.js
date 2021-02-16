@@ -27,14 +27,14 @@ const RichText = forwardRef(({ as, text, children, ...props }, ref) => {
 
 RichText.propTypes = {
   as: PropTypes.oneOfType([PropTypes.element, PropTypes.string]),
-  children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
+  children: PropTypes.node,
   text: PropTypes.string,
 }
 
 RichText.defaultProps = {
   as: "div",
-  children: "",
-  text: "",
+  children: undefined,
+  text: undefined,
 }
 
 export default RichText
