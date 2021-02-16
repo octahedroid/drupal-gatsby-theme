@@ -4,6 +4,11 @@ import { Box } from "theme-ui"
 import { Heading, Link, Icon } from "ui"
 
 const BlogHeadContainer = ({ credits, author, date, title, to, sx, ...props }) => {
+  const iconStyles = {
+    mr: "xsmall",
+    pt: 2,
+  }
+
   return (
     <Box
       as='section'
@@ -35,18 +40,18 @@ const BlogHeadContainer = ({ credits, author, date, title, to, sx, ...props }) =
             ariaLabel={author.authorLabel || author.name}
             sx={{ color: "inherit", cursor: "pointer" }}
           >
-            <Icon icon='user' sx={{ mr: "xsmall", pt: 2 }} />
+            <Icon icon='user' sx={{ ...iconStyles }} />
             {author.name}
           </Link>
         ) : (
           <>
-            <Icon icon='user' sx={{ mr: "xsmall", pt: 2 }} />
+            <Icon icon='user' sx={{ ...iconStyles }} />
             {author.name}
           </>
         )}
       </Box>
       <Box __css={{ pr: "medium" }}>
-        <Icon icon='calendar' sx={{ mr: "xsmall", pt: 2 }} />
+        <Icon icon='calendar' sx={{ ...iconStyles }} />
         {date}
       </Box>
       {credits && (
