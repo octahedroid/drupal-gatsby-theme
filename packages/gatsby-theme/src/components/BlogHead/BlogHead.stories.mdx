@@ -1,6 +1,11 @@
 import { Meta, Story, ArgsTable, Canvas } from "@storybook/addon-docs/blocks"
 import BlogHead from "."
 
+export const author = {
+  name: "Marco José Sánchez",
+  authorLabel: "Marco José",
+}
+
 <Meta title='components/BlogHead' component={BlogHead} />
 
 # BlogHead
@@ -25,8 +30,7 @@ Use this component to insert common BlogHead
       />
       <BlogHead.Container
         credits='Via Unsplash'
-        author='Marco José Sánchez'
-        ariaLabel='Marco José'
+        author={author}
         date='Julio 2, 2020'
         title="Gatsby's long road to incremental builds with Kyle Mathews"
         to='/'

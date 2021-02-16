@@ -16,8 +16,7 @@ const BlogHeadBlock = ({
       {image && <BlogHead.Image image={image} />}
       <BlogHead.Container
         credits={credits}
-        author={author.name}
-        ariaLabel={author.ariaLabel || author.name}
+        author={author}
         date={date}
         title={title}
         to={author.link}
@@ -30,7 +29,7 @@ BlogHeadBlock.propTypes = {
   title: PropTypes.string.isRequired,
   author: PropTypes.shape({
     name: PropTypes.string.isRequired,
-    ariaLabel: PropTypes.string,
+    authorLabel: PropTypes.string,
     link: PropTypes.string,
   }).isRequired,
   credits: PropTypes.string,
