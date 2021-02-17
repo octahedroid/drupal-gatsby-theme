@@ -6,7 +6,6 @@
   "version": "1.0.0",
   "dependencies": {
     "@reach/skip-nav": "^0.12.1",
-    "@storybook/addon-controls": "^6.1.9",
     "gatsby": "^2.27.3",
     "gatsby-image": "^2.6.0",
     "gatsby-link": "^2.6.0",
@@ -30,6 +29,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
+    "@storybook/addon-controls": "^6.1.9",
     "@storybook/addon-a11y": "^6.1.6",
     "@storybook/addon-actions": "^6.1.6",
     "@storybook/addon-essentials": "^6.1.6",
