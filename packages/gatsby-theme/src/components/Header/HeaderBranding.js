@@ -25,8 +25,7 @@ const HeaderBranding = ({ children, to, ariaLabel }) => {
 }
 
 HeaderBranding.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node])
-    .isRequired,
+  children: PropTypes.node.isRequired,
   to: PropTypes.string.isRequired,
   ariaLabel: PropTypes.string.isRequired,
 }

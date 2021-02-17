@@ -40,10 +40,10 @@ InfiniteScroll.propTypes = {
 
 InfiniteScroll.defaultProps = {
   hasMore: false,
-  loadPlaceholder: null,
+  loadPlaceholder: undefined,
   scrollThreshold: "800px",
-  onScrollHandler: () => null,
-  endMessage: null,
+  onScrollHandler: () => undefined,
+  endMessage: undefined,
 }
 
 export default InfiniteScroll

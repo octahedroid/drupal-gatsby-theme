@@ -62,8 +62,7 @@ const Header = forwardRef(({ children, shadow }, ref) => {
 })
 
 Header.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node])
-    .isRequired,
+  children: PropTypes.node.isRequired,
   shadow: PropTypes.bool,
 }
 

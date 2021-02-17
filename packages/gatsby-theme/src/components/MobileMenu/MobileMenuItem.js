@@ -25,14 +25,13 @@ const MobileMenuItem = ({ children, to, sx }) => (
 )
 
 MobileMenuItem.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node])
-    .isRequired,
+  children: PropTypes.node.isRequired,
   to: PropTypes.string.isRequired,
   sx: PropTypes.shape({}),
 }
 
 MobileMenuItem.defaultProps = {
-  sx: null,
+  sx: undefined,
 }
 
 export default MobileMenuItem

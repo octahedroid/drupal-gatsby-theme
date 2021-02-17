@@ -12,7 +12,7 @@ HeroTitle.propTypes = {
 }
 
 HeroTitle.defaultProps = {
-  sx: {},
+  sx: undefined,
 }
 
 export default HeroTitle

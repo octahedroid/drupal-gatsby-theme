@@ -48,14 +48,8 @@ const Grid = ({
 }
 
 Grid.propTypes = {
-  columns: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.string, PropTypes.number])),
-    PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  ]),
-  proportion: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.string])),
-    PropTypes.oneOfType([PropTypes.string]),
-  ]),
+  columns: PropTypes.node,
+  proportion: PropTypes.node,
   columnGap: PropTypes.string,
   rowGap: PropTypes.string,
   children: PropTypes.node.isRequired,

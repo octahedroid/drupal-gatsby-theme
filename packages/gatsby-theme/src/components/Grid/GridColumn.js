@@ -26,19 +26,13 @@ const GridColumn = ({ columns, rows, children, ...props }) => {
 
 GridColumn.propTypes = {
   children: PropTypes.node.isRequired,
-  columns: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.string, PropTypes.number])),
-    PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  ]),
-  rows: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.string, PropTypes.number])),
-    PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  ]),
+  columns: PropTypes.node,
+  rows: PropTypes.node,
 }
 
 GridColumn.defaultProps = {
-  columns: "",
-  rows: "",
+  columns: undefined,
+  rows: undefined,
 }
 
 export default GridColumn
