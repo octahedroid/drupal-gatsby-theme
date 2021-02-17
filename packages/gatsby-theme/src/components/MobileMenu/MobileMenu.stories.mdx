@@ -73,20 +73,3 @@ Use this component to insert a MobileMenu.
 <Canvas>
   <Story name='Default'>{BComponent.bind({})}</Story>
 </Canvas>
-
-### MegaMenu
-
-<Canvas>
-  <Story name='MegaMenu'>
-    <MobileMenu showSidebar handleShowSidebar={() => {}}>
-      <MobileMenu.Navbar>
-        {mainMenu &&
-          mainMenu.map((item) => (
-            <MobileMenu.Item key={item.name} to={item.to}>
-              {item.name}
-            </MobileMenu.Item>
-          ))}
-      </MobileMenu.Navbar>
-    </MobileMenu>
-  </Story>
-</Canvas>
