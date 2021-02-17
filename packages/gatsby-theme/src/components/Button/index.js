@@ -39,12 +39,12 @@ const Button = forwardRef(({ to, variant, as, children, ...props }, ref) => {
 Button.propTypes = {
   to: PropTypes.string,
   variant: PropTypes.string,
-  as: PropTypes.node,
-  children: PropTypes.node.isRequired,
+  as: PropTypes.oneOfType([PropTypes.string], [PropTypes.element]),
+  children: PropTypes.oneOfType([PropTypes.string], [PropTypes.node]).isRequired,
 }
 
 Button.defaultProps = {
-  to: undefined,
+  to: "",
   variant: "primary",
   as: "button",
 }
