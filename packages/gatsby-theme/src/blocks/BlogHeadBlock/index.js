@@ -29,7 +29,7 @@ BlogHeadBlock.propTypes = {
   title: PropTypes.string.isRequired,
   author: PropTypes.shape({
     name: PropTypes.string.isRequired,
-    authorLabel: PropTypes.string,
+    label: PropTypes.string,
     link: PropTypes.string,
   }).isRequired,
   credits: PropTypes.string,

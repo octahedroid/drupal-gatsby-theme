@@ -37,7 +37,7 @@ const BlogHeadContainer = ({ credits, author, date, title, to, sx, ...props }) =
         {to ? (
           <Link
             to={to}
-            ariaLabel={author.authorLabel || author.name}
+            ariaLabel={author.label || author.name}
             sx={{ color: "inherit", cursor: "pointer" }}
           >
             <Icon icon='user' sx={{ ...iconStyles }} />
@@ -77,7 +77,7 @@ const BlogHeadContainer = ({ credits, author, date, title, to, sx, ...props }) =
 BlogHeadContainer.propTypes = {
   author: PropTypes.shape({
     name: PropTypes.string.isRequired,
-    authorLabel: PropTypes.string,
+    label: PropTypes.string,
   }).isRequired,
   credits: PropTypes.string,
   date: PropTypes.string.isRequired,
