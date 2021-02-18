@@ -42,7 +42,7 @@ InfiniteScroll.defaultProps = {
   hasMore: false,
   loadPlaceholder: undefined,
   scrollThreshold: "800px",
-  onScrollHandler: () => undefined,
+  onScrollHandler: undefined,
   endMessage: undefined,
 }
 
