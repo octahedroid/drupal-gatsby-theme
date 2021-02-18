@@ -2,12 +2,13 @@ import React from "react"
 import PropTypes from "prop-types"
 import { Box } from "theme-ui"
 
-const SkipLink = ({ children, id, ...props }) => {
+const SkipLink = ({ children, id, label, ...props }) => {
   return (
     <Box
       as='a'
       tabindex='0'
       href={`#${id}`}
+      ariaLabel={label}
       __css={{
         border: 0,
         height: 1,
@@ -40,10 +41,12 @@ const SkipLink = ({ children, id, ...props }) => {
 SkipLink.propTypes = {
   children: PropTypes.node,
   id: PropTypes.string.isRequired,
+  label: PropTypes.string,
 }
 
 SkipLink.defaultProps = {
   children: "Skip to main content",
+  label: "Skip to main content",
 }
 
 export default SkipLink
