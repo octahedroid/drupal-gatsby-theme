@@ -1,12 +1,13 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { Box } from "theme-ui"
+import { Box, useThemeUI } from "theme-ui"
 import { Link, Logo } from "ui"
 
 const FooterBranding = ({ variant, width, to, ariaLabel }) => {
+  const { theme } = useThemeUI()
   const fillOptions = {
-    dark: "#F7F7F7",
-    light: "#37375B",
+    dark: theme.colors.lightShade,
+    light: theme.colors.darkShade,
   }
 
   return (
