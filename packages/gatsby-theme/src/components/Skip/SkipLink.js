@@ -8,7 +8,7 @@ const SkipLink = ({ children, id, label, ...props }) => {
       as='a'
       tabindex='0'
       href={`#${id}`}
-      ariaLabel={label}
+      aria-label={label}
       __css={{
         border: 0,
         height: 1,
