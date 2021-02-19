@@ -39,7 +39,7 @@ const Button = forwardRef(({ to, variant, as, children, ...props }, ref) => {
 Button.propTypes = {
   to: PropTypes.string,
   variant: PropTypes.string,
-  as: PropTypes.node,
+  as: PropTypes.oneOfType([PropTypes.string, PropTypes.elementType]),
   children: PropTypes.node.isRequired,
 }
 
