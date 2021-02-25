@@ -17,7 +17,7 @@ CardRichText.propTypes = {
 CardRichText.defaultProps = {
   children: undefined,
   text: undefined,
-  sx: null,
+  sx: undefined,
 }
 
 export default CardRichText

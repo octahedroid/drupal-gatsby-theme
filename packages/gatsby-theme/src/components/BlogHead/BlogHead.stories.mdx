@@ -1,5 +1,10 @@
-import { Meta, Story, Props, Preview } from "@storybook/addon-docs/blocks"
+import { Meta, Story, ArgsTable, Canvas } from "@storybook/addon-docs/blocks"
 import BlogHead from "."
+
+export const author = {
+  name: "Marco José Sánchez",
+  label: "Marco José",
+}
 
 <Meta title='components/BlogHead' component={BlogHead} />
 
@@ -9,11 +14,11 @@ Use this component to insert common BlogHead
 
 ## Props
 
-<Props of={BlogHead} />
+<ArgsTable of={BlogHead} />
 
 ### BlogHead
 
-<Preview>
+<Canvas>
   <Story name='Default'>
     <BlogHead>
       <BlogHead.Image
@@ -23,16 +28,13 @@ Use this component to insert common BlogHead
           alt: "Roads",
         }}
       />
-      <BlogHead.Credits>Via Unsplash</BlogHead.Credits>
-      <BlogHead.Container>
-        <BlogHead.Title>
-          Gatsby&apos;s long road to incremental builds with Kyle Mathews
-        </BlogHead.Title>
-        <BlogHead.Author to='/' ariaLabel='Marco'>
-          Marco José Sánchez
-        </BlogHead.Author>
-        <BlogHead.Date>Julio 2, 2020</BlogHead.Date>
-      </BlogHead.Container>
+      <BlogHead.Container
+        credits='Via Unsplash'
+        author={author}
+        date='Julio 2, 2020'
+        title="Gatsby's long road to incremental builds with Kyle Mathews"
+        to='/'
+      />
     </BlogHead>
   </Story>
-</Preview>
+</Canvas>

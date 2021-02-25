@@ -22,8 +22,7 @@ const Section = ({ children, variant, isFull, sx }) => {
 }
 
 Section.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node])
-    .isRequired,
+  children: PropTypes.node.isRequired,
   variant: PropTypes.string,
   isFull: PropTypes.bool,
   sx: PropTypes.shape({}),
@@ -32,7 +31,7 @@ Section.propTypes = {
 Section.defaultProps = {
   variant: "default",
   isFull: false,
-  sx: null,
+  sx: undefined,
 }
 
 export default Section

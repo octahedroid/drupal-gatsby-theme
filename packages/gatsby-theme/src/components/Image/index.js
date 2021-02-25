@@ -53,7 +53,7 @@ Image.propTypes = {
   caption: PropTypes.string,
 }
 Image.defaultProps = {
-  caption: "",
+  caption: undefined,
   variant: "default",
 }
 export default Image

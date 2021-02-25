@@ -1,4 +1,4 @@
-import { Meta, Story, Props, Preview } from "@storybook/addon-docs/blocks"
+import { Meta, Story, ArgsTable, Canvas } from "@storybook/addon-docs/blocks"
 import Heading from "."
 
 export const headingArgTypes = {
@@ -22,17 +22,17 @@ export const headingArgTypes = {
 
 # Heading
 
-Common headings h1 to h6
+Common headings h1 to h6, default is h2. This component accepts a variant.
 
 ## Props
 
-<Props of={Heading} />
+<ArgsTable of={Heading} />
 
 export const HeadingTemplate = (args) => <Heading {...args} />
 
 ### Default
 
-<Preview>
+<Canvas>
   <Story
     args={{ children: "Default is h2, change the tag in the controls tab." }}
     argTypes={headingArgTypes}
@@ -40,11 +40,11 @@ export const HeadingTemplate = (args) => <Heading {...args} />
   >
     {HeadingTemplate.bind({})}
   </Story>
-</Preview>
+</Canvas>
 
 ### Big heading
 
-<Preview>
+<Canvas>
   <Story
     name='Big heading'
     args={{ children: "Big variant", variant: "big" }}
@@ -52,11 +52,11 @@ export const HeadingTemplate = (args) => <Heading {...args} />
   >
     {HeadingTemplate.bind({})}
   </Story>
-</Preview>
+</Canvas>
 
 ### Intro heading
 
-<Preview>
+<Canvas>
   <Story
     name='Intro heading'
     args={{ children: "Intro variant", variant: "intro" }}
@@ -64,11 +64,11 @@ export const HeadingTemplate = (args) => <Heading {...args} />
   >
     {HeadingTemplate.bind({})}
   </Story>
-</Preview>
+</Canvas>
 
 ### With ID
 
-<Preview>
+<Canvas>
   <Story
     name='With ID'
     args={{ children: "A nice title", id: "anchor" }}
@@ -76,11 +76,11 @@ export const HeadingTemplate = (args) => <Heading {...args} />
   >
     {HeadingTemplate.bind({})}
   </Story>
-</Preview>
+</Canvas>
 
 ### With ID no anchor
 
-<Preview>
+<Canvas>
   <Story
     name='With ID no anchor'
     args={{ children: "A nice title", id: "anchor", anchor: false }}
@@ -88,11 +88,11 @@ export const HeadingTemplate = (args) => <Heading {...args} />
   >
     {HeadingTemplate.bind({})}
   </Story>
-</Preview>
+</Canvas>
 
 ### All sizes
 
-<Preview>
+<Canvas>
   <Story name='All sizes'>
     <Heading as='h1'>H1</Heading>
     <Heading as='h2'>H2</Heading>
@@ -101,4 +101,4 @@ export const HeadingTemplate = (args) => <Heading {...args} />
     <Heading as='h5'>H5</Heading>
     <Heading as='h6'>H6</Heading>
   </Story>
-</Preview>
+</Canvas>

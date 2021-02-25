@@ -11,16 +11,15 @@ const HeroColumn = ({ children, columns, rows, sx, ...props }) => {
 }
 
 HeroColumn.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node])
-    .isRequired,
+  children: PropTypes.node.isRequired,
   sx: PropTypes.shape({}),
   columns: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   rows: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 }
 HeroColumn.defaultProps = {
-  sx: {},
+  sx: undefined,
   columns: 1,
-  rows: "",
+  rows: undefined,
 }
 
 export default HeroColumn

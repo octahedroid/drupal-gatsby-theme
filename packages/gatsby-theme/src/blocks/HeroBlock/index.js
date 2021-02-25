@@ -47,10 +47,7 @@ const HeroBlock = ({
 }
 
 HeroBlock.propTypes = {
-  columnProportion: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.string])),
-    PropTypes.oneOfType([PropTypes.string]),
-  ]),
+  columnProportion: PropTypes.node,
   intro: PropTypes.string,
   title: PropTypes.string,
   text: PropTypes.string.isRequired,
@@ -77,14 +74,14 @@ HeroBlock.propTypes = {
 
 HeroBlock.defaultProps = {
   columnProportion: undefined,
-  intro: "",
-  title: "",
+  intro: undefined,
+  title: undefined,
   image: undefined,
-  linkTo: "",
+  linkTo: undefined,
   reversed: false,
-  ctaText: "",
+  ctaText: undefined,
   gutter: "20px",
-  align: "",
+  align: undefined,
 }
 
 export default HeroBlock

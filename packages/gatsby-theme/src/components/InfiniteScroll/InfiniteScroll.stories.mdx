@@ -1,4 +1,4 @@
-import { Meta, Story, Props, Preview } from "@storybook/addon-docs/blocks"
+import { Meta, Story, ArgsTable, Canvas } from "@storybook/addon-docs/blocks"
 import { useState } from "react"
 import { Box } from "theme-ui"
 import { Grid } from "ui"
@@ -8,15 +8,15 @@ import InfiniteScroll from "."
 
 # InfiniteScroll
 
-Use to insert an InfiniteScroll
+Use this component to insert an InfiniteScroll.
 
 ## Props
 
-<Props of={InfiniteScroll} />
+<ArgsTable of={InfiniteScroll} />
 
-### XD
+### Infinite Scroll
 
-<Preview>
+<Canvas>
   <Story name='Infinite Scroll'>
     {() => {
       const [hasMore, setHasMore] = useState(true)
@@ -38,6 +38,7 @@ Use to insert an InfiniteScroll
           <Grid columns={2}>
             {items.map((val) => (
               <Box
+                key={val}
                 __css={{
                   textAlign: "center",
                   py: "xlarge",
@@ -55,4 +56,4 @@ Use to insert an InfiniteScroll
       )
     }}
   </Story>
-</Preview>
+</Canvas>

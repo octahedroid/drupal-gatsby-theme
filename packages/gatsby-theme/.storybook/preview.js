@@ -25,5 +25,7 @@ export const parameters = {
 }
 
 export const decorators = [
-  (storyFn) => <ThemeProvider theme={theme}>{storyFn()}</ThemeProvider>,
+  (unboundStoryFn) => (
+    <ThemeProvider theme={theme}>{unboundStoryFn()}</ThemeProvider>
+  ),
 ]

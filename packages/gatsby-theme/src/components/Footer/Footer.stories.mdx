@@ -1,4 +1,4 @@
-import { Meta, Story, Props, Preview } from "@storybook/addon-docs/blocks"
+import { Meta, Story, ArgsTable, Canvas } from "@storybook/addon-docs/blocks"
 import { Footer } from "ui"
 
 export const mainMenu = [
@@ -25,22 +25,26 @@ export const mainMenu = [
   },
 ]
 
-<Meta title='components/Footer' component={Footer} />
+<Meta
+  title='components/Footer'
+  component={Footer}
+  subcomponents={{ FooterBranding: Footer.Branding }}
+/>
 
 # Footer
 
-Some **markdown** description, or whatever you want.
+a Footer component.
 
 ## Props
 
-<Props of={Footer} />
+<ArgsTable of={Footer} />
 
 ### Default
 
-<Preview>
+<Canvas>
   <Story name='Default'>
     <Footer>
       <Footer.Branding to='/' ariaLabel='Back to Home' width={100} />
     </Footer>
   </Story>
-</Preview>
+</Canvas>
