@@ -1,7 +1,6 @@
 import React, { useState } from "react"
 import { Box } from "theme-ui"
-import { SkipNavContent } from "@reach/skip-nav"
-import { Section, Grid, Card, Image, Link, Icon, MobileMenu } from "ui"
+import { Section, Grid, Card, Image, Link, Icon, MobileMenu, SkipContent } from "ui"
 import { FooterBlock, HeaderBlock, HeroBlock } from "blocks"
 
 export default { title: "pages/Blog" }
@@ -81,7 +80,7 @@ export const BlogListing = () => {
         </MobileMenu.Navbar>
       </MobileMenu>
       <Section>
-        <SkipNavContent />
+        <SkipContent id='main-content' />
         <HeroBlock
           title='Our Ideas'
           text='Creative thinking, technology expertise, and passion for problem solving '
