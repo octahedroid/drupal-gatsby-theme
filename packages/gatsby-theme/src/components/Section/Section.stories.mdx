@@ -1,4 +1,4 @@
-import { Meta, Story, Props, Preview } from "@storybook/addon-docs/blocks"
+import { Meta, Story, ArgsTable, Canvas } from "@storybook/addon-docs/blocks"
 import Section from "."
 import Grid from "../Grid"
 
@@ -10,11 +10,11 @@ Use this component to add a background color to a section and a container.
 
 ## Props
 
-<Props of={Section} />
+<ArgsTable of={Section} />
 
 ### Default background
 
-<Preview>
+<Canvas>
   <Story name='Default'>
     <Section sx={{ p: 4 }}>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam magnam saepe
@@ -22,11 +22,11 @@ Use this component to add a background color to a section and a container.
       repellendus maiores, eius ipsam, eligendi minus nesciunt alias, est reiciendis.
     </Section>
   </Story>
-</Preview>
+</Canvas>
 
 ### Dark background
 
-<Preview>
+<Canvas>
   <Story name='Dark background'>
     <Section variant='dark' isFull>
       <Grid>
@@ -39,11 +39,11 @@ Use this component to add a background color to a section and a container.
       </Grid>
     </Section>
   </Story>
-</Preview>
+</Canvas>
 
 ### Light Background
 
-<Preview>
+<Canvas>
   <Story name='Light Background'>
     <Section variant='light' isFull>
       <Grid>
@@ -56,4 +56,4 @@ Use this component to add a background color to a section and a container.
       </Grid>
     </Section>
   </Story>
-</Preview>
+</Canvas>

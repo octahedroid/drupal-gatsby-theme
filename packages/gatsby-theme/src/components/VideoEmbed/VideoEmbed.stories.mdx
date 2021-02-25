@@ -1,4 +1,4 @@
-import { Meta, Story, Props, Preview } from "@storybook/addon-docs/blocks"
+import { Meta, Story, ArgsTable, Canvas } from "@storybook/addon-docs/blocks"
 import VideoEmbed from "."
 
 <Meta title='components/VideoEmbed' component={VideoEmbed} />
@@ -11,22 +11,22 @@ Wrapper for [React Player](https://github.com/CookPete/react-player)
 
 ## Props
 
-<Props of={VideoEmbed} />
+<ArgsTable of={VideoEmbed} />
 
 ### Default
 
-<Preview>
+<Canvas>
   <Story name='Default'>
     <VideoEmbed
       url='https://www.youtube.com/watch?v=xlr_87FmD3w'
       sx={{ width: 600, mx: "auto", p: 10 }}
     />
   </Story>
-</Preview>
+</Canvas>
 
 ### Custom Aspect Ratio & Volume
 
-<Preview>
+<Canvas>
   <Story name='Aspect Ratio & Volume'>
     <VideoEmbed
       url='https://www.youtube.com/watch?v=xlr_87FmD3w'
@@ -35,13 +35,13 @@ Wrapper for [React Player](https://github.com/CookPete/react-player)
       sx={{ width: 600, mx: "auto", p: 10 }}
     />
   </Story>
-</Preview>
+</Canvas>
 
 ### Light
 
 Utilizado para cargar inicialmente una miniatura y no todo el embed.
 
-<Preview>
+<Canvas>
   <Story name='Light'>
     <VideoEmbed
       url='https://www.youtube.com/watch?v=xlr_87FmD3w'
@@ -49,11 +49,11 @@ Utilizado para cargar inicialmente una miniatura y no todo el embed.
       sx={{ width: 600, mx: "auto", p: 10 }}
     />
   </Story>
-</Preview>
+</Canvas>
 
 ## Muted & Hide Controls
 
-<Preview>
+<Canvas>
   <Story name='Muted & Hide Controls'>
     <VideoEmbed
       url='https://www.youtube.com/watch?v=xlr_87FmD3w'
@@ -62,15 +62,15 @@ Utilizado para cargar inicialmente una miniatura y no todo el embed.
       sx={{ width: 600, mx: "auto", p: 10 }}
     />
   </Story>
-</Preview>
+</Canvas>
 
 ## Vimeo
 
-<Preview>
+<Canvas>
   <Story name='Vimeo'>
     <VideoEmbed
       url='https://vimeo.com/62566576'
       sx={{ width: 600, mx: "auto", p: 10 }}
     />
   </Story>
-</Preview>
+</Canvas>

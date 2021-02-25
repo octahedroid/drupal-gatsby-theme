@@ -1,4 +1,4 @@
-import { Meta, Story, Props, Preview } from "@storybook/addon-docs/blocks"
+import { Meta, Story, ArgsTable, Canvas } from "@storybook/addon-docs/blocks"
 import { Box } from "theme-ui"
 import Grid from "."
 
@@ -21,7 +21,11 @@ export const GenerateColumns = ({ count }) => {
   )
 }
 
-<Meta title='components/Grid' component={Grid} />
+<Meta
+  title='components/Grid'
+  component={Grid}
+  subcomponents={{ GridColumn: Grid.Column }}
+/>
 
 # Grid
 
@@ -36,72 +40,70 @@ All properties accept arrays to establish specific values for the ThemeUI breakp
 
 ## Props
 
-<Props of={Grid} />
+<ArgsTable of={Grid} />
 
 ### Default
 
 By default the component accepts a single number for the `columns` prop. This is the amount of columns
-the grid will have from the third breakpoint onwards. The first and second breakpoint will have 1 column
-and two columns respectively.
+the grid will have from the third breakpoint onwards. The first and second breakpoint will have 1 column and two columns respectively.
 
-<Preview>
+<Canvas>
   <Story name='Default'>
     <Grid columns={3}>
       <GenerateColumns count={6} />
     </Grid>
   </Story>
-</Preview>
+</Canvas>
 
 ### Static column number
 
 If you want to set a single column number for all the breakpoints, pass the value inside an array.
-This will place it for the first breakpoint, and since there are no other declarations, it will
-apply for the next breakpoints as well.
+This will place it for the first breakpoint, and since there are no other declarations, it will apply for the next breakpoints as well.
 
-<Preview>
+<Canvas>
   <Story name='Static column number'>
     <Grid columns={[2]}>
       <GenerateColumns count={6} />
     </Grid>
   </Story>
-</Preview>
+</Canvas>
 
 ### Different proportions
 
 You can set a proportion for the columns using the following format `2:1`, which means
-the first column will a ratio of two to one
+the first column will a ratio of two to one.
 
-<Preview>
+<Canvas>
   <Story name='Different proportions'>
     <Grid proportion='2:1'>
       <GenerateColumns count={6} />
     </Grid>
   </Story>
-</Preview>
+</Canvas>
 
 ### Different columns based on Breakpoints
 
-<Preview>
+<Canvas>
   <Story name='Different columns based on Breakpoints'>
     <Grid columns={["2", "1", "3"]}>
       <GenerateColumns count={6} />
     </Grid>
   </Story>
-</Preview>
+</Canvas>
 
 ### Different proportion based on Breakpoints
 
-<Preview>
+<Canvas>
   <Story name='Different proportion based on Breakpoints'>
     <Grid proportion={["2:1", "1:2:1", "1:1:2"]}>
       <GenerateColumns count={6} />
     </Grid>
   </Story>
-</Preview>
+</Canvas>
 
 ### Item spanning multiple rows
 
-<Preview>
+<Canvas>
   <Story name='Item spanning multiple rows'>
     <Grid proportion={["2:1", "1:2:1", "1:1:2"]}>
       <Grid.Column rows={2} sx={{ bg: "lightblue" }}>
@@ -110,11 +112,11 @@ the first column will a ratio of two to one
       <GenerateColumns count={5} />
     </Grid>
   </Story>
-</Preview>
+</Canvas>
 
 ### Item spanning multiple rows based on breakpoints
 
-<Preview>
+<Canvas>
   <Story name='Item spanning multiple rows based on breakpoints'>
     <Grid proportion={["2:1", "1:2:1", "1:1:2"]}>
       <Grid.Column rows={[3, 2, 1]} sx={{ bg: "lightblue" }}>
@@ -123,11 +125,11 @@ the first column will a ratio of two to one
       <GenerateColumns count={5} />
     </Grid>
   </Story>
-</Preview>
+</Canvas>
 
 ### Item spanning multiple columns
 
-<Preview>
+<Canvas>
   <Story name='Item spanning multiple columns'>
     <Grid proportion={["2:1", "1:2:1", "1:1:2"]}>
       <Grid.Column columns={2} sx={{ bg: "lightblue" }}>
@@ -136,4 +138,4 @@ the first column will a ratio of two to one
       <GenerateColumns count={5} />
     </Grid>
   </Story>
-</Preview>
+</Canvas>

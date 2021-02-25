@@ -1,11 +1,17 @@
 import { Meta, Story, ArgsTable, Canvas } from "@storybook/addon-docs/blocks"
 import Share from "."
 
-<Meta title='components/Share' component={Share} />
+<Meta
+  title='components/Share'
+  component={Share}
+  subcomponents={{ ShareSocial: Share.Social }}
+/>
 
 # Share
 
 Share links
+
+Use the Share component to share the page on preset social media platforms. you can choose the social media.
 
 ## Props
 
