@@ -1,4 +1,4 @@
-import { Meta, Story, Props, Preview } from "@storybook/addon-docs/blocks"
+import { Meta, Story, ArgsTable, Canvas } from "@storybook/addon-docs/blocks"
 import { Box } from "theme-ui"
 import RichText from "."
 
@@ -20,41 +20,41 @@ Use this component to insert rich text
 
 ## Props
 
-<Props of={RichText} />
+<ArgsTable of={RichText} />
 
 ### Body Text
 
-<Preview>
+<Canvas>
   <Story name='Default'>
     <RichText sx={{ fontSize: "1rem" }}>{data}</RichText>
   </Story>
-</Preview>
+</Canvas>
 
 ### Single text child
 
-<Preview>
+<Canvas>
   <Story name='Single text child'>
     <RichText>{"<button>An HTML button</button>"}</RichText>
   </Story>
-</Preview>
+</Canvas>
 
 ### Single node child
 
-<Preview>
+<Canvas>
   <Story name='Single node child'>
     <RichText>
       <Box>A theme-ui Box node</Box>
     </RichText>
   </Story>
-</Preview>
+</Canvas>
 
 ### Multiple node children
 
-<Preview>
+<Canvas>
   <Story name='Multiple node children'>
     <RichText>
       <Box>A theme-ui Box node</Box>
       <Box>Another theme-ui Box node</Box>
     </RichText>
   </Story>
-</Preview>
+</Canvas>

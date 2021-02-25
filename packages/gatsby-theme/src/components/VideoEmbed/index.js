@@ -72,7 +72,7 @@ VideoEmbed.defaultProps = {
   loop: false,
   pip: false,
   muted: false,
-  sx: null,
+  sx: undefined,
 }
 
 export default VideoEmbed

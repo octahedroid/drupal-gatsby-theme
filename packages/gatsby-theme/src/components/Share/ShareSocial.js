@@ -86,7 +86,7 @@ ShareSocial.propTypes = {
 ShareSocial.defaultProps = {
   children: undefined,
   handler: undefined,
-  hashtags: [],
+  hashtags: undefined,
   summary: undefined,
   source: undefined,
   separator: undefined,

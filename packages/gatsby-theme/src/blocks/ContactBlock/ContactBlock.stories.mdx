@@ -1,4 +1,4 @@
-import { Meta, Story, Props, Preview } from "@storybook/addon-docs/blocks"
+import { Meta, Story, ArgsTable, Canvas } from "@storybook/addon-docs/blocks"
 import ContactBlock from "."
 
 export const contactInfo = [
@@ -48,21 +48,21 @@ You can use it to add a Contact block
 
 ## Props
 
-<Props of={ContactBlock} />
+<ArgsTable of={ContactBlock} />
 
 export const ContactBlockTemplate = (args) => <ContactBlock {...args} />
 
 ### Default ContactBlock
 
-<Preview>
+<Canvas>
   <Story
     name='Default'
     args={{
-      heading:
+      title:
         "Tell us about your project. And we will contact you promptly to discuss next steps.",
       contactInfo,
     }}
   >
     {ContactBlockTemplate.bind({})}
   </Story>
-</Preview>
+</Canvas>

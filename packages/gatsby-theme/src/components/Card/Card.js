@@ -25,15 +25,14 @@ const Card = forwardRef(({ children, align, to, ...props }, ref) => {
 })
 
 Card.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node])
-    .isRequired,
+  children: PropTypes.node.isRequired,
   to: PropTypes.string,
   align: PropTypes.string,
 }
 
 Card.defaultProps = {
   align: "left",
-  to: "",
+  to: undefined,
 }
 
 export default Card

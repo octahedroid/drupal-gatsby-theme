@@ -1,4 +1,4 @@
-import { Meta, Story, Props, Preview } from "@storybook/addon-docs/blocks"
+import { Meta, Story, ArgsTable, Canvas } from "@storybook/addon-docs/blocks"
 import { Box } from "theme-ui"
 import Loading from "."
 
@@ -10,24 +10,24 @@ Use this component to insert loading placeholder skeletons
 
 ## Props
 
-<Props of={Loading} />
+<ArgsTable of={Loading} />
 
 ### Contact
 
-<Preview>
+<Canvas>
   <Story name='Contact'>
     <Box variant='wrapper' __themeKey='container'>
       <Loading type='contact' />
     </Box>
   </Story>
-</Preview>
+</Canvas>
 
 ### Blog Listing
 
-<Preview>
+<Canvas>
   <Story name='Blog Listing'>
     <Box variant='wrapper' __themeKey='container'>
       <Loading type='blog_list' />
     </Box>
   </Story>
-</Preview>
+</Canvas>

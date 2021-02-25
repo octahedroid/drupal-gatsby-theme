@@ -44,7 +44,7 @@ Link.propTypes = {
 
 Link.defaultProps = {
   variant: "a",
-  ariaLabel: null,
+  ariaLabel: undefined,
 }
 
 export default Link

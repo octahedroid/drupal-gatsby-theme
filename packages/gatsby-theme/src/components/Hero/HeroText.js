@@ -11,13 +11,12 @@ const HeroText = ({ children, sx, ...props }) => {
 }
 
 HeroText.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node])
-    .isRequired,
+  children: PropTypes.node.isRequired,
   sx: PropTypes.shape({}),
 }
 
 HeroText.defaultProps = {
-  sx: {},
+  sx: undefined,
 }
 
 export default HeroText

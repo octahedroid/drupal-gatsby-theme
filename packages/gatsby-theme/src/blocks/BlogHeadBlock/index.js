@@ -14,17 +14,13 @@ const BlogHeadBlock = ({
   return (
     <BlogHead imageOverlay={backgroundColor} {...props}>
       {image && <BlogHead.Image image={image} />}
-      {credits && <BlogHead.Credits>{credits}</BlogHead.Credits>}
-      <BlogHead.Container>
-        <BlogHead.Title>{title}</BlogHead.Title>
-        <BlogHead.Author
-          to={author.link}
-          ariaLabel={author.ariaLabel || author.name}
-        >
-          {author.name}
-        </BlogHead.Author>
-        <BlogHead.Date>{date}</BlogHead.Date>
-      </BlogHead.Container>
+      <BlogHead.Container
+        credits={credits}
+        author={author}
+        date={date}
+        title={title}
+        to={author.link}
+      />
     </BlogHead>
   )
 }
@@ -33,7 +29,7 @@ BlogHeadBlock.propTypes = {
   title: PropTypes.string.isRequired,
   author: PropTypes.shape({
     name: PropTypes.string.isRequired,
-    ariaLabel: PropTypes.string,
+    label: PropTypes.string,
     link: PropTypes.string,
   }).isRequired,
   credits: PropTypes.string,
@@ -56,9 +52,9 @@ BlogHeadBlock.propTypes = {
 }
 
 BlogHeadBlock.defaultProps = {
-  credits: "",
-  image: null,
-  backgroundColor: "rgba(21, 30, 46, 0.92)",
+  credits: undefined,
+  image: undefined,
+  backgroundColor: "darkBlueOpaque",
 }
 
 export default BlogHeadBlock

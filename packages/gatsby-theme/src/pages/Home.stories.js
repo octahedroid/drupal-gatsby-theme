@@ -1,7 +1,15 @@
 import React, { useState } from "react"
 import { Box } from "theme-ui"
-import { SkipNavContent } from "@reach/skip-nav"
-import { Section, Grid, Heading, Card, Link, MobileMenu } from "ui"
+import {
+  Section,
+  Grid,
+  Heading,
+  Card,
+  Image,
+  Link,
+  MobileMenu,
+  SkipContent,
+} from "ui"
 import { FooterBlock, HeaderBlock, HeroBlock } from "blocks"
 
 export default { title: "pages/Home" }
@@ -45,7 +53,7 @@ export const Home = () => {
         </MobileMenu.Navbar>
       </MobileMenu>
       <Section>
-        <SkipNavContent />
+        <SkipContent id='main-content' />
         <HeroBlock
           intro='INTERESTED IN KNOWING MORE ABOUT JAMSTACK?'
           text='Let us help you maximize your project with the latest and modern
@@ -68,7 +76,7 @@ export const Home = () => {
           <Grid.Column columns='6'>
             <Card align='center'>
               <Link to='/' variant='wrapper'>
-                <Card.Image
+                <Image
                   image={{
                     src:
                       "https://octahedroid.com/static/bff5232017ebf10b89bba9d44ccb5d5a/1ebf8/fixing-website.png",
@@ -82,7 +90,7 @@ export const Home = () => {
           <Grid.Column columns='6'>
             <Card align='center'>
               <Link to='/' variant='wrapper'>
-                <Card.Image
+                <Image
                   image={{
                     src:
                       "https://octahedroid.com/static/132b658e112b02a022f136a377f75759/1ebf8/editing-shapes.png",
