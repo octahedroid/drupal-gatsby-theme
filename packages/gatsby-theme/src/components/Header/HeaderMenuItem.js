@@ -46,8 +46,7 @@ const HeaderMenuItem = ({ children, to, active, sx }) => {
 }
 
 HeaderMenuItem.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node])
-    .isRequired,
+  children: PropTypes.node.isRequired,
   to: PropTypes.string.isRequired,
   active: PropTypes.bool,
   sx: PropTypes.shape({}),
@@ -55,7 +54,7 @@ HeaderMenuItem.propTypes = {
 
 HeaderMenuItem.defaultProps = {
   active: false,
-  sx: null,
+  sx: undefined,
 }
 
 export default HeaderMenuItem

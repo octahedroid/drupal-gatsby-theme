@@ -1,19 +1,25 @@
-import { Meta, Story, Props, Preview } from "@storybook/addon-docs/blocks"
+import { Meta, Story, ArgsTable, Canvas } from "@storybook/addon-docs/blocks"
 import Image from "."
+import data from "../../data.json"
+
+export const mockGatsbyImg = {
+  alt: data.nodes[0].name,
+  fluid: data.nodes[0].featuredImage.node.localFile.childImageSharp.fluid,
+}
 
 <Meta title='components/Image' component={Image} />
 
 # Image
 
-Use to insert image
+Use this component to insert an image.
 
 ## Props
 
-<Props of={Image} />
+<ArgsTable of={Image} />
 
 ### Default
 
-<Preview>
+<Canvas>
   <Story name='Default'>
     <Image
       image={{
@@ -22,11 +28,11 @@ Use to insert image
       }}
     />
   </Story>
-</Preview>
+</Canvas>
 
 ### Avatar
 
-<Preview>
+<Canvas>
   <Story name='Avatar'>
     <Image
       variant='avatar'
@@ -36,11 +42,11 @@ Use to insert image
       }}
     />
   </Story>
-</Preview>
+</Canvas>
 
 ### With Caption
 
-<Preview>
+<Canvas>
   <Story name='With Caption'>
     <Image
       image={{
@@ -50,4 +56,16 @@ Use to insert image
       caption="A caption with a <a href='/'>link</a>"
     />
   </Story>
-</Preview>
+</Canvas>
+
+### With Gatsby Image
+
+<Canvas>
+  <Story name='Gatsby Img base64'>
+    <Image
+      variant='avatar'
+      image={mockGatsbyImg}
+      caption="A caption with a <a href='/'>link</a>"
+    />
+  </Story>
+</Canvas>

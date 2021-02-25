@@ -1,15 +1,21 @@
 import React, { forwardRef } from "react"
 import PropTypes from "prop-types"
-import { Box } from "theme-ui"
+import { Box, useThemeUI } from "theme-ui"
 import Img from "gatsby-image"
 import RichText from "../RichText"
 
 const Image = forwardRef(({ variant, caption, image, ...props }, ref) => {
+  const { theme } = useThemeUI()
   const isGatsbyImage = !image.src
   return (
     <Box as='figure' __css={{ m: 0 }} {...props}>
       {isGatsbyImage ? (
-        <Img ref={ref} {...image} />
+        <Img
+          ref={ref}
+          {...image}
+          style={theme.images[variant] ?? theme.images.default}
+          variant={variant}
+        />
       ) : (
         <Box
           ref={ref}
@@ -47,7 +53,7 @@ Image.propTypes = {
   caption: PropTypes.string,
 }
 Image.defaultProps = {
-  caption: "",
+  caption: undefined,
   variant: "default",
 }
 export default Image

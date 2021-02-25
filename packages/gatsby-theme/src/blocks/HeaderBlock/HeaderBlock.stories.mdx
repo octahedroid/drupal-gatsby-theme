@@ -1,4 +1,4 @@
-import { Meta, Story, Props, Preview } from "@storybook/addon-docs/blocks"
+import { Meta, Story, ArgsTable, Canvas } from "@storybook/addon-docs/blocks"
 import HeaderBlock from "."
 
 export const mainMenu = [
@@ -25,14 +25,16 @@ export const mainMenu = [
 
 # HeaderBlock
 
+You can use it to add a Header block
+
 ## Props
 
-<Props of={HeaderBlock} />
+<ArgsTable of={HeaderBlock} />
 
 ### Default
 
-<Preview height='250'>
+<Canvas height='250'>
   <Story name='Default'>
     <HeaderBlock links={mainMenu} />
   </Story>
-</Preview>
+</Canvas>

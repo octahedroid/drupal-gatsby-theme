@@ -1,4 +1,4 @@
-import { Meta, Story, Props, Preview } from "@storybook/addon-docs/blocks"
+import { Meta, Story, ArgsTable, Canvas } from "@storybook/addon-docs/blocks"
 import { Contact } from "ui"
 import FooterBlock from "."
 
@@ -43,13 +43,13 @@ You can use it to add a Footer block
 
 ## Props
 
-<Props of={FooterBlock} />
+<ArgsTable of={FooterBlock} />
 
 export const FooterBlockTemplate = (args) => <FooterBlock {...args} />
 
 ### Default FooterBlock
 
-<Preview>
+<Canvas>
   <Story
     name='Default'
     args={{
@@ -58,11 +58,11 @@ export const FooterBlockTemplate = (args) => <FooterBlock {...args} />
   >
     {FooterBlockTemplate.bind({})}
   </Story>
-</Preview>
+</Canvas>
 
 ### Full Width
 
-<Preview>
+<Canvas>
   <Story
     name='Full Width'
     args={{
@@ -72,11 +72,11 @@ export const FooterBlockTemplate = (args) => <FooterBlock {...args} />
   >
     {FooterBlockTemplate.bind({})}
   </Story>
-</Preview>
+</Canvas>
 
 ### Light variant
 
-<Preview>
+<Canvas>
   <Story
     name='Light variant'
     args={{
@@ -86,11 +86,11 @@ export const FooterBlockTemplate = (args) => <FooterBlock {...args} />
   >
     {FooterBlockTemplate.bind({})}
   </Story>
-</Preview>
+</Canvas>
 
 ### With Contack Block
 
-<Preview>
+<Canvas>
   <Story
     name='With Contact Block'
     args={{
@@ -99,13 +99,13 @@ export const FooterBlockTemplate = (args) => <FooterBlock {...args} />
     }}
   >
     <FooterBlock isFull variant='light' align='left' branding={footerInfo.branding}>
-      <Contact>
-        <Contact.Header>
-          Tell us about your project. And we will contact you promptly to discuss
-          next steps.
-        </Contact.Header>
+      <Contact
+        title='Tell us about your project. And we will contact you promptly to discuss next
+        steps.'
+        align='left'
+      >
         <Contact.Grid contactInfo={contactInfo} />
       </Contact>
     </FooterBlock>
   </Story>
-</Preview>
+</Canvas>

@@ -1,4 +1,4 @@
-import { Meta, Story, Props, Preview } from "@storybook/addon-docs/blocks"
+import { Meta, Story, ArgsTable, Canvas } from "@storybook/addon-docs/blocks"
 import BlogHeadBlock from "."
 
 export const data = {
@@ -7,7 +7,7 @@ export const data = {
   author: {
     name: "Marco José Sánchez",
     link: "/",
-    ariaLabel: "Marco",
+    label: "Marco",
   },
   date: "Julio 2, 2020",
   image: {
@@ -36,21 +36,23 @@ export const blogHeadArgTypes = {
 
 # BlogHeadBlock
 
+Use this Block to insert common BlogHead
+
 ## Props
 
-<Props of={BlogHeadBlock} />
+<ArgsTable of={BlogHeadBlock} />
 
 export const BlogHeadBlockTemplate = (args) => <BlogHeadBlock {...args} />
 
 ### Default BlogHeadBlock
 
-<Preview>
+<Canvas>
   <Story name='Default'>{BlogHeadBlockTemplate.bind({})}</Story>
-</Preview>
+</Canvas>
 
 ## No author link
 
-<Preview>
+<Canvas>
   <Story
     name='No author link'
     args={{ ...data, author: { name: "Marco José Sánchez" } }}
@@ -58,11 +60,11 @@ export const BlogHeadBlockTemplate = (args) => <BlogHeadBlock {...args} />
   >
     {BlogHeadBlockTemplate.bind({})}
   </Story>
-</Preview>
+</Canvas>
 
 ### No image
 
-<Preview>
+<Canvas>
   <Story
     name='No image'
     args={{ ...data, image: undefined, credits: undefined }}
@@ -70,13 +72,13 @@ export const BlogHeadBlockTemplate = (args) => <BlogHeadBlock {...args} />
   >
     {BlogHeadBlockTemplate.bind({})}
   </Story>
-</Preview>
+</Canvas>
 
 ### Custom Background Overlay Color
 
 This accepts any valid CSS color value
 
-<Preview>
+<Canvas>
   <Story
     name='Custom Background Overlay Color'
     args={{
@@ -89,4 +91,4 @@ This accepts any valid CSS color value
   >
     {BlogHeadBlockTemplate.bind({})}
   </Story>
-</Preview>
+</Canvas>

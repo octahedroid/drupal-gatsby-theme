@@ -19,7 +19,7 @@ const BlogHead = ({ imageOverlay, children, ...props }) => {
           top: 0,
           left: 0,
           zIndex: 1,
-          bg: imageOverlay || "rgba(21, 30, 46, 0.8)",
+          bg: imageOverlay,
           minWidth: "100%",
           minHeight: "100%",
           flexShrink: 0,
@@ -39,7 +39,7 @@ BlogHead.propTypes = {
 }
 
 BlogHead.defaultProps = {
-  imageOverlay: "",
+  imageOverlay: "darkBlueOpaque",
 }
 
 export default BlogHead

@@ -3,8 +3,6 @@ import { Box } from "theme-ui"
 import { Section, Image, Text, Link, MobileMenu, Heading } from "ui"
 import { ContactBlock, BlogHeadBlock, FooterBlock, HeaderBlock } from "blocks"
 
-export default { title: "pages/Blog" }
-
 const headerMainMenu = [
   {
     name: "Home",
