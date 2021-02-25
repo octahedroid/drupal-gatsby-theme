@@ -40,9 +40,9 @@ Hero.propTypes = {
 Hero.defaultProps = {
   proportion: undefined,
   gutter: "20px",
-  sx: {},
+  sx: undefined,
   columns: 1,
-  align: "",
+  align: undefined,
 }
 
 export default Hero

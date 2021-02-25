@@ -33,8 +33,7 @@ const Footer = forwardRef(
 Footer.propTypes = {
   isFull: PropTypes.bool,
   variant: PropTypes.string,
-  children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node])
-    .isRequired,
+  children: PropTypes.node.isRequired,
   align: PropTypes.string,
   size: PropTypes.string,
 }

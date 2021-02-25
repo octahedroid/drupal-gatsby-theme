@@ -40,6 +40,6 @@ Logo.propTypes = {
 
 Logo.defaultProps = {
   width: 50,
-  fill: null,
+  fill: undefined,
 }
 export default Logo

@@ -65,8 +65,7 @@ const MobileMenu = ({ children, showSidebar, handleShowSidebar }) => {
 }
 
 MobileMenu.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node])
-    .isRequired,
+  children: PropTypes.node.isRequired,
   showSidebar: PropTypes.bool.isRequired,
   handleShowSidebar: PropTypes.func.isRequired,
 }

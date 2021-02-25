@@ -40,11 +40,11 @@ Button.propTypes = {
   to: PropTypes.string,
   variant: PropTypes.string,
   as: PropTypes.oneOfType([PropTypes.string, PropTypes.elementType]),
-  children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
+  children: PropTypes.node.isRequired,
 }
 
 Button.defaultProps = {
-  to: "",
+  to: undefined,
   variant: "primary",
   as: "button",
 }

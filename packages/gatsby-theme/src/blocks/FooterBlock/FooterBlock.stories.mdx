@@ -99,11 +99,11 @@ export const FooterBlockTemplate = (args) => <FooterBlock {...args} />
     }}
   >
     <FooterBlock isFull variant='light' align='left' branding={footerInfo.branding}>
-      <Contact>
-        <Contact.Header>
-          Tell us about your project. And we will contact you promptly to discuss
-          next steps.
-        </Contact.Header>
+      <Contact
+        title='Tell us about your project. And we will contact you promptly to discuss next
+        steps.'
+        align='left'
+      >
         <Contact.Grid contactInfo={contactInfo} />
       </Contact>
     </FooterBlock>

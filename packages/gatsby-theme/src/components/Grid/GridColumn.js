@@ -37,8 +37,8 @@ GridColumn.propTypes = {
 }
 
 GridColumn.defaultProps = {
-  columns: "",
-  rows: "",
+  columns: undefined,
+  rows: undefined,
 }
 
 export default GridColumn
