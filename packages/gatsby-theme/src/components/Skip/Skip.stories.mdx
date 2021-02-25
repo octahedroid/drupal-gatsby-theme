@@ -1,0 +1,55 @@
+import { Meta, Story, ArgsTable, Canvas } from "@storybook/addon-docs/blocks"
+import { Box } from "theme-ui"
+import { SkipLink, SkipContent } from "."
+
+<Meta
+  title='components/SkipLink'
+  component={SkipLink}
+  subcomponents={{
+    SkipContent,
+  }}
+/>
+
+# SkipLink
+
+Use this component to help jumps the user down to an anchor or target at the beginning of the main content
+
+## Props
+
+<ArgsTable of={SkipLink} />
+
+<Canvas>
+  <Story name='skiplink'>
+    <>
+      <SkipLink id='main-content'>Skip to main content</SkipLink>
+      <Box __css={{ maxWidth: 800, mx: "auto" }}>
+        <Box
+          __css={{
+            a: {
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              height: 400,
+            },
+          }}
+        >
+          <Box as='a' href='/'>
+            Link 1
+          </Box>
+          <Box as='a' href='/'>
+            Link 2
+          </Box>
+          <Box as='a' href='/'>
+            Link 3
+          </Box>
+        </Box>
+        <SkipContent id='main-content'>
+          <h1>Content</h1>
+          <Box as='a' href='/'>
+            Link 3
+          </Box>
+        </SkipContent>
+      </Box>
+    </>
+  </Story>
+</Canvas>
