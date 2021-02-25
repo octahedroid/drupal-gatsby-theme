@@ -3,8 +3,6 @@ import { Box } from "theme-ui"
 import { Section, Grid, Card, Image, Link, Icon, MobileMenu, SkipContent } from "ui"
 import { FooterBlock, HeaderBlock, HeroBlock } from "blocks"
 
-export default { title: "pages/Blog" }
-
 const branding = {
   to: "/",
   width: 50,
