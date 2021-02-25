@@ -98,7 +98,12 @@ export const FooterBlockTemplate = (args) => <FooterBlock {...args} />
       variant: "light",
     }}
   >
-    <FooterBlock isFull variant='light' align='left' branding={footerInfo.branding}>
+    <FooterBlock
+      isFull
+      variant='light'
+      alignContent='right'
+      branding={footerInfo.branding}
+    >
       <Contact
         title='Tell us about your project. And we will contact you promptly to discuss next
         steps.'

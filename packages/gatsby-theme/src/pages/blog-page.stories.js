@@ -208,7 +208,7 @@ export const BlogPost = () => {
         </Text>
       </Section>
       <Section variant='dark'>
-        <FooterBlock isFull align='left' branding={footerInfo.branding}>
+        <FooterBlock isFull alignContent='right' branding={footerInfo.branding}>
           <ContactBlock
             heading={contactBlockHeading}
             contactInfo={contactBlockContactInfo}

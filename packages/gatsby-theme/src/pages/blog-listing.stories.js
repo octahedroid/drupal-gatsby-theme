@@ -122,7 +122,7 @@ export const BlogListing = () => {
         />
       </Section>
       <Section variant='dark'>
-        <FooterBlock branding={branding} align='right' />
+        <FooterBlock branding={branding} alignContent='left' />
       </Section>
     </Box>
   )
