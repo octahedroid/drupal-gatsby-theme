@@ -1,0 +1,54 @@
+import { Meta } from "@storybook/addon-docs/blocks"
+
+<Meta title='Intro' />
+
+**Intro**
+
+The `drupal-gatsby-theme` is a [mono repository](https://www.toptal.com/front-end/guide-to-monorepos), the monorepo is a strategy where code for many projects is stored in the same repository.
+
+This project uses the atomic design system, this system is a methodology for creating design systems, with five distinct levels: atoms, molecules, organisms, templates and pages.
+
+- The atoms would be our most basic and simple components, like a button.
+- The molecules would be a group of simple components that build something a little more complex like our MobileMenu.
+- Organisms would be our blocks, they contain logic and have specific functions.
+- Templates consist mostly of groups of organisms stitched together to form pages. It’s here where we start to see the design coming together and start seeing things like layout in action.
+- Pages are specific instances of templates and they are the highest level of fidelity.
+
+The necessary code to work and manipulate with the data source is located in `packages/gatsby-theme-drupal`.
+
+**UI**
+
+The UI code is inside `packages/gatsby-theme`.
+
+The UI contains components and blocks, the components follow the compound component pattern when the component requires it. Compound components is a pattern in which components are used together such that they share an implicit state that lets them communicate with each other in the background.
+
+Each component has its story with storybook, the story is a representation of how the component is implemented and works, much like the implementation of the block.
+
+We recommend using the blocks when possible. The blocks are the implementation of the components and contain the logic, they are ready to receive the response obtained from the query. Each block has its storybook story, these stories are very useful to visualize how to pass the data to each block.
+
+**Styles**
+
+This project uses the Theme-ui library for the styles and they are defined in `packages/gatsby-theme/src/gatsby-plugin-theme-ui`. Styles are applied to components, not blocks.
+
+_Variants_
+
+Some components can receive a prop called variant, it is used to use the same component but with different styles.
+
+More information about Theme-UI [here](https://theme-ui.com/getting-started).
+
+**Libraries**
+
+- [Gatsby](https://www.gatsbyjs.com/)
+- [react](https://reactjs.org/)
+- [Theme-UI](https://theme-ui.com/getting-started/)
+- [Storybook](https://storybook.js.org/)
+- [Lodash](https://lodash.com/)
+- [react-content-loader](https://www.npmjs.com/package/react-content-loader)
+- [react-icons](https://react-icons.github.io/react-icons/)
+- [react-infinite-scroll-component](https://www.npmjs.com/package/react-infinite-scroll-component)
+- [react-share](https://www.npmjs.com/package/react-share)
+
+**Resources**
+
+1. [https://bradfrost.com/blog/post/atomic-web-design/](https://bradfrost.com/blog/post/atomic-web-design/)
+2. [https://www.toptal.com/front-end/guide-to-monorepos](https://www.toptal.com/front-end/guide-to-monorepos)
