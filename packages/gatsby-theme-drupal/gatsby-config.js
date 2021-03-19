@@ -7,5 +7,8 @@ module.exports = {
         themePath: `${__dirname}/theme`,
       },
     },
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
   ],
 }
