@@ -6,6 +6,26 @@
         "node": {
           "localFile": {
             "childImageSharp": {
+              "gatsbyImageData": {
+                "layout": "constrained",
+                "backgroundColor": "#181818",
+                "images": {
+                  "fallback": {
+                    "src": "https://placeimg.com/640/480/any",
+                    "srcSet": "https://placeimg.com/640/480/any 38w,\nhttps://placeimg.com/640/480/any 75w,\nhttps://placeimg.com/640/480/any 150w",
+                    "sizes": "(min-width: 150px) 150px, 100vw"
+                  },
+                  "sources": [
+                    {
+                      "srcSet": "https://placeimg.com/640/480/any 38w,\nhttps://placeimg.com/640/480/any 75w,\nhttps://placeimg.com/640/480/any 150w",
+                      "type": "image/jpg",
+                      "sizes": "(min-width: 150px) 150px, 100vw"
+                    }
+                  ]
+                },
+                "width": 150,
+                "height": 150
+              },
               "fluid": {
                 "aspectRatio": 1,
                 "base64": "data:image/jpeg;base64,/9j/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wgARCAALABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAQGAv/EABYBAQEBAAAAAAAAAAAAAAAAAAIBA//aAAwDAQACEAMQAAABZ1ZJKQxQmg//xAAbEAEAAgIDAAAAAAAAAAAAAAABAAMCBBESIv/aAAgBAQABBQKrT926uBT0iDLsSIc//8QAFhEBAQEAAAAAAAAAAAAAAAAAABEB/9oACAEDAQE/AZiP/8QAFxEBAQEBAAAAAAAAAAAAAAAAAQAREv/aAAgBAgEBPwHVbq//xAAeEAAABAcAAAAAAAAAAAAAAAAAARAxAhESISIjUf/aAAgBAQAGPwLYWIqhefUuQZP/xAAaEAEAAwEBAQAAAAAAAAAAAAABABEhMUHB/9oACAEBAAE/IULYRuJh5ht+S7pKahqJOMnmE//aAAwDAQACAAMAAAAQMN//xAAWEQEBAQAAAAAAAAAAAAAAAAABERD/2gAIAQMBAT8QAJM//8QAFhEBAQEAAAAAAAAAAAAAAAAAEQAh/9oACAECAQE/ENxJX//EABsQAQEBAQEAAwAAAAAAAAAAAAERIQAxUZHx/9oACAEBAAE/EKD0qpshpvqcnpz2DaRHycGAUfGcrplKWPbFNSnl/OOw+rv/2Q==",
