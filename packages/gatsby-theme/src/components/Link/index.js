@@ -1,7 +1,6 @@
 import React, { forwardRef } from "react"
 import PropTypes from "prop-types"
 import { Box } from "theme-ui"
-// import GatsbyLink from "gatsby-link"
 import { Link as GatsbyLink } from "gatsby"
 
 const Link = forwardRef(({ to, children, variant, ariaLabel, ...props }, ref) => {
