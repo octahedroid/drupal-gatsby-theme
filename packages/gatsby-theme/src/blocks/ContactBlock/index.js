@@ -11,7 +11,7 @@ const ContactBlock = ({ title, align, contactInfo }) => {
 }
 
 ContactBlock.propTypes = {
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
   contactInfo: PropTypes.arrayOf(
     PropTypes.shape({
       title: PropTypes.string.isRequired,
@@ -23,6 +23,7 @@ ContactBlock.propTypes = {
 }
 
 ContactBlock.defaultProps = {
+  title: undefined,
   align: "center",
 }
 

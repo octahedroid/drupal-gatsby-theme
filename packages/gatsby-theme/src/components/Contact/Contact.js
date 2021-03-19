@@ -11,9 +11,11 @@ const Contact = ({ children, title, align, sx, ...props }) => {
       __css={{ textAlign: align, ...sx }}
       {...props}
     >
-      <RichText sx={{ textAlign: align, pb: "small" }} {...props}>
-        {title}
-      </RichText>
+      {title && (
+        <RichText sx={{ textAlign: align, pb: "small" }} {...props}>
+          {title}
+        </RichText>
+      )}
       {children}
     </Box>
   )
@@ -21,12 +23,13 @@ const Contact = ({ children, title, align, sx, ...props }) => {
 
 Contact.propTypes = {
   children: PropTypes.node.isRequired,
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
   sx: PropTypes.shape({}),
   align: PropTypes.string,
 }
 
 Contact.defaultProps = {
+  title: undefined,
   align: "center",
   sx: undefined,
 }

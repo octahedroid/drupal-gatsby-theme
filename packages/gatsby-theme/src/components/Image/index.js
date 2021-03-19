@@ -42,11 +42,7 @@ Image.propTypes = {
       alt: PropTypes.string.isRequired,
     }),
     PropTypes.shape({
-      fluid: PropTypes.shape({}).isRequired,
-      alt: PropTypes.string.isRequired,
-    }),
-    PropTypes.shape({
-      fixed: PropTypes.shape({}).isRequired,
+      image: PropTypes.shape({}).isRequired,
       alt: PropTypes.string.isRequired,
     }),
   ]).isRequired,
