@@ -11,8 +11,12 @@ const SkipContent = ({ children, id, ...props }) => {
 }
 
 SkipContent.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
   id: PropTypes.string.isRequired,
+}
+
+SkipContent.defaultProps = {
+  children: undefined,
 }
 
 export default SkipContent

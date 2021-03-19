@@ -6,19 +6,21 @@ const HeaderBlock = ({ links }) => {
   const [scrolledMenu, setScrolledMenu] = useState(false)
   const [showSidebar, setShowSidebar] = useState(false)
 
-  const handleScroll = (event) => {
-    const target = event.target || event.srcElement
-    setScrolledMenu(target.scrollingElement.scrollTop > 30)
-  }
   const handleShowSidebar = () => {
     setShowSidebar(!showSidebar)
   }
 
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      window.addEventListener("scroll", handleScroll, { passive: true })
+    const handleScroll = (event) => {
+      const target = event.target || event.srcElement
+      setScrolledMenu(target.scrollingElement.scrollTop > 30)
     }
+
+    window?.addEventListener("scroll", handleScroll, { passive: true })
+
+    return () => window?.removeEventListener("scroll", handleScroll)
   }, [])
+
   return (
     <>
       <Header shadow={scrolledMenu}>

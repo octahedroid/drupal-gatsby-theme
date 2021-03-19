@@ -9,6 +9,7 @@ const ContactItem = ({ title, text, icon, align, ...props }) => {
       <Heading
         as='h3'
         sx={{
+          textAlign: align,
           fontSize: ["large", null, "2xl"],
           m: 0,
           mb: "small",

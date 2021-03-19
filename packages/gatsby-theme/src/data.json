@@ -13,18 +13,18 @@
                   "fallback": {
                     "src": "https://placeimg.com/640/480/any",
                     "srcSet": "https://placeimg.com/640/480/any 38w,\nhttps://placeimg.com/640/480/any 75w,\nhttps://placeimg.com/640/480/any 150w",
-                    "sizes": "(min-width: 150px) 150px, 100vw"
+                    "sizes": "(min-width: 2000px) 2000px, 100vw"
                   },
                   "sources": [
                     {
                       "srcSet": "https://placeimg.com/640/480/any 38w,\nhttps://placeimg.com/640/480/any 75w,\nhttps://placeimg.com/640/480/any 150w",
                       "type": "image/jpg",
-                      "sizes": "(min-width: 150px) 150px, 100vw"
+                      "sizes": "(min-width: 2000px) 2000px, 100vw"
                     }
                   ]
                 },
-                "width": 150,
-                "height": 150
+                "width": 2000,
+                "height": 2000
               },
               "fluid": {
                 "aspectRatio": 1,
