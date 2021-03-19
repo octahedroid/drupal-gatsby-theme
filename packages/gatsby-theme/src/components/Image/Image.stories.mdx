@@ -1,4 +1,5 @@
 import { Meta, Story, ArgsTable, Canvas } from "@storybook/addon-docs/blocks"
+import { GatsbyImage } from "gatsby-plugin-image"
 import Image from "."
 import data from "../../data.json"
 
@@ -6,6 +7,9 @@ export const mockGatsbyImg = {
   alt: data.nodes[0].name,
   fluid: data.nodes[0].featuredImage.node.localFile.childImageSharp.fluid,
 }
+
+export const image =
+  data.nodes[0].featuredImage.node.localFile.childImageSharp.gatsbyImageData
 
 <Meta title='components/Image' component={Image} />
 
@@ -16,6 +20,14 @@ Use this component to insert an image.
 ## Props
 
 <ArgsTable of={Image} />
+
+### Default GatsbyImage
+
+<Canvas>
+  <Story name='Default GatsbyImage'>
+    <GatsbyImage image={image} alt='some alt text' />
+  </Story>
+</Canvas>
 
 ### Default
 
